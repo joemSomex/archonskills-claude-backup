@@ -1,0 +1,63 @@
+#!/usr/bin/env bash
+# Re-apply the per-job cron wrap_response patch after a Hermes upgrade.
+#
+# Upstream Hermes only supports a GLOBAL `cron.wrap_response` setting. This patch makes a
+# job-level `wrap_response` field override it, so the Cebu team group job (97c0a57fdfae)
+# delivers raw message text while every other job keeps its "Cronjob Response:" header
+# and "To stop or manage this job" footer.
+#
+# Idempotent: exits 0 and changes nothing if the patch is already present.
+set -euo pipefail
+
+TARGET="/usr/local/lib/hermes-agent/cron/scheduler_delivery.py"
+PYBIN="/usr/local/lib/hermes-agent/venv/bin/python"
+MARKER="hermes-wrap-response-per-job"
+
+[ -f "$TARGET" ] || { echo "error: $TARGET not found" >&2; exit 1; }
+
+if grep -q "$MARKER" "$TARGET"; then
+  echo "patch already present in $TARGET"
+else
+  cp "$TARGET" "/root/.hermes/backups/scheduler_delivery.py.bak-$(date +%Y%m%d-%H%M%S)"
+  "$PYBIN" - "$TARGET" <<'PY'
+import sys
+p = sys.argv[1]
+src = open(p, encoding="utf-8").read()
+anchor = '''    with contextlib.suppress(Exception):
+        user_cfg = _sched.load_config()
+        wrap_response = user_cfg.get("cron", {}).get("wrap_response", True)
+'''
+if src.count(anchor) != 1:
+    sys.exit(f"error: expected 1 anchor match, found {src.count(anchor)} -- upstream code changed, "
+             "re-derive the patch by hand around the 'Wrap with header/footer' block")
+patch = anchor + '''    # LOCAL PATCH (hermes-wrap-response-per-job): a job-level ``wrap_response`` beats the global
+    # cron.wrap_response setting, so one job can deliver raw output while the rest keep the
+    # header/footer. Re-apply with ~/.hermes/bin/hermes-wrap-response-patch after a Hermes upgrade.
+    _job_wrap = job.get("wrap_response")
+    if _job_wrap is not None:
+        wrap_response = bool(_job_wrap)
+'''
+open(p, "w", encoding="utf-8").write(src.replace(anchor, patch))
+print(f"patched {p}")
+PY
+  "$PYBIN" -m py_compile "$TARGET"
+fi
+
+# Ensure the flag is still set on the team-group job.
+"$PYBIN" - <<'PY'
+import sys
+sys.path.insert(0, "/usr/local/lib/hermes-agent")
+from cron.jobs import get_job, update_job
+JOB = "97c0a57fdfae"
+job = get_job(JOB)
+if not job:
+    print(f"warning: job {JOB} not found -- set wrap_response on whichever job needs raw delivery")
+elif job.get("wrap_response") is False:
+    print(f"job {JOB} already has wrap_response=false")
+else:
+    update_job(JOB, {"wrap_response": False})
+    print(f"set wrap_response=false on job {JOB}")
+PY
+
+echo "done -- restart the gateway for the patch to take effect:"
+echo "  systemctl restart hermes-gateway"

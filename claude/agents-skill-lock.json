@@ -1,0 +1,321 @@
+{
+  "version": 3,
+  "skills": {
+    "ablate-ai-layer": {
+      "source": "coleam00/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/coleam00/skills.git",
+      "skillPath": ".claude/skills/ablate-ai-layer/SKILL.md",
+      "skillFolderHash": "243d791362c1e050550ddb88d54e75b6549a9a68",
+      "installedAt": "2026-09-18T01:51:42.957Z",
+      "updatedAt": "2026-09-18T01:51:42.957Z"
+    },
+    "agent-browser": {
+      "source": "coleam00/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/coleam00/skills.git",
+      "skillPath": ".claude/skills/agent-browser/SKILL.md",
+      "skillFolderHash": "9b31e495b887e4ca123960415eca69fc7e1bba28",
+      "installedAt": "2026-09-18T01:51:42.958Z",
+      "updatedAt": "2026-09-18T01:51:42.958Z"
+    },
+    "ast-grep": {
+      "source": "coleam00/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/coleam00/skills.git",
+      "skillPath": ".claude/skills/ast-grep/SKILL.md",
+      "skillFolderHash": "ef60f77564e2d47d0cba25a809daa3af8f0c469b",
+      "installedAt": "2026-09-18T01:51:42.959Z",
+      "updatedAt": "2026-09-18T01:51:42.959Z"
+    },
+    "build-dark-factory": {
+      "source": "coleam00/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/coleam00/skills.git",
+      "skillPath": ".claude/skills/build-dark-factory/SKILL.md",
+      "skillFolderHash": "754851050fc2f4ed13b1eb3dad0c5c63f8217739",
+      "installedAt": "2026-09-18T01:51:42.960Z",
+      "updatedAt": "2026-09-18T01:51:42.960Z"
+    },
+    "drive-screen": {
+      "source": "coleam00/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/coleam00/skills.git",
+      "skillPath": ".claude/skills/drive-screen/SKILL.md",
+      "skillFolderHash": "dfebcb936eb782da03168107dd777875b090ea36",
+      "installedAt": "2026-09-18T01:51:42.960Z",
+      "updatedAt": "2026-09-18T01:51:42.960Z"
+    },
+    "hooks-create": {
+      "source": "coleam00/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/coleam00/skills.git",
+      "skillPath": ".claude/skills/hooks-create/SKILL.md",
+      "skillFolderHash": "c00e23a2452609c80e94aaf0a1d748637710f356",
+      "installedAt": "2026-09-18T01:51:42.961Z",
+      "updatedAt": "2026-09-18T01:51:42.961Z"
+    },
+    "opportunity-scan": {
+      "source": "coleam00/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/coleam00/skills.git",
+      "skillPath": ".claude/skills/opportunity-scan/SKILL.md",
+      "skillFolderHash": "d22f203d905fab64a571f9b4d729d35038a6c3b1",
+      "installedAt": "2026-09-18T01:51:42.962Z",
+      "updatedAt": "2026-09-18T01:51:42.962Z"
+    },
+    "piv-commit": {
+      "source": "coleam00/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/coleam00/skills.git",
+      "skillPath": ".claude/skills/piv-commit/SKILL.md",
+      "skillFolderHash": "c95ac39536c9893d0a8be2c2a9e881b9cca4e549",
+      "installedAt": "2026-09-18T01:51:42.966Z",
+      "updatedAt": "2026-09-18T01:51:42.966Z"
+    },
+    "piv-create-pr": {
+      "source": "coleam00/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/coleam00/skills.git",
+      "skillPath": ".claude/skills/piv-create-pr/SKILL.md",
+      "skillFolderHash": "a5eaec0e21bb313d2fea77583beb7451e42458a5",
+      "installedAt": "2026-09-18T01:51:42.968Z",
+      "updatedAt": "2026-09-18T01:51:42.968Z"
+    },
+    "piv-fix-review-findings": {
+      "source": "coleam00/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/coleam00/skills.git",
+      "skillPath": ".claude/skills/piv-fix-review-findings/SKILL.md",
+      "skillFolderHash": "6e3e14b1f367bc43a2c9f20bda5d11f6834fb190",
+      "installedAt": "2026-09-18T01:51:42.970Z",
+      "updatedAt": "2026-09-18T01:51:42.970Z"
+    },
+    "piv-implement": {
+      "source": "coleam00/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/coleam00/skills.git",
+      "skillPath": ".claude/skills/piv-implement/SKILL.md",
+      "skillFolderHash": "f441f4997c7656134a4081b261a36031bca15efe",
+      "installedAt": "2026-09-18T01:51:42.971Z",
+      "updatedAt": "2026-09-18T01:51:42.971Z"
+    },
+    "piv-implement-issue": {
+      "source": "coleam00/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/coleam00/skills.git",
+      "skillPath": ".claude/skills/piv-implement-issue/SKILL.md",
+      "skillFolderHash": "7fea1af7863685edb6022a3db6bfb9a08823d927",
+      "installedAt": "2026-09-18T01:51:42.971Z",
+      "updatedAt": "2026-09-18T01:51:42.971Z"
+    },
+    "piv-investigate-issue": {
+      "source": "coleam00/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/coleam00/skills.git",
+      "skillPath": ".claude/skills/piv-investigate-issue/SKILL.md",
+      "skillFolderHash": "bfe3427b9bb379fb29c2bac281dd0d4c26274887",
+      "installedAt": "2026-09-18T01:51:42.972Z",
+      "updatedAt": "2026-09-18T01:51:42.972Z"
+    },
+    "piv-plan-implementation": {
+      "source": "coleam00/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/coleam00/skills.git",
+      "skillPath": ".claude/skills/piv-plan-implementation/SKILL.md",
+      "skillFolderHash": "96e4c2827ee2e933c2be1e09d0bc87b8e3d8810c",
+      "installedAt": "2026-09-18T01:51:42.973Z",
+      "updatedAt": "2026-09-18T01:51:42.973Z"
+    },
+    "piv-review-changes": {
+      "source": "coleam00/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/coleam00/skills.git",
+      "skillPath": ".claude/skills/piv-review-changes/SKILL.md",
+      "skillFolderHash": "edba14f106dd674c1370fc07a8ee2aac98eb5c53",
+      "installedAt": "2026-09-18T01:51:42.973Z",
+      "updatedAt": "2026-09-18T01:51:42.973Z"
+    },
+    "piv-review-pr": {
+      "source": "coleam00/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/coleam00/skills.git",
+      "skillPath": ".claude/skills/piv-review-pr/SKILL.md",
+      "skillFolderHash": "d838ca7b57b129273085262cec3f79fad6660853",
+      "installedAt": "2026-09-18T01:51:42.974Z",
+      "updatedAt": "2026-09-18T01:51:42.974Z"
+    },
+    "piv-run-full-loop": {
+      "source": "coleam00/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/coleam00/skills.git",
+      "skillPath": ".claude/skills/piv-run-full-loop/SKILL.md",
+      "skillFolderHash": "c0ee5cdc13aba5d23c50d5528bc41b48a089c49d",
+      "installedAt": "2026-09-18T01:51:42.974Z",
+      "updatedAt": "2026-09-18T01:51:42.974Z"
+    },
+    "piv-slice-epic": {
+      "source": "coleam00/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/coleam00/skills.git",
+      "skillPath": ".claude/skills/piv-slice-epic/SKILL.md",
+      "skillFolderHash": "85539e70184181bf22baf120b6bd56ed67e9a97a",
+      "installedAt": "2026-09-18T01:51:42.975Z",
+      "updatedAt": "2026-09-18T01:51:42.975Z"
+    },
+    "piv-validate": {
+      "source": "coleam00/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/coleam00/skills.git",
+      "skillPath": ".claude/skills/piv-validate/SKILL.md",
+      "skillFolderHash": "618bac9e2cab87364b1b92c5fee8e7d8d74fdbc1",
+      "installedAt": "2026-09-18T01:51:42.975Z",
+      "updatedAt": "2026-09-18T01:51:42.975Z"
+    },
+    "plan-architecture": {
+      "source": "coleam00/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/coleam00/skills.git",
+      "skillPath": ".claude/skills/plan-architecture/SKILL.md",
+      "skillFolderHash": "bcc295d357b953a638aee43fa1329e5619f8e145",
+      "installedAt": "2026-09-18T01:51:42.976Z",
+      "updatedAt": "2026-09-18T01:51:42.976Z"
+    },
+    "plan-create-prd": {
+      "source": "coleam00/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/coleam00/skills.git",
+      "skillPath": ".claude/skills/plan-create-prd/SKILL.md",
+      "skillFolderHash": "e30f2b6b3702eb5f5f601744c02d56970af9c4b3",
+      "installedAt": "2026-09-18T01:51:42.976Z",
+      "updatedAt": "2026-09-18T01:51:42.976Z"
+    },
+    "plan-create-stories": {
+      "source": "coleam00/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/coleam00/skills.git",
+      "skillPath": ".claude/skills/plan-create-stories/SKILL.md",
+      "skillFolderHash": "50605e9a6b337cde5e01c64e87a7eb6c219b2850",
+      "installedAt": "2026-09-18T01:51:42.977Z",
+      "updatedAt": "2026-09-18T01:51:42.977Z"
+    },
+    "prime-backend": {
+      "source": "coleam00/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/coleam00/skills.git",
+      "skillPath": ".claude/skills/prime-backend/SKILL.md",
+      "skillFolderHash": "3b4d38dbee11e02ec4f9edb02f1f2ce18ed0e91e",
+      "installedAt": "2026-09-18T01:51:42.978Z",
+      "updatedAt": "2026-09-18T01:51:42.978Z"
+    },
+    "prime-codebase": {
+      "source": "coleam00/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/coleam00/skills.git",
+      "skillPath": ".claude/skills/prime-codebase/SKILL.md",
+      "skillFolderHash": "766200290744d97473f554c4dd3320bd0176af8d",
+      "installedAt": "2026-09-18T01:51:42.978Z",
+      "updatedAt": "2026-09-18T01:51:42.978Z"
+    },
+    "prime-frontend": {
+      "source": "coleam00/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/coleam00/skills.git",
+      "skillPath": ".claude/skills/prime-frontend/SKILL.md",
+      "skillFolderHash": "d7bebf7313cfa4b2af952f792a6c9d494e5293a8",
+      "installedAt": "2026-09-18T01:51:42.979Z",
+      "updatedAt": "2026-09-18T01:51:42.979Z"
+    },
+    "rules-check-drift": {
+      "source": "coleam00/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/coleam00/skills.git",
+      "skillPath": ".claude/skills/rules-check-drift/SKILL.md",
+      "skillFolderHash": "0515c1a57cd7c412056ce2a01407915f9938585c",
+      "installedAt": "2026-09-18T01:51:42.980Z",
+      "updatedAt": "2026-09-18T01:51:42.980Z"
+    },
+    "rules-create-global": {
+      "source": "coleam00/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/coleam00/skills.git",
+      "skillPath": ".claude/skills/rules-create-global/SKILL.md",
+      "skillFolderHash": "d4321047d3ea131849fd56bae61b126c0ef5c676",
+      "installedAt": "2026-09-18T01:51:42.980Z",
+      "updatedAt": "2026-09-18T01:51:42.980Z"
+    },
+    "second-brain-audit": {
+      "source": "coleam00/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/coleam00/skills.git",
+      "skillPath": ".claude/skills/second-brain-audit/SKILL.md",
+      "skillFolderHash": "c4c5b5621061fcd021b8d533daa369ea529e0c3e",
+      "installedAt": "2026-09-18T01:51:42.981Z",
+      "updatedAt": "2026-09-18T01:51:42.981Z"
+    },
+    "second-brain-fix": {
+      "source": "coleam00/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/coleam00/skills.git",
+      "skillPath": ".claude/skills/second-brain-fix/SKILL.md",
+      "skillFolderHash": "feac9f08ef8af33db2ccbe7670baca2c3ff0e8d8",
+      "installedAt": "2026-09-18T01:51:42.982Z",
+      "updatedAt": "2026-09-18T01:51:42.982Z"
+    },
+    "setup-ai-tutor": {
+      "source": "coleam00/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/coleam00/skills.git",
+      "skillPath": ".claude/skills/setup-ai-tutor/SKILL.md",
+      "skillFolderHash": "05b6a7bc0dd59857ae773fe8fce48647ea48ff08",
+      "installedAt": "2026-09-18T01:51:42.983Z",
+      "updatedAt": "2026-09-18T01:51:42.983Z"
+    },
+    "skills-create": {
+      "source": "coleam00/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/coleam00/skills.git",
+      "skillPath": ".claude/skills/skills-create/SKILL.md",
+      "skillFolderHash": "cc6cae461ccd93fee16c6ce51b5b5f303ff251e3",
+      "installedAt": "2026-09-18T01:51:42.985Z",
+      "updatedAt": "2026-09-18T01:51:42.985Z"
+    },
+    "system-evolution-review": {
+      "source": "coleam00/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/coleam00/skills.git",
+      "skillPath": ".claude/skills/system-evolution-review/SKILL.md",
+      "skillFolderHash": "000afbfb95821a00a98d4d500d1517d3ad586246",
+      "installedAt": "2026-09-18T01:51:42.986Z",
+      "updatedAt": "2026-09-18T01:51:42.986Z"
+    },
+    "system-execution-report": {
+      "source": "coleam00/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/coleam00/skills.git",
+      "skillPath": ".claude/skills/system-execution-report/SKILL.md",
+      "skillFolderHash": "ab51285057df9d9c12941697e3ffaefbd1150aa1",
+      "installedAt": "2026-09-18T01:51:42.986Z",
+      "updatedAt": "2026-09-18T01:51:42.986Z"
+    },
+    "worktree-create": {
+      "source": "coleam00/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/coleam00/skills.git",
+      "skillPath": ".claude/skills/worktree-create/SKILL.md",
+      "skillFolderHash": "70fe0b1bd72015c88652fb8ab929c5c1c021b1b5",
+      "installedAt": "2026-09-18T01:51:42.987Z",
+      "updatedAt": "2026-09-18T01:51:42.987Z"
+    },
+    "worktree-merge": {
+      "source": "coleam00/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/coleam00/skills.git",
+      "skillPath": ".claude/skills/worktree-merge/SKILL.md",
+      "skillFolderHash": "150cb167cb6c0bd703e3ba5b05330aa7f9db9861",
+      "installedAt": "2026-09-18T01:51:42.987Z",
+      "updatedAt": "2026-09-18T01:51:42.987Z"
+    }
+  },
+  "dismissed": {}
+}

@@ -1,0 +1,1 @@
+/root/.agents/skills/opportunity-scan/SKILL.md

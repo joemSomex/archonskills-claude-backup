@@ -1,0 +1,1 @@
+/root/.claude/skills/gstack/.hermes/skills/gstack-qa/SKILL.md

@@ -1,0 +1,3550 @@
+{
+  "repository": "https://github.com/msitarzewski/agency-agents",
+  "commit": "ad9264e309bd5e5422c04784372d7841b1e5d604",
+  "license": "MIT",
+  "copyright": "Copyright (c) 2025 AgentLand Contributors",
+  "scope": "All tracked working-tree source files, excluding .git; no upstream scripts executed.",
+  "file_count": 362,
+  "agent_count": 279,
+  "folder_counts": {
+    ".": 9,
+    ".github": 2,
+    ".github/ISSUE_TEMPLATE": 2,
+    ".github/workflows": 6,
+    "academic": 6,
+    "design": 10,
+    "engineering": 64,
+    "examples": 6,
+    "finance": 5,
+    "game-development": 6,
+    "game-development/blender": 1,
+    "game-development/godot": 3,
+    "game-development/roblox-studio": 3,
+    "game-development/unity": 4,
+    "game-development/unreal-engine": 4,
+    "gis": 13,
+    "healthcare": 3,
+    "integrations": 1,
+    "integrations/aider": 1,
+    "integrations/antigravity": 1,
+    "integrations/claude-code": 1,
+    "integrations/codex": 1,
+    "integrations/cursor": 1,
+    "integrations/gemini-cli": 1,
+    "integrations/github-copilot": 1,
+    "integrations/hermes": 1,
+    "integrations/kimi": 1,
+    "integrations/mcp-memory": 3,
+    "integrations/openclaw": 1,
+    "integrations/opencode": 1,
+    "integrations/qwen": 1,
+    "integrations/vibe": 1,
+    "integrations/windsurf": 1,
+    "integrations/zcode": 1,
+    "marketing": 36,
+    "paid-media": 7,
+    "product": 5,
+    "project-management": 7,
+    "research": 1,
+    "sales": 9,
+    "scripts": 19,
+    "scripts/i18n": 3,
+    "security": 12,
+    "spatial-computing": 6,
+    "specialized": 59,
+    "strategy": 4,
+    "strategy/coordination": 2,
+    "strategy/playbooks": 7,
+    "strategy/runbooks": 4,
+    "support": 6,
+    "testing": 9
+  },
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 121,
+      "sha256": "d9ea08aefa78eba98874b32c9fb7cfce75aa4c264af23d29a6759cfb628b4a66"
+    },
+    {
+      "path": ".github/FUNDING.yml",
+      "bytes": 21,
+      "sha256": "2b837639535c88caaaeae8d2fa6c367ab7b17578146b04e5e77c255811b8711b"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/bug-report.yml",
+      "bytes": 713,
+      "sha256": "e3eb8155f9c3de4dbfd6ce4a419eef76f67b67237ddd446ef5fea804d6958389"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/new-agent-request.yml",
+      "bytes": 1082,
+      "sha256": "3e0f5fb285d7f0f604b33c8f879252e9fe7e28b61fc24804fc1fcd5b37805385"
+    },
+    {
+      "path": ".github/PULL_REQUEST_TEMPLATE.md",
+      "bytes": 449,
+      "sha256": "4ca121e44adfa5ea1ed78076dc337fc097324ce91da2e282407d3de8e97cb029"
+    },
+    {
+      "path": ".github/workflows/check-divisions.yml",
+      "bytes": 530,
+      "sha256": "9480640f35bf3b8cd1c3d46874443995187e118ca0858c1f621e731627671ef6"
+    },
+    {
+      "path": ".github/workflows/check-hermes-config-rewrite.yml",
+      "bytes": 830,
+      "sha256": "557d1c76937dcb2389d8955169960d2f71dc93f25ceaf2f8b976a74d88937672"
+    },
+    {
+      "path": ".github/workflows/check-runbooks.yml",
+      "bytes": 592,
+      "sha256": "b27b90212360371404f40fbe24cea361c92588d04b98a9aba359daaed159400f"
+    },
+    {
+      "path": ".github/workflows/check-tools.yml",
+      "bytes": 1218,
+      "sha256": "9f35c32b8d9b87718426c1006a67c266833896bba0e18284170b0fc364d53008"
+    },
+    {
+      "path": ".github/workflows/lint-agents.yml",
+      "bytes": 2081,
+      "sha256": "7bbb80994f37884f06fcc8be4b51180933f1db4c5af638baecf36f833758ac87"
+    },
+    {
+      "path": ".github/workflows/test-install.yml",
+      "bytes": 843,
+      "sha256": "ebd310a4ae139e6b8ddb8741a9158414ae087ada9d968e43840c15421100f122"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 1436,
+      "sha256": "13b760eae462b0d512132efccbe0484363d3af9e6465382184ef3684f50c9673"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "bytes": 20881,
+      "sha256": "3c6fd0849c3f4acda5fcbcdfe590b8ae51349c6f573ce4000eb7ff31f84dd592"
+    },
+    {
+      "path": "CONTRIBUTING_zh-CN.md",
+      "bytes": 9677,
+      "sha256": "e16fcef34292c79f0c3034f1bf399863cb821dbdd87be742653c6cfdfc93f937"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1079,
+      "sha256": "9a45258434d5cedf0af73c9ad4771373701225038d246c49219026c33677f66f"
+    },
+    {
+      "path": "README.md",
+      "bytes": 83994,
+      "sha256": "739721c84435430dff6636c96fd10f59e1b2559c588b29166409630eb93b9acd"
+    },
+    {
+      "path": "SECURITY.md",
+      "bytes": 1066,
+      "sha256": "fd8e0ed5ad8f7e8e48ef17a4a80163a1763306cebeea605d869754165ee818dc"
+    },
+    {
+      "path": "academic/academic-anthropologist.md",
+      "bytes": 7878,
+      "sha256": "2668602164abf574cb4e432a0cd40727a943de0b59864abb5b73956a0eb26146"
+    },
+    {
+      "path": "academic/academic-geographer.md",
+      "bytes": 7740,
+      "sha256": "4acf4a6ee6ae96ce562323c8ce508db9f2eb0ece016fc754214be9587c071c0d"
+    },
+    {
+      "path": "academic/academic-historian.md",
+      "bytes": 7272,
+      "sha256": "2c59c10dceec033d9e92990b6156553471b7b94dd8e0c64fe27148f612be8955"
+    },
+    {
+      "path": "academic/academic-narratologist.md",
+      "bytes": 6797,
+      "sha256": "12d7a6fa6134c014e3734f8203f0b8634e627cffe5985fa1b69d25c4a69094b5"
+    },
+    {
+      "path": "academic/academic-psychologist.md",
+      "bytes": 7833,
+      "sha256": "193b7dba6d04346d15ee21753fd1cdb69dc1a21a5ac30d5d62726654820a5633"
+    },
+    {
+      "path": "academic/academic-statistician.md",
+      "bytes": 11508,
+      "sha256": "4b023595c59becec2026cab38807f835e48e280885f9cd381bab7845cbf4280c"
+    },
+    {
+      "path": "design/design-brand-guardian.md",
+      "bytes": 11641,
+      "sha256": "d1d5c78af85d4d35be94b93d5c011d17e3cf5dcb69b2037a3ebf3059803b893e"
+    },
+    {
+      "path": "design/design-image-prompt-engineer.md",
+      "bytes": 11160,
+      "sha256": "63a564d01dc5812c494cd8aa034ce1217031d8fe8b3eca1323316879769ff13f"
+    },
+    {
+      "path": "design/design-inclusive-visuals-specialist.md",
+      "bytes": 6799,
+      "sha256": "b1c535f1b18bc64865eee0b4a1b58d019e92762e5dd995e30417f63d86b95583"
+    },
+    {
+      "path": "design/design-persona-walkthrough.md",
+      "bytes": 16759,
+      "sha256": "8def8c73df7f79a61704e7353b85b915afa31c4a9fa1100fbb9220c50d6a1c55"
+    },
+    {
+      "path": "design/design-ui-designer.md",
+      "bytes": 13339,
+      "sha256": "3130768958d3b3d38178aaec91cf789e01ecca4984c8674d4aaea446b6cba240"
+    },
+    {
+      "path": "design/design-ui-finish-gate-reviewer.md",
+      "bytes": 8988,
+      "sha256": "cc2cc803782a791797b63530bfd46ee676148f05bc1db7c614c8860f9798bc86"
+    },
+    {
+      "path": "design/design-ux-architect.md",
+      "bytes": 15758,
+      "sha256": "151f7386682b77a6c1455374d427237a3d46eadfa1248964466b0412848f7117"
+    },
+    {
+      "path": "design/design-ux-researcher.md",
+      "bytes": 13030,
+      "sha256": "25f59c4333df2d0f1170ff7a1b11ea8415fd3d0ef80c3e0985209aeb4018680f"
+    },
+    {
+      "path": "design/design-visual-storyteller.md",
+      "bytes": 7416,
+      "sha256": "f4950c9d65b5d105ec48ebce4b7621154e3bf89871dbbf07af245476930eb4dd"
+    },
+    {
+      "path": "design/design-whimsy-injector.md",
+      "bytes": 15851,
+      "sha256": "d517c959118a25ce8514c086603d5990f70a901832af8ac29fece80d9e445ff0"
+    },
+    {
+      "path": "divisions.json",
+      "bytes": 2514,
+      "sha256": "a85d4ceeabe671051559e7703dfca074bf7a259ba26b61fb5e14ed36d54ae051"
+    },
+    {
+      "path": "engineering/engineering-ai-data-remediation-engineer.md",
+      "bytes": 10691,
+      "sha256": "5aa193052f15283493eeb9749bc346d09c02407f26760fe0d08f8bd9242ede79"
+    },
+    {
+      "path": "engineering/engineering-ai-engineer.md",
+      "bytes": 7383,
+      "sha256": "f25a69aad25acd35dd1d62e33d5a814f4a26b075d90f968b4d778452e53924d8"
+    },
+    {
+      "path": "engineering/engineering-api-platform-engineer.md",
+      "bytes": 13584,
+      "sha256": "278798c42d7a7cf4f42d3973795765403105ce60d518d647abfdaa522d862d8e"
+    },
+    {
+      "path": "engineering/engineering-ats-validator-architect.md",
+      "bytes": 28170,
+      "sha256": "b2514fc107f8f8287401969dbf4030e70c9b4484162d5025d538af1c2c63882a"
+    },
+    {
+      "path": "engineering/engineering-autonomous-optimization-architect.md",
+      "bytes": 7953,
+      "sha256": "6904f627eff4a2035ecc245b3ee65f326b484083a08c3e284ad4106bdc57d2d8"
+    },
+    {
+      "path": "engineering/engineering-backend-architect.md",
+      "bytes": 10928,
+      "sha256": "18f237d054fa91f72a5dcda46a52ddcf7354ea3a3e39e0247629f4ea0f446917"
+    },
+    {
+      "path": "engineering/engineering-china-network-engineer.md",
+      "bytes": 17646,
+      "sha256": "d375db645d1192fb8be3dd4e40de005d55edd33557abf909a4a4135257e03788"
+    },
+    {
+      "path": "engineering/engineering-cms-developer.md",
+      "bytes": 19520,
+      "sha256": "e072ac6e3d485483818880846b145c85b5224045a68c45dddc4e087940d57ba4"
+    },
+    {
+      "path": "engineering/engineering-code-reviewer.md",
+      "bytes": 3076,
+      "sha256": "7509fcc3ea1dda46511b2801996305bf3d4a125576f9655ff0b63df25602f446"
+    },
+    {
+      "path": "engineering/engineering-codebase-onboarding-engineer.md",
+      "bytes": 9569,
+      "sha256": "07aa548b45887c3ad768efad5fdbf6e57bea639df4f1b74c7e383142f454e2a1"
+    },
+    {
+      "path": "engineering/engineering-data-engineer.md",
+      "bytes": 14687,
+      "sha256": "d46e5ebdb81f5f3e7e0296fa8355583f13693e47cce0e1c8e834c6ff956e861a"
+    },
+    {
+      "path": "engineering/engineering-data-visualization-engineer.md",
+      "bytes": 13797,
+      "sha256": "0f5b5391f82aa98ca489768d31024f7a5f840a8ee5fe968fe1499ed538948ce5"
+    },
+    {
+      "path": "engineering/engineering-database-optimizer.md",
+      "bytes": 5533,
+      "sha256": "a58860b44590ed643ca02b6faf738b889c99bd889df78c695f519b5288ea018d"
+    },
+    {
+      "path": "engineering/engineering-database-reliability-engineer.md",
+      "bytes": 14392,
+      "sha256": "a25e100eb5ada1b26a9b01ce82822c967dfabc09772bd4e3803dfc0a4382a247"
+    },
+    {
+      "path": "engineering/engineering-desktop-app-engineer.md",
+      "bytes": 14557,
+      "sha256": "01b103bae349f127726e2a37a06502aad9be64793e72331c5ff01db9b8fffd55"
+    },
+    {
+      "path": "engineering/engineering-developer-tooling-engineer.md",
+      "bytes": 13041,
+      "sha256": "948d44fddfa47e2363236de150f9dc948edd79599609a92af8bf6b72b5b9b609"
+    },
+    {
+      "path": "engineering/engineering-devops-automator.md",
+      "bytes": 12879,
+      "sha256": "5d3c3d12c605a8c07fadfd109697249f98bc8e3d1901247c390641ef9fb013e8"
+    },
+    {
+      "path": "engineering/engineering-drupal-performance.md",
+      "bytes": 23523,
+      "sha256": "544942f460b76e15c2cd6e9a820b4048e3344186db3a7123d99adfbdf6c41d09"
+    },
+    {
+      "path": "engineering/engineering-drupal-shopping-cart.md",
+      "bytes": 21461,
+      "sha256": "cbd06e6d27363029dbbc6638297d47608c78d3b93b3e4a6ff52d16757199ee50"
+    },
+    {
+      "path": "engineering/engineering-email-intelligence-engineer.md",
+      "bytes": 16550,
+      "sha256": "bef84b77b2ce3f2cbe29faa72ec0d58576bbcad390ee2c1bdcccaca38b4b125f"
+    },
+    {
+      "path": "engineering/engineering-embedded-firmware-engineer.md",
+      "bytes": 6562,
+      "sha256": "8453982bc1ae4b5c43244fd1b702279b5a7a00ecf6d471b9a75a7a01433e5327"
+    },
+    {
+      "path": "engineering/engineering-feishu-integration-developer.md",
+      "bytes": 21127,
+      "sha256": "836667ab301da70a2da5d6241c44f2134fe059f839b4efeac7f6ceece632b76a"
+    },
+    {
+      "path": "engineering/engineering-filament-optimization-specialist.md",
+      "bytes": 14269,
+      "sha256": "428f6a6be2318a123678b2838600e33c5e193afecbe8f828fa97c779eaf85fbf"
+    },
+    {
+      "path": "engineering/engineering-finops-engineer.md",
+      "bytes": 12918,
+      "sha256": "54134b5d3e3bf59db0de7a42b1246ea3a6ad771133d946670f4211e424c33aba"
+    },
+    {
+      "path": "engineering/engineering-frontend-developer.md",
+      "bytes": 9283,
+      "sha256": "35961da50f408e00eb6189c87825ac5e62e6b1bf9de3dee198a95536c6d2619e"
+    },
+    {
+      "path": "engineering/engineering-gaussdb-expert.md",
+      "bytes": 15613,
+      "sha256": "db3e2fbd178e4df20885c5d5f27b0a552061c7736374f9977807fc374ff99e07"
+    },
+    {
+      "path": "engineering/engineering-git-workflow-master.md",
+      "bytes": 3342,
+      "sha256": "b2ab151fa5dc31035ba5f40f9b104f61cc8ef45dab8a8249ad15675141550d77"
+    },
+    {
+      "path": "engineering/engineering-i18n-engineer.md",
+      "bytes": 12728,
+      "sha256": "913c72b65eca4af13d2edadf4b53acff63df91715c7c446a63cea75a9a14f007"
+    },
+    {
+      "path": "engineering/engineering-identity-access-engineer.md",
+      "bytes": 14866,
+      "sha256": "f37ea9df4e87d468fe2e34e29fc78fc508e717ae69d5bf4187a09375e842eedf"
+    },
+    {
+      "path": "engineering/engineering-incident-response-commander.md",
+      "bytes": 21121,
+      "sha256": "1df5c8f558f99a8d3e6455cf6a6badbd1e0c2b2cccb02682843ee7ca11a13929"
+    },
+    {
+      "path": "engineering/engineering-iot-fleet-engineer.md",
+      "bytes": 13587,
+      "sha256": "90cfb3b713d0cd11e9529f6158ed72ac99fe1d945a838d9d740009a51e9d3421"
+    },
+    {
+      "path": "engineering/engineering-it-service-manager.md",
+      "bytes": 27663,
+      "sha256": "26c23ef51726da346dcdf5b9eb004e7c03cfae4ad6a995ed46a26ec6cd5520e6"
+    },
+    {
+      "path": "engineering/engineering-knowledge-graph-engineer.md",
+      "bytes": 23440,
+      "sha256": "4d6eff6c2dac6b2950cc66a2708f3ec29ef5bb776cfa209858e8dc1a4b9a76b3"
+    },
+    {
+      "path": "engineering/engineering-llm-post-training-engineer.md",
+      "bytes": 10947,
+      "sha256": "aa697dc1c0eb402551b9f6764a89938c8787c9628760b74065d3e383299a980a"
+    },
+    {
+      "path": "engineering/engineering-minimal-change-engineer.md",
+      "bytes": 11231,
+      "sha256": "9999cc74e7b3936af892ef2c2793d105bb92f6c47789aa23db6df92bf68b45e5"
+    },
+    {
+      "path": "engineering/engineering-mobile-app-builder.md",
+      "bytes": 17035,
+      "sha256": "1a3e043f806b0b7c071d58b2ee3ab3c58c8342e2727c1ca9e6e5175f86986caf"
+    },
+    {
+      "path": "engineering/engineering-mobile-release-engineer.md",
+      "bytes": 13642,
+      "sha256": "9ec73eb4effdefa4858b444d29bbd66b57e717c1d4cab39f53adcb21c07ca9a4"
+    },
+    {
+      "path": "engineering/engineering-multi-agent-systems-architect.md",
+      "bytes": 29301,
+      "sha256": "d93dd20fef67bf85a537ba0f869fad1a17d0e589f20899d1bbe1f095a7bcb91b"
+    },
+    {
+      "path": "engineering/engineering-network-engineer.md",
+      "bytes": 13365,
+      "sha256": "d4c65a148af24cec08e14ab2bee3a0a3699cc966c8d170eea196f00df3e87d98"
+    },
+    {
+      "path": "engineering/engineering-orgscript-engineer.md",
+      "bytes": 5611,
+      "sha256": "f8426369743ff0086e32cb9facfc3935488d99a1c2de92961917f9b27d401427"
+    },
+    {
+      "path": "engineering/engineering-payments-billing-engineer.md",
+      "bytes": 12574,
+      "sha256": "b07c4e97ee1c23aec7fdacc79ffd39a0fcee73fef46700f82970be240dad9f5e"
+    },
+    {
+      "path": "engineering/engineering-pdf-engine-architect.md",
+      "bytes": 31446,
+      "sha256": "8ca4ccb119fdb0d5f20f385d72b45d14e941a11073b95cedba254e0e74869dc9"
+    },
+    {
+      "path": "engineering/engineering-platform-engineer.md",
+      "bytes": 11688,
+      "sha256": "0736a0c476ff46e16e33b36ec143352107b82d69b3501bcdaefe22feee252652"
+    },
+    {
+      "path": "engineering/engineering-privacy-engineer.md",
+      "bytes": 14229,
+      "sha256": "0d00d2f0d3008a55000eb01f13adac54f40daf471d240a7c073477efe92376a6"
+    },
+    {
+      "path": "engineering/engineering-prompt-engineer.md",
+      "bytes": 9477,
+      "sha256": "625b066e01fca23222b71331833f7851941a6ba800857481ead4ea2420d40081"
+    },
+    {
+      "path": "engineering/engineering-rag-pipeline-engineer.md",
+      "bytes": 18250,
+      "sha256": "a87135cd8a852aeec3da7edf00d2a019cbe30ee9cd9394ea00bd62a4668ca8c7"
+    },
+    {
+      "path": "engineering/engineering-rapid-prototyper.md",
+      "bytes": 15492,
+      "sha256": "327598e2cee41b78866720e20ee76d84e674b4a95ed92773b40c942153cba88a"
+    },
+    {
+      "path": "engineering/engineering-realtime-collaboration-engineer.md",
+      "bytes": 14247,
+      "sha256": "08ab1a6a421a435fd5fffa9f03720566bd95fcda17c06eeff6e056d482e96a2a"
+    },
+    {
+      "path": "engineering/engineering-rust-refactoring-specialist.md",
+      "bytes": 14863,
+      "sha256": "06ca53dbd12694560bf01feb94cbbd8c428e4abe6ac92c8a72eeb277ce179a78"
+    },
+    {
+      "path": "engineering/engineering-search-relevance-engineer.md",
+      "bytes": 15023,
+      "sha256": "5562f37cbb561dce6dac47b1dd4e75cb7bde6c0c48045198db346ba7d6d790af"
+    },
+    {
+      "path": "engineering/engineering-section-508-specialist.md",
+      "bytes": 26617,
+      "sha256": "d4fb7139c69e270fd626cfc1410b7412bd864d010903b459f9eb90c8359809f9"
+    },
+    {
+      "path": "engineering/engineering-senior-developer.md",
+      "bytes": 6252,
+      "sha256": "63b8da6c12b95f54bbdbcd0666abeb9519a98b35395233e1b1d8e5c102c82599"
+    },
+    {
+      "path": "engineering/engineering-software-architect.md",
+      "bytes": 6485,
+      "sha256": "b85121691776147bacde26673e68fbbacd6a7f0816d1ca8e203c264d25ce1d30"
+    },
+    {
+      "path": "engineering/engineering-solidity-smart-contract-engineer.md",
+      "bytes": 21719,
+      "sha256": "9e6f96fb29cc71faf2638bce3a5aa06ff15b4c674ca4ec039e5e4515a7844839"
+    },
+    {
+      "path": "engineering/engineering-sre.md",
+      "bytes": 3882,
+      "sha256": "85b305e495506913f50c7cb28de42444a85fbc4898cd3ad4e1dc9b358b4ab5e8"
+    },
+    {
+      "path": "engineering/engineering-technical-writer.md",
+      "bytes": 14210,
+      "sha256": "70c8a29cddf7de486b41185693b4961af3fcccbc632b8df13ec43572859edc43"
+    },
+    {
+      "path": "engineering/engineering-universal-document-compiler.md",
+      "bytes": 18717,
+      "sha256": "53c755d4ea1dfb083fd94b8d3cb16f8a8584e04adabdb3350b46f8ec1280119d"
+    },
+    {
+      "path": "engineering/engineering-uswds-developer.md",
+      "bytes": 24213,
+      "sha256": "d3c46e2340d50a97cec536edd985abd2fe6b5f012c3c02e5e9187cd061b27ca7"
+    },
+    {
+      "path": "engineering/engineering-video-streaming-engineer.md",
+      "bytes": 12863,
+      "sha256": "a07dca52d7882ac55af9128fffd66c8a753d4c44170da19abffc51710dea9a11"
+    },
+    {
+      "path": "engineering/engineering-voice-ai-integration-engineer.md",
+      "bytes": 27288,
+      "sha256": "de80469db772d96f3d6d55d3e040360e3a19b45197b2dbd446cb3fcd5a4645f6"
+    },
+    {
+      "path": "engineering/engineering-webassembly-engineer.md",
+      "bytes": 13110,
+      "sha256": "013afbdab6688dfd278815e0ded8f2ce38580de2ee7e3b09d5974ca2f72c0b44"
+    },
+    {
+      "path": "engineering/engineering-wechat-mini-program-developer.md",
+      "bytes": 15566,
+      "sha256": "dcda22b2d93c1bbfb5d29a78bba031ad40552af54713d89c49ece2d70d08a02c"
+    },
+    {
+      "path": "engineering/engineering-wordpress-performance.md",
+      "bytes": 24292,
+      "sha256": "58ed429ace903aac3a2c9e190ecae5b61966b7330e9e51ea66aa03eb4112854f"
+    },
+    {
+      "path": "engineering/engineering-wordpress-shopping-cart.md",
+      "bytes": 22177,
+      "sha256": "a2ef45cebe1cf03175b16ef48a2a01acdd2b7e8eda289114f568ebe0f1ae4112"
+    },
+    {
+      "path": "examples/README.md",
+      "bytes": 2402,
+      "sha256": "4337886744e068c62fe24795c60aed43e82f13c56526646445c48e02b3cab3f9"
+    },
+    {
+      "path": "examples/nexus-spatial-discovery.md",
+      "bytes": 40664,
+      "sha256": "828bd93b1fbb2218e5eee049c618448be2e081cd46983e928dbecd7afcbcc2df"
+    },
+    {
+      "path": "examples/workflow-book-chapter.md",
+      "bytes": 2101,
+      "sha256": "a0382f06c7536579be480c737d56257c3247b55fbacfc6fdc219f870053a8f3f"
+    },
+    {
+      "path": "examples/workflow-landing-page.md",
+      "bytes": 3389,
+      "sha256": "05942259ec3fa56d32dc882e27646c75d69bdd8cb8333212ac9589eaba729bac"
+    },
+    {
+      "path": "examples/workflow-startup-mvp.md",
+      "bytes": 4594,
+      "sha256": "e540cc1c11e16ea5726dbfe2122e8832e020b865f957fdeb44a2216ab5873308"
+    },
+    {
+      "path": "examples/workflow-with-memory.md",
+      "bytes": 9090,
+      "sha256": "12d75f810271871ea4aec14feb3705ea51fb0bb2519ef1e651c68777475c2453"
+    },
+    {
+      "path": "finance/finance-bookkeeper-controller.md",
+      "bytes": 15247,
+      "sha256": "5510a24274d8f7897ca3f4df2c3318262138a2c82827b37dd2489dcfca8de75a"
+    },
+    {
+      "path": "finance/finance-financial-analyst.md",
+      "bytes": 13448,
+      "sha256": "3547907cd52e6108a4c666fd576d5e42715ac337586a3958a722deee4c1f77bb"
+    },
+    {
+      "path": "finance/finance-fpa-analyst.md",
+      "bytes": 16614,
+      "sha256": "5fa9137c80e0b91fbe62815e7981d7b6a2ca5bafe43013c56d1b847a3c963141"
+    },
+    {
+      "path": "finance/finance-investment-researcher.md",
+      "bytes": 15678,
+      "sha256": "4851318dcd82fdfd68403656450761b439a01c6071b8755e49dbd215149bc2c1"
+    },
+    {
+      "path": "finance/finance-tax-strategist.md",
+      "bytes": 13731,
+      "sha256": "37ea1a246e1290f473ef59abe1bba9ecc4f346c9867522fefcc11d37cd0265ab"
+    },
+    {
+      "path": "game-development/blender/blender-addon-engineer.md",
+      "bytes": 10954,
+      "sha256": "f6bf42625647999d9ebc606c6e7c9c57a8c9a6d20c65a9e96918dbfbb063dcd9"
+    },
+    {
+      "path": "game-development/economy-designer.md",
+      "bytes": 8844,
+      "sha256": "a6767b808ef0c155d85f5569e9e53285c97dce4c9df25aa24a09a65246967998"
+    },
+    {
+      "path": "game-development/game-audio-engineer.md",
+      "bytes": 12298,
+      "sha256": "d7a2eebd8c20021e543222bc962cb5a111924c5438e9f771a6db42d74cd19232"
+    },
+    {
+      "path": "game-development/game-designer.md",
+      "bytes": 8433,
+      "sha256": "203c4d7f0358a628ea21e3b9c16980f28003bd035b5cfd41a2daec04f6b84e5a"
+    },
+    {
+      "path": "game-development/godot/godot-gameplay-scripter.md",
+      "bytes": 15538,
+      "sha256": "0cce0fc75b3a7eeec7221f4a6ac0ff7876fb2468cdb8fab5931951c26f18d539"
+    },
+    {
+      "path": "game-development/godot/godot-multiplayer-engineer.md",
+      "bytes": 13918,
+      "sha256": "d72e7798c03e6fa27b3b38147857c10c50a9b1b86ce4c3865f473ea5c860f137"
+    },
+    {
+      "path": "game-development/godot/godot-shader-developer.md",
+      "bytes": 13392,
+      "sha256": "1362da1ba227aea6dadf5373455bdbb989f10f172731b47243cedc52db406415"
+    },
+    {
+      "path": "game-development/level-designer.md",
+      "bytes": 10340,
+      "sha256": "79c1d41b7dfc477f6f364ba8b6dec02dc0c081235fe8f8b61c8b062b5dc3b344"
+    },
+    {
+      "path": "game-development/narrative-designer.md",
+      "bytes": 13160,
+      "sha256": "7a5489c7b0502aa167030018137e3f349d2c32505c0ad7b9ec1de066a9a93f0d"
+    },
+    {
+      "path": "game-development/roblox-studio/roblox-avatar-creator.md",
+      "bytes": 14116,
+      "sha256": "6bdb5af6fe5c390da43f7bdcc4d73b6fbdef2a8b19bd6d30bf1fef6b4258f16a"
+    },
+    {
+      "path": "game-development/roblox-studio/roblox-experience-designer.md",
+      "bytes": 14863,
+      "sha256": "569f75a1b6448a30159d3ca7323eb590bc45e2355e3ee89a733d45a5d8986793"
+    },
+    {
+      "path": "game-development/roblox-studio/roblox-systems-scripter.md",
+      "bytes": 15204,
+      "sha256": "6d7e11b07aba99eecc45a8b031c5b8618f96f36699a5e1d3409d05323d7feab6"
+    },
+    {
+      "path": "game-development/technical-artist.md",
+      "bytes": 11220,
+      "sha256": "8a669de1fa3455c456092feefbf945d3b0ae18072b873d002d190b16ed1f678d"
+    },
+    {
+      "path": "game-development/unity/unity-architect.md",
+      "bytes": 12244,
+      "sha256": "15502fbcd46fcd7559bcd85d15b512317ceed27ffb90fc54e79f3c32bf682c1a"
+    },
+    {
+      "path": "game-development/unity/unity-editor-tool-developer.md",
+      "bytes": 14889,
+      "sha256": "8b368fe6ee0a4c0c71d10324cd8de4378c7bdaae9bc871a5561199b4a802b5dc"
+    },
+    {
+      "path": "game-development/unity/unity-multiplayer-engineer.md",
+      "bytes": 14947,
+      "sha256": "61561d24650216ef1907979e1b25e2f77e33537ad2694e8264a1fcdeeeed3a89"
+    },
+    {
+      "path": "game-development/unity/unity-shader-graph-artist.md",
+      "bytes": 13080,
+      "sha256": "3e2033f179a95da207627d1d7521395d434ac76c30a3b20f08f90a05b7405c52"
+    },
+    {
+      "path": "game-development/unreal-engine/unreal-multiplayer-architect.md",
+      "bytes": 14039,
+      "sha256": "666a4d07a6cfaf9d7fb2278dd8eb9de832599d4bb6f65743f305eb6a6546c044"
+    },
+    {
+      "path": "game-development/unreal-engine/unreal-systems-engineer.md",
+      "bytes": 15507,
+      "sha256": "ca34c6be64ee4f60f926a823bee626ab92dced93042a730f99f6fe08c4b7636f"
+    },
+    {
+      "path": "game-development/unreal-engine/unreal-technical-artist.md",
+      "bytes": 11854,
+      "sha256": "54bdd46bc872ba21fbcf7e02492c9f5bef82a6d3a35ee3de757d3b678edd6b82"
+    },
+    {
+      "path": "game-development/unreal-engine/unreal-world-builder.md",
+      "bytes": 14011,
+      "sha256": "7d2bf21ac77089b99f1fa36f6102fa938c9014c3107e9dcb9069b896e2b4001e"
+    },
+    {
+      "path": "gis/gis-3d-scene-developer.md",
+      "bytes": 5628,
+      "sha256": "56f753732d35e54f0527a2cbdc60c73c9215463d4704cc66242e3bbaa1c744e7"
+    },
+    {
+      "path": "gis/gis-analyst.md",
+      "bytes": 4487,
+      "sha256": "db86d14315eb0ee9fc4cc4699c3844b40f2004a988370f32fe55dadfac2c40a7"
+    },
+    {
+      "path": "gis/gis-bim-specialist.md",
+      "bytes": 5594,
+      "sha256": "724609ec55d1b83c88672ada351763ac6c219adca2d36faea0790bdda953e567"
+    },
+    {
+      "path": "gis/gis-cartography-designer.md",
+      "bytes": 6968,
+      "sha256": "2223d403dfdd863d42c0aa29c912cba0c91ffdc9ad8192630f7b08e4b4c7e804"
+    },
+    {
+      "path": "gis/gis-drone-reality-mapping.md",
+      "bytes": 6007,
+      "sha256": "2e670d99f491e1b4b76d4a5a91e33eb7a5a9ddfd9e67dda1d3c24cd57faea1f2"
+    },
+    {
+      "path": "gis/gis-geoai-ml-engineer.md",
+      "bytes": 4947,
+      "sha256": "6323600aecb9a1867a90158b10fa066280d1ffc77411c2b453248d125a505448"
+    },
+    {
+      "path": "gis/gis-geoprocessing-specialist.md",
+      "bytes": 4817,
+      "sha256": "28efb48c3c4312ac7a662c8f2da69cc013d74e5d59880a04a71a40783e0ba424"
+    },
+    {
+      "path": "gis/gis-qa-engineer.md",
+      "bytes": 5400,
+      "sha256": "f7247c7df478d963db720562af361394454c20b6af3fc78a02791ec6624bfc38"
+    },
+    {
+      "path": "gis/gis-solution-engineer.md",
+      "bytes": 4591,
+      "sha256": "a871691ed7e305047281238eb225f64df4b03274fe82278879788de3c839f054"
+    },
+    {
+      "path": "gis/gis-spatial-data-engineer.md",
+      "bytes": 4949,
+      "sha256": "b8f0e43cee6538aa7880168335ceac8e1a4700965b49f3b6c227b0f13d399e5f"
+    },
+    {
+      "path": "gis/gis-spatial-data-scientist.md",
+      "bytes": 5840,
+      "sha256": "03254a9fa2a9522800eddf743b8305bc2d4b2093e233e6c9b593da6f0746c657"
+    },
+    {
+      "path": "gis/gis-technical-consultant.md",
+      "bytes": 4525,
+      "sha256": "f0228896fc57ea0b8fcf3c3fab188a6d4063ba6bf704aa93b0e46e27ba096736"
+    },
+    {
+      "path": "gis/gis-web-gis-developer.md",
+      "bytes": 5324,
+      "sha256": "dbf3ceea4bb8fdc2f2fc61bf96806adeb89f725c8d67a01cd103d256e56909a7"
+    },
+    {
+      "path": "healthcare/healthcare-clinical-evidence-agent.md",
+      "bytes": 10273,
+      "sha256": "5fd6223b0fb17c7625b2ca8ba9f1f6fb649560c074a39b0d72e22e984487a688"
+    },
+    {
+      "path": "healthcare/healthcare-innovation-strategist.md",
+      "bytes": 20366,
+      "sha256": "e1bd8f9f8c5ac7db333632d482e017c6086519eee310da6879db5c121129fbbd"
+    },
+    {
+      "path": "healthcare/healthcare-sovereign-health-systems-agent.md",
+      "bytes": 14891,
+      "sha256": "8e846a8643def597e351719853da63b4b6d9f0bf41978ac25e896750427989fa"
+    },
+    {
+      "path": "integrations/README.md",
+      "bytes": 6561,
+      "sha256": "964ec71d4970691bd2de6f288917ebb6b93b06d3ba2f3c3b7494ea9dd244fadf"
+    },
+    {
+      "path": "integrations/aider/README.md",
+      "bytes": 691,
+      "sha256": "26dc041627fb39709bfe9b258cbfb248434af200793a5e971e70e009089f5f64"
+    },
+    {
+      "path": "integrations/antigravity/README.md",
+      "bytes": 1092,
+      "sha256": "f097ccf5eb15751bed0d2f4646fdfbcac08a14cdf506e5b6a1f76be9df4f49e6"
+    },
+    {
+      "path": "integrations/claude-code/README.md",
+      "bytes": 712,
+      "sha256": "b37cfa2648c93b32f737904f98c5babb060355f985bd166e0738b908f1d7e4d9"
+    },
+    {
+      "path": "integrations/codex/README.md",
+      "bytes": 1715,
+      "sha256": "c558f8109a403dc80c137d90c3d4df41a72447fc259087540c28e502276bcf0d"
+    },
+    {
+      "path": "integrations/cursor/README.md",
+      "bytes": 729,
+      "sha256": "c59a7e8a40a6b79d79b857a5b0c8e19a965087463bedcc06e5abe673e5cc41a4"
+    },
+    {
+      "path": "integrations/gemini-cli/README.md",
+      "bytes": 805,
+      "sha256": "e5caea48879fc4ca55e59fc187c7c6e1f4966e183462e165a5e70b7cca198299"
+    },
+    {
+      "path": "integrations/github-copilot/README.md",
+      "bytes": 759,
+      "sha256": "81c59088b32258ba22ae553997f7b9e9c2d33268871ab914747ce5d1015ec7f4"
+    },
+    {
+      "path": "integrations/hermes/README.md",
+      "bytes": 3110,
+      "sha256": "13d7f0c896f90f23b27ee26e5e90eaae30d2fb7b04c7615d003daa9a775e5cc0"
+    },
+    {
+      "path": "integrations/kimi/README.md",
+      "bytes": 2027,
+      "sha256": "01aebb21981f1b340fa26c56ffd71abb698c93d487cd1244443e250896b9c514"
+    },
+    {
+      "path": "integrations/mcp-memory/README.md",
+      "bytes": 3760,
+      "sha256": "e3252682132b4aa6f95f17fb4888cf8722b8bd9c747af403e3d6651b1dd57cf4"
+    },
+    {
+      "path": "integrations/mcp-memory/backend-architect-with-memory.md",
+      "bytes": 10940,
+      "sha256": "961975de8bff54a089ddc9b86dd86e8f3ac1a9c37aff9c68aed0afd45bfb5eab"
+    },
+    {
+      "path": "integrations/mcp-memory/setup.sh",
+      "bytes": 2227,
+      "sha256": "7fd9166f7410f3708486b26301166728befacde39fc561a492f3ce6e7c529928"
+    },
+    {
+      "path": "integrations/openclaw/README.md",
+      "bytes": 697,
+      "sha256": "4a2a0d6fb6d2ec7a360d3e023ab5e333c3508e4a6d4312120e28eba1aef6d00a"
+    },
+    {
+      "path": "integrations/opencode/README.md",
+      "bytes": 1928,
+      "sha256": "73a4764708808b8e77dad0a72d2f326cc3bced5d107cb7a232ab515981a7514f"
+    },
+    {
+      "path": "integrations/qwen/README.md",
+      "bytes": 957,
+      "sha256": "486a95c5a8a66d09627bcb762da090f9285e5a1cc1d2e0e11f314689bbbbfb0f"
+    },
+    {
+      "path": "integrations/vibe/README.md",
+      "bytes": 2310,
+      "sha256": "d3077288f986f776810cf38254c896be3985eb9b297d80875887d69bf1e5e905"
+    },
+    {
+      "path": "integrations/windsurf/README.md",
+      "bytes": 510,
+      "sha256": "00d8863ed811f69fa50f12aa7db1253cea90507dcdd8f02485b70f84428c970a"
+    },
+    {
+      "path": "integrations/zcode/README.md",
+      "bytes": 922,
+      "sha256": "503cb2992048409efaebd4a2894182cea3f22d977a94229fe6431f5422beb6d7"
+    },
+    {
+      "path": "marketing/marketing-aeo-foundations.md",
+      "bytes": 15548,
+      "sha256": "b7ef7e1188c924833974bab5cc57f166a7eb6b681d63ccd22eb05c91c25a3c8b"
+    },
+    {
+      "path": "marketing/marketing-agentic-search-optimizer.md",
+      "bytes": 15702,
+      "sha256": "9e9cbbc763b3ad82f664d80ff9b7965ffadb225998a708f386f47aff7bcee87d"
+    },
+    {
+      "path": "marketing/marketing-ai-citation-strategist.md",
+      "bytes": 9414,
+      "sha256": "1d23c94aced61beb0e7a3151ad4c14ccb8205a95e48d4bc6c0fda6739c2e356d"
+    },
+    {
+      "path": "marketing/marketing-app-store-optimizer.md",
+      "bytes": 13087,
+      "sha256": "1987be72f8fd43ca694f9145cb0dbe37eabc5b1f04439425d7b59185db9263c9"
+    },
+    {
+      "path": "marketing/marketing-baidu-seo-specialist.md",
+      "bytes": 12968,
+      "sha256": "895a5e8440066ad0b8fa6fe79a91c7750d246a233b01bf7932584b74e9c5becb"
+    },
+    {
+      "path": "marketing/marketing-bilibili-content-strategist.md",
+      "bytes": 11647,
+      "sha256": "4268a7b51025967fbb4a80c0aeb5e4a80abaad9344f5dec164a8d1fb6ea62d06"
+    },
+    {
+      "path": "marketing/marketing-book-co-author.md",
+      "bytes": 5083,
+      "sha256": "09ea2fb4770180b072c92100be84b808367c40ef8a3f2119cfd059206aa4c717"
+    },
+    {
+      "path": "marketing/marketing-carousel-growth-engine.md",
+      "bytes": 14840,
+      "sha256": "04ef895d1d9f1dd539d7d03403616b892609a9fb8a844496b36bbecf7f3e57c7"
+    },
+    {
+      "path": "marketing/marketing-china-ecommerce-operator.md",
+      "bytes": 16791,
+      "sha256": "aa6743c68cce9dd00fd31751e9e3c2bea3987857cad332c68c7f68e683e98ba7"
+    },
+    {
+      "path": "marketing/marketing-china-market-localization-strategist.md",
+      "bytes": 16913,
+      "sha256": "7f6351003b0d6525c7f44870078252d4616287953e33dcace3c8b7da2e9e4325"
+    },
+    {
+      "path": "marketing/marketing-content-creator.md",
+      "bytes": 3140,
+      "sha256": "26ddce44f057068a3935c13d53becd3c57385fb47fcdcfdd891b80269070b3d5"
+    },
+    {
+      "path": "marketing/marketing-cross-border-ecommerce.md",
+      "bytes": 17415,
+      "sha256": "073dba84e8159c763c073fcf16f14d57685611c50555a7cde346df85a25c6293"
+    },
+    {
+      "path": "marketing/marketing-douyin-strategist.md",
+      "bytes": 6954,
+      "sha256": "87e3b91287fc97ad0dedb2f407a49d551b52b8513c8c61d06c1a93d837a7ae46"
+    },
+    {
+      "path": "marketing/marketing-email-strategist.md",
+      "bytes": 16198,
+      "sha256": "605c98066a4a1b5538d76476a11316247316ecb8da88beda68a21f2c8918f19b"
+    },
+    {
+      "path": "marketing/marketing-global-podcast-strategist.md",
+      "bytes": 21857,
+      "sha256": "98416e338db666c5cc1d6bfd37c35daffa00532010623fdb4a92ed7dce76a7aa"
+    },
+    {
+      "path": "marketing/marketing-growth-hacker.md",
+      "bytes": 3055,
+      "sha256": "6938b4fccaf4447e8c4b8fd071ce383a484cd3fb72583d87ac9835fa9741a7c7"
+    },
+    {
+      "path": "marketing/marketing-instagram-curator.md",
+      "bytes": 6563,
+      "sha256": "bab95910975a95409eca10e28c44cf762cd46f9d8b7d551bcb347ef0f39e68fd"
+    },
+    {
+      "path": "marketing/marketing-kuaishou-strategist.md",
+      "bytes": 13889,
+      "sha256": "d28742e505fa7bf6b39a88ccb6c2052ee5b4f569d17cebb81401fa8810a5ad49"
+    },
+    {
+      "path": "marketing/marketing-linkedin-content-creator.md",
+      "bytes": 13361,
+      "sha256": "344896bff33acf0b5107bbba3c84ee1fb310f3652b44c7e53553c934c735ed4f"
+    },
+    {
+      "path": "marketing/marketing-livestream-commerce-coach.md",
+      "bytes": 17166,
+      "sha256": "2d53e67cd70d825aeeddc9fd8b3b4a496887893b64df85c19903a2e7dbcb101f"
+    },
+    {
+      "path": "marketing/marketing-multi-platform-publisher.md",
+      "bytes": 14660,
+      "sha256": "adfc6c481c0c1e1c03df21a17ccb5fb4d4c56a84193249abb27cb3d44e4f1f5e"
+    },
+    {
+      "path": "marketing/marketing-podcast-strategist.md",
+      "bytes": 18038,
+      "sha256": "37fb126529afb4aa6f4409ca02307330d26b01f695dfbaade017d569169d936b"
+    },
+    {
+      "path": "marketing/marketing-pr-communications-manager.md",
+      "bytes": 24692,
+      "sha256": "e255a9ebf00a0db0dc12e72fe2a647195ceacf3c0e63f38788e077966d69b800"
+    },
+    {
+      "path": "marketing/marketing-private-domain-operator.md",
+      "bytes": 16176,
+      "sha256": "7d8372b562324d4cca9765ee95dfc9e31b52287306e8a8e1dafdd1ded10744d4"
+    },
+    {
+      "path": "marketing/marketing-reddit-community-builder.md",
+      "bytes": 7498,
+      "sha256": "03bb723420800754bcbf23994cba707c45123f7eefe3e1964188cf92ecc2b7d7"
+    },
+    {
+      "path": "marketing/marketing-seo-specialist.md",
+      "bytes": 21310,
+      "sha256": "cfa35eb3626230e1bc96ab3d434b42005b092fd4de8f517efe4a4b3f8fca60d0"
+    },
+    {
+      "path": "marketing/marketing-short-video-editing-coach.md",
+      "bytes": 30779,
+      "sha256": "4634520ab5e84b26bb6658f4f8c0f737ed7dd0b5c631b9211482a4cf4037ccbf"
+    },
+    {
+      "path": "marketing/marketing-social-media-strategist.md",
+      "bytes": 7414,
+      "sha256": "7c698a9280872666b2726b7ca305c6d4890fcb95a098c7c316beb9bf5fdb4274"
+    },
+    {
+      "path": "marketing/marketing-tiktok-strategist.md",
+      "bytes": 7559,
+      "sha256": "980ca09138f63ec2d934e111af4fa59d76a483bb23220a5f862aa4e9f0c9124a"
+    },
+    {
+      "path": "marketing/marketing-twitter-engager.md",
+      "bytes": 7760,
+      "sha256": "df58c7df04fb808d282d7a551c84e039bebdf4a17318a09b84fa285a118f54ab"
+    },
+    {
+      "path": "marketing/marketing-video-optimization-specialist.md",
+      "bytes": 6245,
+      "sha256": "9cf82969be8898c96192617becf5e38e8de6b79650c362d840c53d2c10f2e8b9"
+    },
+    {
+      "path": "marketing/marketing-wechat-official-account.md",
+      "bytes": 9832,
+      "sha256": "b74a42aff9b960cb2a221e362d2006865924ffece9e3514df81f1116322d2dce"
+    },
+    {
+      "path": "marketing/marketing-weibo-strategist.md",
+      "bytes": 15697,
+      "sha256": "7a79f1ec3894ab2e32cb0b0b729b77fda176defaffdb59f4feae29e56a767917"
+    },
+    {
+      "path": "marketing/marketing-x-twitter-intelligence-analyst.md",
+      "bytes": 9730,
+      "sha256": "e3dd504765e720f0dce0c5b68254ab65c440798edccfe6af6aafd0d3925d6dcb"
+    },
+    {
+      "path": "marketing/marketing-xiaohongshu-specialist.md",
+      "bytes": 9609,
+      "sha256": "c0afe07b77d7795ff6c5ea928360f0e545d51a6df231d42d6282168ace027154"
+    },
+    {
+      "path": "marketing/marketing-zhihu-strategist.md",
+      "bytes": 12006,
+      "sha256": "35f6fd759a67860f92d1ae5245bdf45f5eb524277453a28011899aeb450f5c4c"
+    },
+    {
+      "path": "paid-media/paid-media-auditor.md",
+      "bytes": 5557,
+      "sha256": "ce0346ba6a1b1652e350733cd3c124ab200e869c116fd85bcd0225d9764b0c56"
+    },
+    {
+      "path": "paid-media/paid-media-creative-strategist.md",
+      "bytes": 5162,
+      "sha256": "a24a303228178eb23d514fee63831cf7e1a3d7e5276c54ce5b58dce566700c41"
+    },
+    {
+      "path": "paid-media/paid-media-paid-social-strategist.md",
+      "bytes": 5451,
+      "sha256": "c8004c7f640dfef9c7c698f69c4c3712d063df06c8d391c809df92ba420af3db"
+    },
+    {
+      "path": "paid-media/paid-media-ppc-strategist.md",
+      "bytes": 4995,
+      "sha256": "3e172aa58ad7f9ea3bad947def69dfe26d66134c0aa88dca60e5aea4b8e25f67"
+    },
+    {
+      "path": "paid-media/paid-media-programmatic-buyer.md",
+      "bytes": 5282,
+      "sha256": "c2a54b847823906485bed6e704fc7a013e3d9cf1340045354aae9a9e0c96e7e1"
+    },
+    {
+      "path": "paid-media/paid-media-search-query-analyst.md",
+      "bytes": 4941,
+      "sha256": "bfd792539f93515118429f20c528fdaee320a172ca861fbc7ffb0209dffb723e"
+    },
+    {
+      "path": "paid-media/paid-media-tracking-specialist.md",
+      "bytes": 5326,
+      "sha256": "8caa9bbc8f5a8aaeb5ac156dbb27818f27e79512472053b824484496b0ca5b96"
+    },
+    {
+      "path": "product/product-behavioral-nudge-engine.md",
+      "bytes": 5335,
+      "sha256": "61f8a4a6a502ac0239c1a555d859051f0ecc83189f5f26048e2a448becf1c722"
+    },
+    {
+      "path": "product/product-feedback-synthesizer.md",
+      "bytes": 7271,
+      "sha256": "9f7bc1474bf8bf95c0573c20df5e3d8ae70c3b9659ec5ea7958cc4692b958270"
+    },
+    {
+      "path": "product/product-manager.md",
+      "bytes": 22687,
+      "sha256": "4a3fe4661e72e5173877bcba7c362392181774b20efc27ac1789171e98676c9d"
+    },
+    {
+      "path": "product/product-sprint-prioritizer.md",
+      "bytes": 9464,
+      "sha256": "da5233770ca85a3931b72d80b37dd09616a54fd24075c607667853acf65b000a"
+    },
+    {
+      "path": "product/product-trend-researcher.md",
+      "bytes": 10493,
+      "sha256": "69c8e54a9413ba411195e8d5274ee3cd88fa8cda18486db70c0f19ce374550a2"
+    },
+    {
+      "path": "project-management/project-management-experiment-tracker.md",
+      "bytes": 9455,
+      "sha256": "8f1410bfa054c8ac2eee3084b9bfdb3adb1e8a2f3e015c2876d0ecf07136c22f"
+    },
+    {
+      "path": "project-management/project-management-jira-workflow-steward.md",
+      "bytes": 13498,
+      "sha256": "e45c68423c1df0c20452916a5caafe7f41a97b56ca5af8872af966212ccbf389"
+    },
+    {
+      "path": "project-management/project-management-meeting-notes-specialist.md",
+      "bytes": 5616,
+      "sha256": "53a6efaa379b70cbc3276b44544ecf569789fffe892ba82eb68e8672407de91f"
+    },
+    {
+      "path": "project-management/project-management-project-shepherd.md",
+      "bytes": 9825,
+      "sha256": "0feb647366d78b61c1633b12e370ffb1dea52facb9d750ef6c952de1e996031c"
+    },
+    {
+      "path": "project-management/project-management-studio-operations.md",
+      "bytes": 9926,
+      "sha256": "8a2e5098d94688d191a128b6b2fdbbf3724bfcd2f4944766de6e25a0709f1517"
+    },
+    {
+      "path": "project-management/project-management-studio-producer.md",
+      "bytes": 10905,
+      "sha256": "d942feab0f50ea7b8e98cb73bdaf05226d2a6c53c6359c7380149f7545bb199d"
+    },
+    {
+      "path": "project-management/project-manager-senior.md",
+      "bytes": 5308,
+      "sha256": "70fb27cab174c97375293311211d5563c5ac257fba274450d1ca9c05b540ef2d"
+    },
+    {
+      "path": "research/research-synthesist.md",
+      "bytes": 10739,
+      "sha256": "3618b4a2a73523147731ae38ac4096cea0e83a7de930f55ea9ea6c69e3c77f30"
+    },
+    {
+      "path": "sales/sales-account-strategist.md",
+      "bytes": 14844,
+      "sha256": "dd9b2c37c41827286ef91d64057a5b0ff4795c2e57bd44695436feeb5a3f0423"
+    },
+    {
+      "path": "sales/sales-coach.md",
+      "bytes": 21009,
+      "sha256": "83f0be3daa7e78b24bfb41c7514d5f2936e9690c42ab7a0d8b5bc66a8b829f62"
+    },
+    {
+      "path": "sales/sales-deal-strategist.md",
+      "bytes": 13698,
+      "sha256": "fdd92f2ced04ad842e25fd9ebcc341372ce2630d4ec152a29c53f7b8535b855e"
+    },
+    {
+      "path": "sales/sales-discovery-coach.md",
+      "bytes": 13591,
+      "sha256": "8244a25e5b8785058b19ef92dca9e543a2c990e4dde1166d194f14514e3ae278"
+    },
+    {
+      "path": "sales/sales-engineer.md",
+      "bytes": 13948,
+      "sha256": "355014b3ecf52aaa1209a5d7b089e5e65c3aad7874eef513e60b6da79fec572e"
+    },
+    {
+      "path": "sales/sales-offer-lead-gen-strategist.md",
+      "bytes": 16126,
+      "sha256": "75a12987fb2a205ac029c2ebf43d1ae1a1502d1707ab4921923928489ff3778c"
+    },
+    {
+      "path": "sales/sales-outbound-strategist.md",
+      "bytes": 10744,
+      "sha256": "4f6c8abf9c936fbe5f4b66fc8044096e3dd5199f8f8ae9d0309ad92bc0653174"
+    },
+    {
+      "path": "sales/sales-pipeline-analyst.md",
+      "bytes": 18765,
+      "sha256": "d105ed717423298d754e58300566003ef464d79268183a43b5853cf67d11f61c"
+    },
+    {
+      "path": "sales/sales-proposal-strategist.md",
+      "bytes": 14295,
+      "sha256": "84c42e0ae7e11e6b239b7f921bdb0c33398102f94998c2eaa41114a3a46dc4c9"
+    },
+    {
+      "path": "scripts/agents-to-install.example",
+      "bytes": 363,
+      "sha256": "aa2c2be89b820bedf02f25603698634cb7e7ed20a3e18495e6abfb9825a45283"
+    },
+    {
+      "path": "scripts/build-hermes-plugin.py",
+      "bytes": 22193,
+      "sha256": "88cb0272e48199c7af723846c27b4969586a316e79c4af9e334c8f49c7fce383"
+    },
+    {
+      "path": "scripts/check-agent-originality.sh",
+      "bytes": 6429,
+      "sha256": "eaeb87a3d7a93c54f17b56ecdaee4e4d4edb05d700f87c2f2a2712d5974ae033"
+    },
+    {
+      "path": "scripts/check-divisions.sh",
+      "bytes": 5479,
+      "sha256": "503dfc8f23d059fcbda7a05a7c24d22f834240ad942d81bcf688d33c5dad4be2"
+    },
+    {
+      "path": "scripts/check-hermes-config-rewrite.py",
+      "bytes": 5855,
+      "sha256": "2ad01554143c74cb8e3b8f0a749157075f01a6692bc4cef122f9aa1964e36ab2"
+    },
+    {
+      "path": "scripts/check-hermes-config-rewrite.sh",
+      "bytes": 769,
+      "sha256": "ca94523a001eef807e68d6796aa836dd6668564ac31802e7c187528f10fbf57b"
+    },
+    {
+      "path": "scripts/check-hermes-plugin.py",
+      "bytes": 2883,
+      "sha256": "3dae627cfd45ba50e4059023da4a5d5dae7a856b73907f6422edcfdcdd0cdfc9"
+    },
+    {
+      "path": "scripts/check-runbooks.sh",
+      "bytes": 3209,
+      "sha256": "d698966912835d353d16a0151a618afaf3489f525b652ad711d0b25ff8fa9c6b"
+    },
+    {
+      "path": "scripts/check-tools.sh",
+      "bytes": 4067,
+      "sha256": "6971cf68c3b07f0de25a8f023389bfac385e0cf686778aa6662547c3fc81e1b7"
+    },
+    {
+      "path": "scripts/convert-outputs.sha256",
+      "bytes": 27670,
+      "sha256": "5446415e778d9d38add4971c7c4c8f2670190f722e5bd1e4c13c5c772f632245"
+    },
+    {
+      "path": "scripts/convert.sh",
+      "bytes": 24152,
+      "sha256": "47b3b05b6dc421b3af850a300c8dfa456e41c5c38c390a8291e319d49987e5b8"
+    },
+    {
+      "path": "scripts/i18n/README.md",
+      "bytes": 1842,
+      "sha256": "fcf424cd7af5444f49f580995745b54be6ebd7cc6c85566877c41236026b7684"
+    },
+    {
+      "path": "scripts/i18n/agent-names-zh.json",
+      "bytes": 22358,
+      "sha256": "1ff1ca27d8af247999f0f0c1590b15c54ab7114342765ed9181b393b5073a836"
+    },
+    {
+      "path": "scripts/i18n/localize-agents-zh.ps1",
+      "bytes": 1617,
+      "sha256": "10f7956f4b2de59a11c0053b1aa580f26c8ceaf135f158aaf39cde23c051594c"
+    },
+    {
+      "path": "scripts/install.sh",
+      "bytes": 62320,
+      "sha256": "7d8af31f2becbba3ff81e162e20bf14bc9e6da251111394aa13048f6c5845238"
+    },
+    {
+      "path": "scripts/lib.sh",
+      "bytes": 8775,
+      "sha256": "f5c9a94cdeae6905816b072dd8d2d378c3e28793dce08ebbb39c91147a29bd5e"
+    },
+    {
+      "path": "scripts/lint-agents.sh",
+      "bytes": 5645,
+      "sha256": "18d55536b0612c6c038930e3bc4a9141da3ae8ca95a9935caa6d6fd55e627094"
+    },
+    {
+      "path": "scripts/test-agent-selection.sh",
+      "bytes": 1420,
+      "sha256": "a9e8e40afd18f61d714b6b324b4ce7b31803dc4fd53985a3ed870b19241f410b"
+    },
+    {
+      "path": "scripts/test-convert-frontmatter.sh",
+      "bytes": 1201,
+      "sha256": "11e07889dc6616acaea17b8ce406e25bfcefd67c12a43d826cd687edaa9e6a7a"
+    },
+    {
+      "path": "scripts/test-convert-outputs.sh",
+      "bytes": 24104,
+      "sha256": "2f7be05d5ce38dbdbd74706bc022757dd9d3d8db84c5ffbcebff0b30d2c3953c"
+    },
+    {
+      "path": "scripts/test-hermes-plugin.py",
+      "bytes": 5886,
+      "sha256": "cc9200ead9275eb9e7d42576e79e4f3ff4d59a11ab0cc17b1593822206fd38d0"
+    },
+    {
+      "path": "scripts/test-install.sh",
+      "bytes": 15944,
+      "sha256": "a17d5526b98ee39542ef8424c40451b38e5aa067e53ef77190ba4ce71b24b210"
+    },
+    {
+      "path": "security/security-ai-generated-code-auditor.md",
+      "bytes": 17126,
+      "sha256": "ac2196a914bfb00dddfef93edb9eef1860f924f9582d814cd303ab45e4fc71bc"
+    },
+    {
+      "path": "security/security-appsec-engineer.md",
+      "bytes": 25789,
+      "sha256": "f3ee22350c9e0e7289d2d4747e7c1a8fe196d70340feec7b176b13bacc3deb77"
+    },
+    {
+      "path": "security/security-architect.md",
+      "bytes": 18029,
+      "sha256": "b1a68e9614f7adb43938f5bd9964f6e41250febc9a57f691eefcbab58d5b1df1"
+    },
+    {
+      "path": "security/security-blockchain-security-auditor.md",
+      "bytes": 21130,
+      "sha256": "b35bcd083889ccea487535e30c66bde83f0d06527ae4dd12acec32b285c5ec66"
+    },
+    {
+      "path": "security/security-cloud-security-architect.md",
+      "bytes": 23042,
+      "sha256": "d541b4041d47c512ef5223985aba682249ce2416244e147959641fc6d193aa71"
+    },
+    {
+      "path": "security/security-compliance-auditor.md",
+      "bytes": 7213,
+      "sha256": "ebb550ceef8011be23fe5a6fab0a7b3f77c2433f4d6aa22617a7eb87db97274f"
+    },
+    {
+      "path": "security/security-incident-responder.md",
+      "bytes": 24298,
+      "sha256": "a648cf5a0b40d8726ccb61ea48f1dee2797691f1b52395c59af91c7a5f511278"
+    },
+    {
+      "path": "security/security-penetration-tester.md",
+      "bytes": 21436,
+      "sha256": "f52c2524309fb048250b412daa6a2ad0a906b5daff01f64f195052d024b9e1a0"
+    },
+    {
+      "path": "security/security-secrets-credential-engineer.md",
+      "bytes": 13267,
+      "sha256": "5a52e4c1045d8805c74414cfb334bb80da429fd191b987bdd8889ee60ca7561b"
+    },
+    {
+      "path": "security/security-senior-secops.md",
+      "bytes": 31340,
+      "sha256": "90b535077cff7253bf18355ec99d5205dbe09c9f3e93f5b85222183460f2b879"
+    },
+    {
+      "path": "security/security-threat-detection-engineer.md",
+      "bytes": 24873,
+      "sha256": "83bfaabe485d51965ba6474de3eb6e00f67fd7f76e5b34ca1d3fb385a8fa3d97"
+    },
+    {
+      "path": "security/security-threat-intelligence-analyst.md",
+      "bytes": 28365,
+      "sha256": "777b26397ae7aeb246259736327f9f76e435eee378a1435bed9d18699ec8d666"
+    },
+    {
+      "path": "spatial-computing/macos-spatial-metal-engineer.md",
+      "bytes": 12141,
+      "sha256": "b0bdd78da0cdbd1ee0055401ddaba4d7cb750e3107d219b6f12794c1a023e69f"
+    },
+    {
+      "path": "spatial-computing/terminal-integration-specialist.md",
+      "bytes": 4121,
+      "sha256": "3082737f766821cf1c5372b9067ff67c873916de8c30b173478fe8bbc9a10087"
+    },
+    {
+      "path": "spatial-computing/visionos-spatial-engineer.md",
+      "bytes": 3411,
+      "sha256": "8d154bb42d6952056b0eb3fd0d030e6e22a638f11c16c04b59326973ee08b20d"
+    },
+    {
+      "path": "spatial-computing/xr-cockpit-interaction-specialist.md",
+      "bytes": 1795,
+      "sha256": "c8473bd555ad22da7d4978e94a3aec07ae9519b2080572b409639deb9a8e7110"
+    },
+    {
+      "path": "spatial-computing/xr-immersive-developer.md",
+      "bytes": 1847,
+      "sha256": "a9aa13187bfb774f3eb734ae9869ef249ec3290674f0bb3c1368b69bfa25a2b0"
+    },
+    {
+      "path": "spatial-computing/xr-interface-architect.md",
+      "bytes": 1700,
+      "sha256": "995b459992ab42162269a3bc607131371206742df9c55a4ef614e0171f34e92b"
+    },
+    {
+      "path": "specialized/accounts-payable-agent.md",
+      "bytes": 6795,
+      "sha256": "3b943d48884c7ef13cdd6a354714be1a22bc2aae0b17ccbe6daffeb3744a90d2"
+    },
+    {
+      "path": "specialized/agentic-identity-trust.md",
+      "bytes": 18398,
+      "sha256": "55de131a5c790dfb84edd9855d8fd2911d4d676d07f7f6c8e90d36705e73427b"
+    },
+    {
+      "path": "specialized/agents-orchestrator.md",
+      "bytes": 15725,
+      "sha256": "3f900ee286eba5a809388ecc22ad860c4a3ef9ed7ff25488e80eac18f3a0f317"
+    },
+    {
+      "path": "specialized/automation-governance-architect.md",
+      "bytes": 5831,
+      "sha256": "8aab89104fec352f1f601ec5e6db11c9628d0b2072e6324484fd7e4c8462f55e"
+    },
+    {
+      "path": "specialized/business-strategist.md",
+      "bytes": 25296,
+      "sha256": "9314906805d8dee81c3e2d10cb93513a391731d9fceb2e4c936257005a144b92"
+    },
+    {
+      "path": "specialized/change-management-consultant.md",
+      "bytes": 27377,
+      "sha256": "1feb05dfd0bb4d0942a24a8abb409090ffbc252623e15daa09f5bc8c838b0e5a"
+    },
+    {
+      "path": "specialized/chief-financial-officer.md",
+      "bytes": 18628,
+      "sha256": "05efa4015fc7feac9bb41942fa6e9eb2b79e2219bf1280b290c754fd16e15a08"
+    },
+    {
+      "path": "specialized/corporate-training-designer.md",
+      "bytes": 15673,
+      "sha256": "e70733229e87dde01bd404f502d2f5b491821f681d7230b314b18d98111b898c"
+    },
+    {
+      "path": "specialized/customer-service.md",
+      "bytes": 19184,
+      "sha256": "71d5b8ccd6fb6c5861230169a708ec5d8c0af628de44fc293ae256181573424f"
+    },
+    {
+      "path": "specialized/customer-success-manager.md",
+      "bytes": 23313,
+      "sha256": "2fc5ebc10734a621d65d1bfe0a253158f0a7418ee39b7c93a18efe6b26661cfe"
+    },
+    {
+      "path": "specialized/data-consolidation-agent.md",
+      "bytes": 2393,
+      "sha256": "7e7de097ff27e3aa2732a9f1ab0bd7acaaef73dabf53fc7be6c90c8ab6afab11"
+    },
+    {
+      "path": "specialized/data-privacy-officer.md",
+      "bytes": 22433,
+      "sha256": "77e495853a6ef839c8a2f87dae1c8de7b41e11d5e187828fa42c1d9a1e1ae00f"
+    },
+    {
+      "path": "specialized/esg-sustainability-officer.md",
+      "bytes": 20839,
+      "sha256": "a8feee4c7b9687ee89ec5ea0879ff98b4cc4451431052369bf00f90d9382b7dd"
+    },
+    {
+      "path": "specialized/government-digital-presales-consultant.md",
+      "bytes": 22759,
+      "sha256": "0676fd83a462828901c64df516034b0912468c85abb751d3e484038d3288b848"
+    },
+    {
+      "path": "specialized/grant-writer.md",
+      "bytes": 27051,
+      "sha256": "eb35ab7f6bc1c1401a04104b998224af60293e9669751662c6a4f20aabd59eec"
+    },
+    {
+      "path": "specialized/healthcare-aging-parent-care-companion.md",
+      "bytes": 25248,
+      "sha256": "fca0725bc30a447d6666df5060333eac2a4f81083cc02670118045678c79a035"
+    },
+    {
+      "path": "specialized/healthcare-customer-service.md",
+      "bytes": 22100,
+      "sha256": "b2e4117a8b449a94409235f74315b52909716985dd94b82b87413a54ca471d73"
+    },
+    {
+      "path": "specialized/healthcare-marketing-compliance.md",
+      "bytes": 35322,
+      "sha256": "942cc3b43da5f0e6103b7e5087941df4247c602228b2c4b0c6487140e89b176e"
+    },
+    {
+      "path": "specialized/hospitality-guest-services.md",
+      "bytes": 27773,
+      "sha256": "1c5819c560d3902eca44a4fb372bae9e882e5b9e8455e51aa3e8d9662a5d184a"
+    },
+    {
+      "path": "specialized/hr-onboarding.md",
+      "bytes": 23923,
+      "sha256": "28a52c26f27ab24d7fe11f5e48cfe712f6d27da142ec97911683b4a3ad92332c"
+    },
+    {
+      "path": "specialized/identity-graph-operator.md",
+      "bytes": 14122,
+      "sha256": "f37b705283147e3b92b76d61a3a60bdfe67bad9d6e364d11565329b8a107b3b4"
+    },
+    {
+      "path": "specialized/language-translator.md",
+      "bytes": 16086,
+      "sha256": "afd1e4b5fb1bb8fa9b8b5770774e0d7b003722681f664147ce7b9dddbcd52a4c"
+    },
+    {
+      "path": "specialized/legal-billing-time-tracking.md",
+      "bytes": 27280,
+      "sha256": "27f84055643150459f4de3102ba05c17696e5967a0efc64426fb600ab3c5d12c"
+    },
+    {
+      "path": "specialized/legal-client-intake.md",
+      "bytes": 25630,
+      "sha256": "b0b1cce8a30f08ada6d630b010b1af99f765f5eca667436af6592545667f4c79"
+    },
+    {
+      "path": "specialized/legal-document-review.md",
+      "bytes": 24728,
+      "sha256": "02bf51dbc9d8ffc93a8b053a09ec61ee2a3a9905e395fbd24389a532d20d1dba"
+    },
+    {
+      "path": "specialized/loan-officer-assistant.md",
+      "bytes": 28515,
+      "sha256": "3d6bfdb598187fb19fba6ab4b50ff357870cda04ea846aa975649d04788df84b"
+    },
+    {
+      "path": "specialized/lsp-index-engineer.md",
+      "bytes": 11197,
+      "sha256": "3f720a81cdcdaa63136b6fd7817f198d95a517ca1dfcfaa9ec81a5469a1cff95"
+    },
+    {
+      "path": "specialized/ma-integration-manager.md",
+      "bytes": 21438,
+      "sha256": "007dcfaee61d45e852a95c37a4529b1d162a178551f1a7f963ee558f1ace6fb5"
+    },
+    {
+      "path": "specialized/medical-billing-coding-specialist.md",
+      "bytes": 24636,
+      "sha256": "e9f597ef3a214d886a2b861347183c3674b6e24278c9308ed998a02972e7007c"
+    },
+    {
+      "path": "specialized/operations-manager.md",
+      "bytes": 19209,
+      "sha256": "3c133a31ae1542922444d77d7c8f9964127704ba94638dde12e37a9ad0fd35bd"
+    },
+    {
+      "path": "specialized/organizational-psychologist.md",
+      "bytes": 22579,
+      "sha256": "b7e523e1557ef9e98d5a0b515809996c6bbc0de6a49b1dc355d803e3bae09be2"
+    },
+    {
+      "path": "specialized/personal-growth-mentor.md",
+      "bytes": 7833,
+      "sha256": "623c1ef061d98fedbb941245a39fa5b8c5236ef94194724bfe5c54b8050143d4"
+    },
+    {
+      "path": "specialized/real-estate-buyer-seller.md",
+      "bytes": 31124,
+      "sha256": "00e2f54e76be38c85c4eb406135a0944a3f610d287e6747fbfac37a12c82920a"
+    },
+    {
+      "path": "specialized/recruitment-specialist.md",
+      "bytes": 29401,
+      "sha256": "fa1349988c278d0ecf652d7e286b3cac6acd388e10ba2e7d92c59d448303ccf8"
+    },
+    {
+      "path": "specialized/report-distribution-agent.md",
+      "bytes": 2653,
+      "sha256": "f5796b3cb693123e6c59f7058c100fe817b744f819d3e281442964714f72bac5"
+    },
+    {
+      "path": "specialized/resume-tailor.md",
+      "bytes": 11214,
+      "sha256": "be3d173ce4807d49671c7956f107029a4cb4061651882a0a3ea8c4f20738273f"
+    },
+    {
+      "path": "specialized/retail-customer-returns.md",
+      "bytes": 27700,
+      "sha256": "5cd60860a6ea57a95ec6d14246d6b0032e0e13ba0220ec4a79527fdc0ccd0f9c"
+    },
+    {
+      "path": "specialized/sales-data-extraction-agent.md",
+      "bytes": 2697,
+      "sha256": "202a6f04df452385fd1185a6bb23a0c9a47e624088eac14179bed4975f0b268a"
+    },
+    {
+      "path": "specialized/sales-outreach.md",
+      "bytes": 20656,
+      "sha256": "84d4ca90d4bed4649904c8f239f8e13f373274c8bceb6fd7eb2479e6f9e28c90"
+    },
+    {
+      "path": "specialized/specialized-chief-of-staff.md",
+      "bytes": 18190,
+      "sha256": "c0d053f19f32d369b6e9a4ded3a3b93efd792648b88b28f0ecd37a899b91b7b3"
+    },
+    {
+      "path": "specialized/specialized-civil-engineer.md",
+      "bytes": 17068,
+      "sha256": "37c9c37511345799235dcb41a4bd92c5577614c392b9a1fa3a1afee112e5de3b"
+    },
+    {
+      "path": "specialized/specialized-codebase-archaeologist.md",
+      "bytes": 26159,
+      "sha256": "c1b2c22711cb6e74dd834f831d6a8b3f10c93cd462722073b01acae9d0a40700"
+    },
+    {
+      "path": "specialized/specialized-cultural-intelligence-strategist.md",
+      "bytes": 6643,
+      "sha256": "91f1d2ef19bcf05f8d3b2758049d2dee909939a18ec2d086f192358179455abc"
+    },
+    {
+      "path": "specialized/specialized-developer-advocate.md",
+      "bytes": 14829,
+      "sha256": "92617477989c99f57cda5d6d91ac5fea3a56db422a3f3825c4a438ad244079d3"
+    },
+    {
+      "path": "specialized/specialized-document-generator.md",
+      "bytes": 2437,
+      "sha256": "cd2ca961e0f7baa18942aaaa315e333ea4315604bbb6a182d7daa31b76dfc3a3"
+    },
+    {
+      "path": "specialized/specialized-fedramp-rmf-compliance.md",
+      "bytes": 32568,
+      "sha256": "3269ca423abba6405b074ddff80da26ff1d73ae01787cc34bc7a1d45732936b0"
+    },
+    {
+      "path": "specialized/specialized-focus-music-architect.md",
+      "bytes": 10361,
+      "sha256": "6399fd4a54e95f9355371e81e0a731852b7e34035bdd6765565f77ce595cf966"
+    },
+    {
+      "path": "specialized/specialized-french-consulting-market.md",
+      "bytes": 11209,
+      "sha256": "68ebd164a0b3e0493d8deec43f4122e24b293c0a8f77786b2c3a4c8f3924c045"
+    },
+    {
+      "path": "specialized/specialized-korean-business-navigator.md",
+      "bytes": 14071,
+      "sha256": "71eb41ef3705fe155eee87d99e0ec7a52a237af442dd66e3421e225b76580f21"
+    },
+    {
+      "path": "specialized/specialized-master-plan-architect.md",
+      "bytes": 10622,
+      "sha256": "c458130fd387521cff95c547b4852c5c47677b3c35c071343bc1e754b7c01654"
+    },
+    {
+      "path": "specialized/specialized-mcp-builder.md",
+      "bytes": 12062,
+      "sha256": "3880031674ae2458552ad3c4da99c122469e85351ed57969db7f6f767befd7cb"
+    },
+    {
+      "path": "specialized/specialized-model-qa.md",
+      "bytes": 20143,
+      "sha256": "835a26b93003cfb8819201001dad37267971f5702320abcf1720f697e00cf4bd"
+    },
+    {
+      "path": "specialized/specialized-pricing-analyst.md",
+      "bytes": 12770,
+      "sha256": "fb8a63681615666bb2efe45b7fd2d9ad8a072ab9066efae6b61d454a58039f85"
+    },
+    {
+      "path": "specialized/specialized-salesforce-architect.md",
+      "bytes": 9943,
+      "sha256": "756fd2dc09f76422dfecb8104e2334f8876f8b95cb6734f8f044c36c641b22e1"
+    },
+    {
+      "path": "specialized/specialized-strategy-duel-agent.md",
+      "bytes": 5946,
+      "sha256": "3012369325bd06ec6e73f980d4e28947fe1f3dd0121e8ccd5ffb5834b50f3911"
+    },
+    {
+      "path": "specialized/specialized-workflow-architect.md",
+      "bytes": 26479,
+      "sha256": "74d46f03dcdd769163ce73ea8ac025bae48ae2356792a7aff3619c92f802a8ef"
+    },
+    {
+      "path": "specialized/study-abroad-advisor.md",
+      "bytes": 16984,
+      "sha256": "afd4b1033e76671b4d7a17a74329d7d81f491351004c77876a2615137140b84f"
+    },
+    {
+      "path": "specialized/supply-chain-strategist.md",
+      "bytes": 32397,
+      "sha256": "4e3c93bcfefd72b958432d8dbe562c6ca5add80d39a5eec061a83e9e0fe984c3"
+    },
+    {
+      "path": "specialized/zk-steward.md",
+      "bytes": 10892,
+      "sha256": "01fdb11cc8df0ada78aa31007c1565a3d118d64e9e97ff86b8dd838782a44082"
+    },
+    {
+      "path": "strategy/EXECUTIVE-BRIEF.md",
+      "bytes": 5754,
+      "sha256": "9bebe4a21139156825315df5bd60aa605b62df8a9401277c4ce5c414a5ed9d50"
+    },
+    {
+      "path": "strategy/QUICKSTART.md",
+      "bytes": 8388,
+      "sha256": "8a1f9053e6e31a0628b4e002b0dc620f95c30dca79890d09b1e5acac76207af2"
+    },
+    {
+      "path": "strategy/coordination/agent-activation-prompts.md",
+      "bytes": 13158,
+      "sha256": "9db4323a005d28d27ae16771892c2d4b2062fa151ce499f059bb262b82c9c1c3"
+    },
+    {
+      "path": "strategy/coordination/handoff-templates.md",
+      "bytes": 10073,
+      "sha256": "297dff8ea47b35e02b5d53cefb31aa05e1d880a1440c4c90ef9dec6156b68931"
+    },
+    {
+      "path": "strategy/nexus-strategy.md",
+      "bytes": 55289,
+      "sha256": "ff7bf873f862eacab72d624c297326753ca9f2a94952a16038ecbc37d9f1eb7d"
+    },
+    {
+      "path": "strategy/playbooks/phase-0-discovery.md",
+      "bytes": 6150,
+      "sha256": "0ae7d5cfc479e0d2818bf5a8559d59f90ee446b03d754b355594a1c0c62b294e"
+    },
+    {
+      "path": "strategy/playbooks/phase-1-strategy.md",
+      "bytes": 8094,
+      "sha256": "8509ef04a669ec01752ebf8da5048ec538fd0c3c1e85029f83a2ea90d8888bdd"
+    },
+    {
+      "path": "strategy/playbooks/phase-2-foundation.md",
+      "bytes": 8916,
+      "sha256": "16c02d3c0debc95732ac4b9a7187d02e832ba55683d9bd605395a958be0f5e94"
+    },
+    {
+      "path": "strategy/playbooks/phase-3-build.md",
+      "bytes": 9641,
+      "sha256": "b9b2383e0c6e135d3bcd59a8ab995f234c420c6c04900fabff19e083a92468d2"
+    },
+    {
+      "path": "strategy/playbooks/phase-4-hardening.md",
+      "bytes": 10546,
+      "sha256": "0db1b7dc62dccc30579f06e8f2b480f7b04fcd153fca7df43aa2470f46907386"
+    },
+    {
+      "path": "strategy/playbooks/phase-5-launch.md",
+      "bytes": 8280,
+      "sha256": "afae11996e699041f9c094e9a07452c866ce12d959bb93a89526307617e7205b"
+    },
+    {
+      "path": "strategy/playbooks/phase-6-operate.md",
+      "bytes": 9802,
+      "sha256": "5681569052513c334bcb2219374776ea3f7c78eedfbde587b1a051372d0c476b"
+    },
+    {
+      "path": "strategy/runbooks/scenario-enterprise-feature.md",
+      "bytes": 6256,
+      "sha256": "40e20eac5c6eb54f4a5017b1f8d9f56bba44ae9afc82bfb2c678f971c7d5fb2b"
+    },
+    {
+      "path": "strategy/runbooks/scenario-incident-response.md",
+      "bytes": 6789,
+      "sha256": "b08fe23eddcc6f5038a4a8e33930f7d40d67b6916144076667eb6d50ce604fff"
+    },
+    {
+      "path": "strategy/runbooks/scenario-marketing-campaign.md",
+      "bytes": 7072,
+      "sha256": "979c985e5cbb6a42aae2bfbd02494712fac75f8fceac5d7f9ca704b071ef7f57"
+    },
+    {
+      "path": "strategy/runbooks/scenario-startup-mvp.md",
+      "bytes": 5631,
+      "sha256": "90eb81f4338453ce3064d33434967cf028f6a3a668fccb436c64424d1e00ff26"
+    },
+    {
+      "path": "strategy/runbooks.json",
+      "bytes": 6769,
+      "sha256": "2d0372782460694bddcbdb5ec04ff28ae6284a2c751888f8010e16033024ac49"
+    },
+    {
+      "path": "support/support-analytics-reporter.md",
+      "bytes": 15796,
+      "sha256": "8d4a4d0835f9ecb577d81dacbafcb96841b9b0d1f2af1f9273359502a14fcb5c"
+    },
+    {
+      "path": "support/support-executive-summary-generator.md",
+      "bytes": 8992,
+      "sha256": "298891fcf297de5d9b343e9ab9b63864317de63256b15c0c72e6cec172f8f0ff"
+    },
+    {
+      "path": "support/support-finance-tracker.md",
+      "bytes": 19249,
+      "sha256": "73b83d0b0ec4ce53c0335f57473b0e1dcb3b46af22ecd58d9680465b9717b5d9"
+    },
+    {
+      "path": "support/support-infrastructure-maintainer.md",
+      "bytes": 22365,
+      "sha256": "64d705a9e58f73868136d781f83ceaf12dfc1721cdb5bfb31b2c03441d69bf5c"
+    },
+    {
+      "path": "support/support-legal-compliance-checker.md",
+      "bytes": 26545,
+      "sha256": "0544f2219d52742f9ba436c193b34eb48c47cee8fcba38aef2b478dcb5e19284"
+    },
+    {
+      "path": "support/support-support-responder.md",
+      "bytes": 24683,
+      "sha256": "4dcd962743e940d1cdd119dcc748d4a434b6b32775aa11ea68fbd2209ee0852c"
+    },
+    {
+      "path": "testing/testing-accessibility-auditor.md",
+      "bytes": 15300,
+      "sha256": "982a14c0d0a9b30834ecd6e04811e4f900baf7950e18c68cc97142354cc803e7"
+    },
+    {
+      "path": "testing/testing-api-tester.md",
+      "bytes": 12539,
+      "sha256": "c89d7ae592523f4799426a8b09700ec4b9d99bf2fcae2d1b0dd2900d5f770127"
+    },
+    {
+      "path": "testing/testing-evidence-collector.md",
+      "bytes": 8354,
+      "sha256": "d7e95b64033230aa07c386546d24fca68e4f606c47be1a7698cafc09d4ef5b12"
+    },
+    {
+      "path": "testing/testing-performance-benchmarker.md",
+      "bytes": 12224,
+      "sha256": "24dbd3a55cf6ca36c5f8af4081e87859914131199d87b6f90d129643fcfba43e"
+    },
+    {
+      "path": "testing/testing-reality-checker.md",
+      "bytes": 10854,
+      "sha256": "6d32fcdb114233e13902ec6372d50293b120e85d490b5e81d372c29808f988a1"
+    },
+    {
+      "path": "testing/testing-test-automation-engineer.md",
+      "bytes": 12254,
+      "sha256": "479ba12efa5c19e87b60e3b154170c124ac38c46b95c342f0e3b62537113c0a7"
+    },
+    {
+      "path": "testing/testing-test-results-analyzer.md",
+      "bytes": 14602,
+      "sha256": "f080e1e8a5ddadc90dbcb845317afcf56e9889e0ed6568732605d37851cf21d8"
+    },
+    {
+      "path": "testing/testing-tool-evaluator.md",
+      "bytes": 17542,
+      "sha256": "98e9a2b4491ffa1979d45ca5e1ddb9233fe35b98cc44c66c9d8a0b258ee9a2f4"
+    },
+    {
+      "path": "testing/testing-workflow-optimizer.md",
+      "bytes": 22050,
+      "sha256": "021ba71e2455071983ce1a6044783bec224b025b864757ce76b2bd4d40c00211"
+    },
+    {
+      "path": "tools.json",
+      "bytes": 8393,
+      "sha256": "2b9635406d8980dfde28849f965f2a22de384b4906128ec345ef6fc6246f127d"
+    }
+  ],
+  "agents": [
+    {
+      "path": "academic/academic-anthropologist.md",
+      "division": "academic",
+      "name": "Anthropologist",
+      "description": "Expert in cultural systems, rituals, kinship, belief systems, and ethnographic method — builds culturally coherent societies that feel lived-in rather than invented"
+    },
+    {
+      "path": "academic/academic-geographer.md",
+      "division": "academic",
+      "name": "Geographer",
+      "description": "Expert in physical and human geography, climate systems, cartography, and spatial analysis — builds geographically coherent worlds where terrain, climate, resources, and settlement patterns make scientific sense"
+    },
+    {
+      "path": "academic/academic-historian.md",
+      "division": "academic",
+      "name": "Historian",
+      "description": "Expert in historical analysis, periodization, material culture, and historiography — validates historical coherence and enriches settings with authentic period detail grounded in primary and secondary sources"
+    },
+    {
+      "path": "academic/academic-narratologist.md",
+      "division": "academic",
+      "name": "Narratologist",
+      "description": "Expert in narrative theory, story structure, character arcs, and literary analysis — grounds advice in established frameworks from Propp to Campbell to modern narratology"
+    },
+    {
+      "path": "academic/academic-psychologist.md",
+      "division": "academic",
+      "name": "Psychologist",
+      "description": "Expert in human behavior, personality theory, motivation, and cognitive patterns — builds psychologically credible characters and interactions grounded in clinical and research frameworks"
+    },
+    {
+      "path": "academic/academic-statistician.md",
+      "division": "academic",
+      "name": "Statistician",
+      "description": "Expert in quantitative research methodology, experimental design, and statistical inference — pressure-tests claims, designs sound studies, and separates real signal from noise, chance, and bias"
+    },
+    {
+      "path": "design/design-brand-guardian.md",
+      "division": "design",
+      "name": "Brand Guardian",
+      "description": "Expert brand strategist and guardian specializing in brand identity development, consistency maintenance, and strategic brand positioning"
+    },
+    {
+      "path": "design/design-image-prompt-engineer.md",
+      "division": "design",
+      "name": "Image Prompt Engineer",
+      "description": "Expert photography prompt engineer specializing in crafting detailed, evocative prompts for AI image generation. Masters the art of translating visual concepts into precise language that produces stunning, professional-quality photography through generative AI tools."
+    },
+    {
+      "path": "design/design-inclusive-visuals-specialist.md",
+      "division": "design",
+      "name": "Inclusive Visuals Specialist",
+      "description": "Representation expert who defeats systemic AI biases to generate culturally accurate, affirming, and non-stereotypical images and video."
+    },
+    {
+      "path": "design/design-persona-walkthrough.md",
+      "division": "design",
+      "name": "Persona Walkthrough Specialist",
+      "description": "Simulate cognitive walkthroughs of web pages from a defined persona's psychological perspective — captures emotional reactions and rational thought at each scroll position, then delivers structured CRO reports grounded in LIFT, Cialdini, and Fogg frameworks"
+    },
+    {
+      "path": "design/design-ui-designer.md",
+      "division": "design",
+      "name": "UI Designer",
+      "description": "Expert UI designer specializing in visual design systems, component libraries, and pixel-perfect interface creation. Creates beautiful, consistent, accessible user interfaces that enhance UX and reflect brand identity"
+    },
+    {
+      "path": "design/design-ui-finish-gate-reviewer.md",
+      "division": "design",
+      "name": "UI Finish-Gate Reviewer",
+      "description": "Product-interface reviewer who catches generic, interchangeable UI before it ships by grounding critique in real product evidence, a written design contract, and a hard implementation finish gate."
+    },
+    {
+      "path": "design/design-ux-architect.md",
+      "division": "design",
+      "name": "UX Architect",
+      "description": "Technical architecture and UX specialist who provides developers with solid foundations, CSS systems, and clear implementation guidance"
+    },
+    {
+      "path": "design/design-ux-researcher.md",
+      "division": "design",
+      "name": "UX Researcher",
+      "description": "Expert user experience researcher specializing in user behavior analysis, usability testing, and data-driven design insights. Provides actionable research findings that improve product usability and user satisfaction"
+    },
+    {
+      "path": "design/design-visual-storyteller.md",
+      "division": "design",
+      "name": "Visual Storyteller",
+      "description": "Expert visual communication specialist focused on creating compelling visual narratives, multimedia content, and brand storytelling through design. Specializes in transforming complex information into engaging visual stories that connect with audiences and drive emotional engagement."
+    },
+    {
+      "path": "design/design-whimsy-injector.md",
+      "division": "design",
+      "name": "Whimsy Injector",
+      "description": "Expert creative specialist focused on adding personality, delight, and playful elements to brand experiences. Creates memorable, joyful interactions that differentiate brands through unexpected moments of whimsy"
+    },
+    {
+      "path": "engineering/engineering-ai-data-remediation-engineer.md",
+      "division": "engineering",
+      "name": "AI Data Remediation Engineer",
+      "description": "Specialist in self-healing data pipelines — uses air-gapped local SLMs and semantic clustering to automatically detect, classify, and fix data anomalies at scale. Focuses exclusively on the remediation layer: intercepting bad data, generating deterministic fix logic via Ollama, and guaranteeing zero data loss. Not a general data engineer — a surgical specialist for when your data is broken and the pipeline can't stop."
+    },
+    {
+      "path": "engineering/engineering-ai-engineer.md",
+      "division": "engineering",
+      "name": "AI Engineer",
+      "description": "Expert AI/ML engineer specializing in machine learning model development, deployment, and integration into production systems. Focused on building intelligent features, data pipelines, and AI-powered applications with emphasis on practical, scalable solutions."
+    },
+    {
+      "path": "engineering/engineering-api-platform-engineer.md",
+      "division": "engineering",
+      "name": "API Platform Engineer",
+      "description": "Expert API platform engineer for public and partner APIs — contract-first design (OpenAPI/gRPC), versioning and deprecation policy, SDK generation, API gateway concerns (auth, rate limiting, quotas), and developer-portal DX."
+    },
+    {
+      "path": "engineering/engineering-ats-validator-architect.md",
+      "division": "engineering",
+      "name": "ATS Validator Architect",
+      "description": "Architect and validator for Applicant Tracking Systems (ATS) and resume parsers. Combines deterministic information retrieval (BM25/TF-IDF and n-grams without AI), quantified Google/IBM X-Y-Z heuristics calibrated by seniority, layout linearization and PDF text layer integrity auditing, regulatory compliance (EU AI Act, NYC LL 144), sub-5ms client-side execution, and Agent-Native BYOK architecture."
+    },
+    {
+      "path": "engineering/engineering-autonomous-optimization-architect.md",
+      "division": "engineering",
+      "name": "Autonomous Optimization Architect",
+      "description": "Intelligent system governor that continuously shadow-tests APIs for performance while enforcing strict financial and security guardrails against runaway costs."
+    },
+    {
+      "path": "engineering/engineering-backend-architect.md",
+      "division": "engineering",
+      "name": "Backend Architect",
+      "description": "Senior backend architect specializing in scalable system design, database architecture, API development, and cloud infrastructure. Builds robust, secure, performant server-side applications and microservices"
+    },
+    {
+      "path": "engineering/engineering-china-network-engineer.md",
+      "division": "engineering",
+      "name": "China Network Engineer",
+      "description": "Expert in mainland China's mainstream enterprise networking stacks — Huawei VRP, H3C Comware, Ruijie RGOS, and Hillstone StoneOS — covering routing, switching, firewalling, NAT, and MLPS 2.0 (等保) compliant border design for domestic deployments."
+    },
+    {
+      "path": "engineering/engineering-cms-developer.md",
+      "division": "engineering",
+      "name": "CMS Developer",
+      "description": "Drupal and WordPress specialist for theme development, custom plugins/modules, content architecture, and code-first CMS implementation"
+    },
+    {
+      "path": "engineering/engineering-code-reviewer.md",
+      "division": "engineering",
+      "name": "Code Reviewer",
+      "description": "Expert code reviewer who provides constructive, actionable feedback focused on correctness, maintainability, security, and performance — not style preferences."
+    },
+    {
+      "path": "engineering/engineering-codebase-onboarding-engineer.md",
+      "division": "engineering",
+      "name": "Codebase Onboarding Engineer",
+      "description": "Expert developer onboarding specialist who helps new engineers understand unfamiliar codebases fast by reading source code, tracing code paths, and stating only facts grounded in the code."
+    },
+    {
+      "path": "engineering/engineering-data-engineer.md",
+      "division": "engineering",
+      "name": "Data Engineer",
+      "description": "Expert data engineer specializing in building reliable data pipelines, lakehouse architectures, and scalable data infrastructure. Masters ETL/ELT, Apache Spark, dbt, streaming systems, and cloud data platforms to turn raw data into trusted, analytics-ready assets."
+    },
+    {
+      "path": "engineering/engineering-data-visualization-engineer.md",
+      "division": "engineering",
+      "name": "Data Visualization Engineer",
+      "description": "Expert data visualization engineer — chart-type selection by data and question, perceptually honest encodings, colorblind-safe data palettes, accessible and interactive charts, and rendering large datasets performantly with D3, Vega, and charting libraries."
+    },
+    {
+      "path": "engineering/engineering-database-optimizer.md",
+      "division": "engineering",
+      "name": "Database Optimizer",
+      "description": "Expert database specialist focusing on schema design, query optimization, indexing strategies, and performance tuning for PostgreSQL, MySQL, and modern databases like Supabase and PlanetScale."
+    },
+    {
+      "path": "engineering/engineering-database-reliability-engineer.md",
+      "division": "engineering",
+      "name": "Database Reliability Engineer",
+      "description": "Expert database reliability engineer (DBRE) — high availability and replication, automated failover, backup and point-in-time recovery, zero-downtime online schema migrations, connection pooling, and disaster-recovery drills. Focused on keeping data safe and available, not query tuning."
+    },
+    {
+      "path": "engineering/engineering-desktop-app-engineer.md",
+      "division": "engineering",
+      "name": "Desktop App Engineer",
+      "description": "Expert desktop application engineer for Electron and Tauri — secure IPC and process isolation, code signing and notarization, auto-update pipelines, native OS integration, and resource-footprint discipline."
+    },
+    {
+      "path": "engineering/engineering-developer-tooling-engineer.md",
+      "division": "engineering",
+      "name": "Developer Tooling Engineer",
+      "description": "Expert developer-tooling and CLI engineer — building command-line tools and internal developer platforms with great DX: intuitive command design, helpful errors, shell completions, fast startup, cross-platform distribution, and scriptable, composable interfaces."
+    },
+    {
+      "path": "engineering/engineering-devops-automator.md",
+      "division": "engineering",
+      "name": "DevOps Automator",
+      "description": "Expert DevOps engineer specializing in infrastructure automation, CI/CD pipeline development, and cloud operations"
+    },
+    {
+      "path": "engineering/engineering-drupal-performance.md",
+      "division": "engineering",
+      "name": "Drupal Performance Engineer",
+      "description": "Expert Drupal 10/11 performance engineer specializing in Core Web Vitals, render and dynamic page caching, BigPipe, cache tags and contexts, database query and Views optimization, CSS/JS aggregation, responsive images and lazy loading, CDN integration, and opcache/PHP-FPM tuning for fast, audit-passing sites"
+    },
+    {
+      "path": "engineering/engineering-drupal-shopping-cart.md",
+      "division": "engineering",
+      "name": "Drupal Shopping Cart Engineer",
+      "description": "Expert Drupal e-commerce engineer specializing in Drupal Commerce for product catalog management, payment gateway integration, checkout workflow design, order management, tax and promotion configuration, and high-reliability storefront delivery on Drupal 10/11"
+    },
+    {
+      "path": "engineering/engineering-email-intelligence-engineer.md",
+      "division": "engineering",
+      "name": "Email Intelligence Engineer",
+      "description": "Expert in extracting structured, reasoning-ready data from raw email threads for AI agents and automation systems"
+    },
+    {
+      "path": "engineering/engineering-embedded-firmware-engineer.md",
+      "division": "engineering",
+      "name": "Embedded Firmware Engineer",
+      "description": "Specialist in bare-metal and RTOS firmware - ESP32/ESP-IDF, PlatformIO, Arduino, ARM Cortex-M, STM32 HAL/LL, Nordic nRF5/nRF Connect SDK, FreeRTOS, Zephyr"
+    },
+    {
+      "path": "engineering/engineering-feishu-integration-developer.md",
+      "division": "engineering",
+      "name": "Feishu Integration Developer",
+      "description": "Full-stack integration expert specializing in the Feishu (Lark) Open Platform — proficient in Feishu bots, mini programs, approval workflows, Bitable (multidimensional spreadsheets), interactive message cards, Webhooks, SSO authentication, and workflow automation, building enterprise-grade collaboration and automation solutions within the Feishu ecosystem."
+    },
+    {
+      "path": "engineering/engineering-filament-optimization-specialist.md",
+      "division": "engineering",
+      "name": "Filament Optimization Specialist",
+      "description": "Expert in restructuring and optimizing Filament PHP admin interfaces for maximum usability and efficiency. Focuses on impactful structural changes — not just cosmetic tweaks."
+    },
+    {
+      "path": "engineering/engineering-finops-engineer.md",
+      "division": "engineering",
+      "name": "FinOps Engineer",
+      "description": "Expert cloud cost engineer for AWS/GCP/Azure — cost allocation and tagging, rightsizing, commitment planning (reserved instances/savings plans), egress and storage optimization, and unit-economics dashboards that tie spend to business value."
+    },
+    {
+      "path": "engineering/engineering-frontend-developer.md",
+      "division": "engineering",
+      "name": "Frontend Developer",
+      "description": "Expert frontend developer specializing in modern web technologies, React/Vue/Angular frameworks, UI implementation, and performance optimization"
+    },
+    {
+      "path": "engineering/engineering-gaussdb-expert.md",
+      "division": "engineering",
+      "name": "GaussDB Expert Engineer",
+      "description": "Expert database specialist focusing on GaussDB OLTP — Huawei's self-developed enterprise-grade relational database (NOT GaussDB(DWS) OLAP, NOT GaussDB(for openGauss) cloud service, NOT GaussDB(for MySQL)). Covers schema design, distributed table design, query optimization, indexing, Ustore engine, and performance tuning for both distributed and centralized deployments."
+    },
+    {
+      "path": "engineering/engineering-git-workflow-master.md",
+      "division": "engineering",
+      "name": "Git Workflow Master",
+      "description": "Expert in Git workflows, branching strategies, and version control best practices including conventional commits, rebasing, worktrees, and CI-friendly branch management."
+    },
+    {
+      "path": "engineering/engineering-i18n-engineer.md",
+      "division": "engineering",
+      "name": "Internationalization Engineer",
+      "description": "Expert i18n engineer for ICU MessageFormat, CLDR plural rules, RTL and bidirectional layouts, locale-aware date/number/currency formatting, string extraction pipelines, and pseudo-localization testing."
+    },
+    {
+      "path": "engineering/engineering-identity-access-engineer.md",
+      "division": "engineering",
+      "name": "Identity & Access Engineer",
+      "description": "Expert identity engineer for OAuth 2.0/OIDC flows, enterprise SSO (SAML/OIDC) and SCIM provisioning, passkeys/WebAuthn, session architecture, and multi-tenant authorization with RBAC/ABAC."
+    },
+    {
+      "path": "engineering/engineering-incident-response-commander.md",
+      "division": "engineering",
+      "name": "Incident Response Commander",
+      "description": "Expert incident commander specializing in production incident management, structured response coordination, post-mortem facilitation, SLO/SLI tracking, and on-call process design for reliable engineering organizations."
+    },
+    {
+      "path": "engineering/engineering-iot-fleet-engineer.md",
+      "division": "engineering",
+      "name": "IoT Fleet Engineer",
+      "description": "Expert IoT and edge fleet engineer — device provisioning and identity, MQTT/telemetry pipelines, staged over-the-air (OTA) firmware updates with rollback, edge compute, and observability across fleets of unreliable, intermittently-connected devices."
+    },
+    {
+      "path": "engineering/engineering-it-service-manager.md",
+      "division": "engineering",
+      "name": "IT Service Manager",
+      "description": "Expert IT service management specialist using ITIL 4 framework for service catalog design, incident and problem management, change control, SLA governance, CMDB maintenance, and continual service improvement — ensuring IT delivers reliable, measurable business value across any organization size"
+    },
+    {
+      "path": "engineering/engineering-knowledge-graph-engineer.md",
+      "division": "engineering",
+      "name": "Knowledge Graph Engineer",
+      "description": "Structures information and capabilities into interconnected nodes (entities) and edges (relationships) — enabling dynamic context navigation, modular competency chaining, lower token costs, and hallucination reduction."
+    },
+    {
+      "path": "engineering/engineering-llm-post-training-engineer.md",
+      "division": "engineering",
+      "name": "LLM Post-Training Engineer",
+      "description": "Evidence-driven owner for SFT, preference optimization, RLHF/RLVR, MoE post-training, and the release gates that turn a checkpoint into a defensible model change."
+    },
+    {
+      "path": "engineering/engineering-minimal-change-engineer.md",
+      "division": "engineering",
+      "name": "Minimal Change Engineer",
+      "description": "Engineering specialist focused on minimum-viable diffs — fixes only what was asked, refuses scope creep, prefers three similar lines over a premature abstraction. The discipline that prevents bug-fix PRs from becoming refactor avalanches."
+    },
+    {
+      "path": "engineering/engineering-mobile-app-builder.md",
+      "division": "engineering",
+      "name": "Mobile App Builder",
+      "description": "Specialized mobile application developer with expertise in native iOS/Android development and cross-platform frameworks"
+    },
+    {
+      "path": "engineering/engineering-mobile-release-engineer.md",
+      "division": "engineering",
+      "name": "Mobile Release Engineer",
+      "description": "Expert mobile release and distribution engineer for iOS and Android — code signing, provisioning, fastlane pipelines, App Store Connect and Play Console submission, phased rollouts, and crash-triaged release health."
+    },
+    {
+      "path": "engineering/engineering-multi-agent-systems-architect.md",
+      "division": "engineering",
+      "name": "Multi-Agent Systems Architect",
+      "description": "Systems architect specializing in the design, coordination, and governance of multi-agent AI pipelines — covering topology selection, context management, inter-agent trust, failure recovery, human-in-the-loop gating, and observability for production-grade agent systems."
+    },
+    {
+      "path": "engineering/engineering-network-engineer.md",
+      "division": "engineering",
+      "name": "Network Engineer",
+      "description": "Expert network engineer for Cisco IOS/IOS-XE, Cisco ASA/FTD, Juniper Junos, and Palo Alto PAN-OS routing, switching, firewalling, and troubleshooting."
+    },
+    {
+      "path": "engineering/engineering-orgscript-engineer.md",
+      "division": "engineering",
+      "name": "OrgScript Engineer",
+      "description": "Expert in designing, parsing, and implementing OrgScript grammar, AST validation, and business logic definitions."
+    },
+    {
+      "path": "engineering/engineering-payments-billing-engineer.md",
+      "division": "engineering",
+      "name": "Payments & Billing Engineer",
+      "description": "Expert payments engineer for PSP integrations (Stripe, Adyen, Braintree, PayPal), idempotent payment flows, webhook processing, subscription billing, SCA/3DS, PCI scope reduction, and financial reconciliation."
+    },
+    {
+      "path": "engineering/engineering-pdf-engine-architect.md",
+      "division": "engineering",
+      "name": "PDF Engine Architect",
+      "description": "Architect and specialist in deterministic HTML-to-PDF document compilation, Playwright browser context pools, dynamic Euclidean page sizing, LayoutNG subpixel budgeting, tagged PDF (PDF/UA-1 & PDF/A-2b), and 1:1 sheet canvas editors."
+    },
+    {
+      "path": "engineering/engineering-platform-engineer.md",
+      "division": "engineering",
+      "name": "Platform Engineer",
+      "description": "Expert internal developer platform (IDP) engineer specializing in golden paths, paved roads, and self-serve infrastructure that multiplies engineering velocity."
+    },
+    {
+      "path": "engineering/engineering-privacy-engineer.md",
+      "division": "engineering",
+      "name": "Privacy Engineer",
+      "description": "Expert privacy engineer who implements privacy in code — PII discovery and classification, data minimization, consent enforcement at the API layer, automated DSAR and deletion across services, pseudonymization/tokenization, and retention automation. Builds the technical controls a privacy policy only promises."
+    },
+    {
+      "path": "engineering/engineering-prompt-engineer.md",
+      "division": "engineering",
+      "name": "Prompt Engineer",
+      "description": "Specialist in crafting, testing, and systematically optimizing prompts for LLMs — turning vague instructions into reliable, production-grade AI behaviors."
+    },
+    {
+      "path": "engineering/engineering-rag-pipeline-engineer.md",
+      "division": "engineering",
+      "name": "RAG Pipeline Engineer",
+      "description": "Production RAG specialist focused on chunking strategy, retrieval quality, hybrid search, re-ranking, and eval-driven iteration. Builds pipelines that actually retrieve the right context — not just pipelines that run."
+    },
+    {
+      "path": "engineering/engineering-rapid-prototyper.md",
+      "division": "engineering",
+      "name": "Rapid Prototyper",
+      "description": "Specialized in ultra-fast proof-of-concept development and MVP creation using efficient tools and frameworks"
+    },
+    {
+      "path": "engineering/engineering-realtime-collaboration-engineer.md",
+      "division": "engineering",
+      "name": "Realtime Collaboration Engineer",
+      "description": "Expert realtime systems engineer for WebSocket/SSE infrastructure, presence, CRDT and OT-based collaborative editing, offline-first sync engines, and fan-out scaling with reconnect-safe protocols."
+    },
+    {
+      "path": "engineering/engineering-rust-refactoring-specialist.md",
+      "division": "engineering",
+      "name": "Rust Refactoring Specialist",
+      "description": "Expert Rust engineer for repository-scale refactoring, safe renames, module restructuring, duplication removal, panic hardening, ownership improvements, and compiler or Clippy remediation."
+    },
+    {
+      "path": "engineering/engineering-search-relevance-engineer.md",
+      "division": "engineering",
+      "name": "Search Relevance Engineer",
+      "description": "Expert search engineer for Elasticsearch and OpenSearch — index and analyzer design, BM25 query tuning, hybrid lexical+vector retrieval, and judgment-based relevance evaluation with nDCG and online experiments."
+    },
+    {
+      "path": "engineering/engineering-section-508-specialist.md",
+      "division": "engineering",
+      "name": "Section 508 Accessibility Specialist",
+      "description": "Expert U.S. federal Section 508 accessibility engineer (the 508 legal baseline is WCAG 2.0 Level AA; WCAG 2.1/2.2 AA are recommended best practice, and ADA Title II requires WCAG 2.1 AA for state/local government) specializing in accessible web development, ARIA implementation, screen reader testing (JAWS/NVDA/VoiceOver), keyboard navigation, color contrast, accessible forms and PDFs, VPAT/ACR authoring, automated and manual auditing (axe/WAVE/Lighthouse), and remediation for government and enterprise sites"
+    },
+    {
+      "path": "engineering/engineering-senior-developer.md",
+      "division": "engineering",
+      "name": "Senior Developer",
+      "description": "Premium implementation specialist - Masters Laravel/Livewire/FluxUI, advanced CSS, Three.js integration"
+    },
+    {
+      "path": "engineering/engineering-software-architect.md",
+      "division": "engineering",
+      "name": "Software Architect",
+      "description": "Expert software architect specializing in system design, domain-driven design, architectural patterns, and technical decision-making for scalable, maintainable systems."
+    },
+    {
+      "path": "engineering/engineering-solidity-smart-contract-engineer.md",
+      "division": "engineering",
+      "name": "Solidity Smart Contract Engineer",
+      "description": "Expert Solidity developer specializing in EVM smart contract architecture, gas optimization, upgradeable proxy patterns, DeFi protocol development, and security-first contract design across Ethereum and L2 chains."
+    },
+    {
+      "path": "engineering/engineering-sre.md",
+      "division": "engineering",
+      "name": "SRE (Site Reliability Engineer)",
+      "description": "Expert site reliability engineer specializing in SLOs, error budgets, observability, chaos engineering, and toil reduction for production systems at scale."
+    },
+    {
+      "path": "engineering/engineering-technical-writer.md",
+      "division": "engineering",
+      "name": "Technical Writer",
+      "description": "Expert technical writer specializing in developer documentation, API references, README files, and tutorials. Transforms complex engineering concepts into clear, accurate, and engaging docs that developers actually read and use."
+    },
+    {
+      "path": "engineering/engineering-universal-document-compiler.md",
+      "division": "engineering",
+      "name": "Universal Document Compiler",
+      "description": "Architect of schema-agnostic document ASTs, algorithmic data-shape layout inference, bidirectional CST-to-canvas synchronization, and universal paged document publishing."
+    },
+    {
+      "path": "engineering/engineering-uswds-developer.md",
+      "division": "engineering",
+      "name": "USWDS Developer",
+      "description": "Expert U.S. Web Design System frontend developer specializing in USWDS components and design tokens, accessible-by-default patterns, responsive government UI, Sass settings/theming, the federal design language, integration into CMS platforms (Drupal/WordPress), and compliance with 21st Century IDEA and the Federal Website Standards"
+    },
+    {
+      "path": "engineering/engineering-video-streaming-engineer.md",
+      "division": "engineering",
+      "name": "Video Streaming Engineer",
+      "description": "Expert video streaming engineer for adaptive bitrate delivery — HLS/DASH packaging, ffmpeg transcode ladders, CMAF low-latency, DRM, CDN delivery, and QoE-driven player tuning."
+    },
+    {
+      "path": "engineering/engineering-voice-ai-integration-engineer.md",
+      "division": "engineering",
+      "name": "Voice AI Integration Engineer",
+      "description": "Expert in building end-to-end speech transcription pipelines using Whisper-style models and cloud ASR services — from raw audio ingestion through preprocessing, transcript cleanup, subtitle generation, speaker diarization, and structured downstream integration into apps, APIs, and CMS platforms."
+    },
+    {
+      "path": "engineering/engineering-webassembly-engineer.md",
+      "division": "engineering",
+      "name": "WebAssembly Engineer",
+      "description": "Expert WebAssembly engineer — compiling Rust/C++/Go to Wasm, JS interop and the boundary marshalling cost, WASI and server-side runtimes (Wasmtime/Wasmer), the component model, and near-native performance tuning."
+    },
+    {
+      "path": "engineering/engineering-wechat-mini-program-developer.md",
+      "division": "engineering",
+      "name": "WeChat Mini Program Developer",
+      "description": "Expert WeChat Mini Program developer specializing in 小程序 development with WXML/WXSS/WXS, WeChat API integration, payment systems, subscription messaging, and the full WeChat ecosystem."
+    },
+    {
+      "path": "engineering/engineering-wordpress-performance.md",
+      "division": "engineering",
+      "name": "WordPress Performance Engineer",
+      "description": "Expert WordPress performance engineer specializing in Core Web Vitals, object caching (Redis/Memcached), page caching, database and WP_Query optimization, the Transients API, asset minification/deferral/critical CSS, image optimization and lazy loading, CDN integration, plugin performance auditing, and PHP-FPM/opcache tuning for fast, audit-passing sites"
+    },
+    {
+      "path": "engineering/engineering-wordpress-shopping-cart.md",
+      "division": "engineering",
+      "name": "WordPress Shopping Cart Engineer",
+      "description": "Expert WordPress e-commerce engineer specializing in WooCommerce for product catalog management, payment gateway integration, checkout customization, order management, tax and coupon configuration, and conversion-optimized storefront delivery on WordPress"
+    },
+    {
+      "path": "finance/finance-bookkeeper-controller.md",
+      "division": "finance",
+      "name": "Bookkeeper & Controller",
+      "description": "Expert bookkeeper and controller specializing in day-to-day accounting operations, financial reconciliations, month-end close processes, and internal controls. Ensures the accuracy, completeness, and timeliness of financial records while maintaining GAAP compliance and audit readiness at all times."
+    },
+    {
+      "path": "finance/finance-financial-analyst.md",
+      "division": "finance",
+      "name": "Financial Analyst",
+      "description": "Expert financial analyst specializing in financial modeling, forecasting, scenario analysis, and data-driven decision support. Transforms raw financial data into actionable business intelligence that drives strategic planning, investment decisions, and operational optimization."
+    },
+    {
+      "path": "finance/finance-fpa-analyst.md",
+      "division": "finance",
+      "name": "FP&A Analyst",
+      "description": "Expert Financial Planning & Analysis (FP&A) analyst specializing in budgeting, variance analysis, financial planning, rolling forecasts, and strategic decision support. Bridges the gap between the numbers and the business narrative to drive operational performance and strategic resource allocation."
+    },
+    {
+      "path": "finance/finance-investment-researcher.md",
+      "division": "finance",
+      "name": "Investment Researcher",
+      "description": "Expert investment researcher specializing in market research, due diligence, portfolio analysis, and asset valuation. Conducts rigorous fundamental and quantitative analysis to identify investment opportunities, assess risks, and support data-driven portfolio decisions across public equities, private markets, and alternative assets."
+    },
+    {
+      "path": "finance/finance-tax-strategist.md",
+      "division": "finance",
+      "name": "Tax Strategist",
+      "description": "Expert tax strategist specializing in tax optimization, multi-jurisdictional compliance, transfer pricing, and strategic tax planning. Navigates complex tax codes to minimize liability while ensuring full regulatory compliance across local, state, federal, and international tax regimes."
+    },
+    {
+      "path": "game-development/blender/blender-addon-engineer.md",
+      "division": "game-development",
+      "name": "Blender Add-on Engineer",
+      "description": "Blender tooling specialist - Builds Python add-ons, asset validators, exporters, and pipeline automations that turn repetitive DCC work into reliable one-click workflows"
+    },
+    {
+      "path": "game-development/economy-designer.md",
+      "division": "game-development",
+      "name": "Economy Designer",
+      "description": "Virtual economy architect - Masters currency systems, sources and sinks, monetization modeling, inflation control, and data-driven economic balancing for live games"
+    },
+    {
+      "path": "game-development/game-audio-engineer.md",
+      "division": "game-development",
+      "name": "Game Audio Engineer",
+      "description": "Interactive audio specialist - Masters FMOD/Wwise integration, adaptive music systems, spatial audio, and audio performance budgeting across all game engines"
+    },
+    {
+      "path": "game-development/game-designer.md",
+      "division": "game-development",
+      "name": "Game Designer",
+      "description": "Systems and mechanics architect - Masters GDD authorship, player psychology, economy balancing, and gameplay loop design across all engines and genres"
+    },
+    {
+      "path": "game-development/godot/godot-gameplay-scripter.md",
+      "division": "game-development",
+      "name": "Godot Gameplay Scripter",
+      "description": "Composition and signal integrity specialist - Masters GDScript 2.0, C# integration, node-based architecture, and type-safe signal design for Godot 4 projects"
+    },
+    {
+      "path": "game-development/godot/godot-multiplayer-engineer.md",
+      "division": "game-development",
+      "name": "Godot Multiplayer Engineer",
+      "description": "Godot 4 networking specialist - Masters the MultiplayerAPI, scene replication, ENet/WebRTC transport, RPCs, and authority models for real-time multiplayer games"
+    },
+    {
+      "path": "game-development/godot/godot-shader-developer.md",
+      "division": "game-development",
+      "name": "Godot Shader Developer",
+      "description": "Godot 4 visual effects specialist - Masters the Godot Shading Language (GLSL-like), VisualShader editor, CanvasItem and Spatial shaders, post-processing, and performance optimization for 2D/3D effects"
+    },
+    {
+      "path": "game-development/level-designer.md",
+      "division": "game-development",
+      "name": "Level Designer",
+      "description": "Spatial storytelling and flow specialist - Masters layout theory, pacing architecture, encounter design, and environmental narrative across all game engines"
+    },
+    {
+      "path": "game-development/narrative-designer.md",
+      "division": "game-development",
+      "name": "Narrative Designer",
+      "description": "Story systems and dialogue architect - Masters GDD-aligned narrative design, branching dialogue, lore architecture, and environmental storytelling across all game engines"
+    },
+    {
+      "path": "game-development/roblox-studio/roblox-avatar-creator.md",
+      "division": "game-development",
+      "name": "Roblox Avatar Creator",
+      "description": "Roblox UGC and avatar pipeline specialist - Masters Roblox's avatar system, UGC item creation, accessory rigging, texture standards, and the Creator Marketplace submission pipeline"
+    },
+    {
+      "path": "game-development/roblox-studio/roblox-experience-designer.md",
+      "division": "game-development",
+      "name": "Roblox Experience Designer",
+      "description": "Roblox platform UX and monetization specialist - Masters engagement loop design, DataStore-driven progression, Roblox monetization systems (Passes, Developer Products, UGC), and player retention for Roblox experiences"
+    },
+    {
+      "path": "game-development/roblox-studio/roblox-systems-scripter.md",
+      "division": "game-development",
+      "name": "Roblox Systems Scripter",
+      "description": "Roblox platform engineering specialist - Masters Luau, the client-server security model, RemoteEvents/RemoteFunctions, DataStore, and module architecture for scalable Roblox experiences"
+    },
+    {
+      "path": "game-development/technical-artist.md",
+      "division": "game-development",
+      "name": "Technical Artist",
+      "description": "Art-to-engine pipeline specialist - Masters shaders, VFX systems, LOD pipelines, performance budgeting, and cross-engine asset optimization"
+    },
+    {
+      "path": "game-development/unity/unity-architect.md",
+      "division": "game-development",
+      "name": "Unity Architect",
+      "description": "Data-driven modularity specialist - Masters ScriptableObjects, decoupled systems, and single-responsibility component design for scalable Unity projects"
+    },
+    {
+      "path": "game-development/unity/unity-editor-tool-developer.md",
+      "division": "game-development",
+      "name": "Unity Editor Tool Developer",
+      "description": "Unity editor automation specialist - Masters custom EditorWindows, PropertyDrawers, AssetPostprocessors, ScriptedImporters, and pipeline automation that saves teams hours per week"
+    },
+    {
+      "path": "game-development/unity/unity-multiplayer-engineer.md",
+      "division": "game-development",
+      "name": "Unity Multiplayer Engineer",
+      "description": "Networked gameplay specialist - Masters Netcode for GameObjects, Unity Gaming Services (Relay/Lobby), client-server authority, lag compensation, and state synchronization"
+    },
+    {
+      "path": "game-development/unity/unity-shader-graph-artist.md",
+      "division": "game-development",
+      "name": "Unity Shader Graph Artist",
+      "description": "Visual effects and material specialist - Masters Unity Shader Graph, HLSL, URP/HDRP rendering pipelines, and custom pass authoring for real-time visual effects"
+    },
+    {
+      "path": "game-development/unreal-engine/unreal-multiplayer-architect.md",
+      "division": "game-development",
+      "name": "Unreal Multiplayer Architect",
+      "description": "Unreal Engine networking specialist - Masters Actor replication, GameMode/GameState architecture, server-authoritative gameplay, network prediction, and dedicated server setup for UE5"
+    },
+    {
+      "path": "game-development/unreal-engine/unreal-systems-engineer.md",
+      "division": "game-development",
+      "name": "Unreal Systems Engineer",
+      "description": "Performance and hybrid architecture specialist - Masters C++/Blueprint continuum, Nanite geometry, Lumen GI, and Gameplay Ability System for AAA-grade Unreal Engine projects"
+    },
+    {
+      "path": "game-development/unreal-engine/unreal-technical-artist.md",
+      "division": "game-development",
+      "name": "Unreal Technical Artist",
+      "description": "Unreal Engine visual pipeline specialist - Masters the Material Editor, Niagara VFX, Procedural Content Generation, and the art-to-engine pipeline for UE5 projects"
+    },
+    {
+      "path": "game-development/unreal-engine/unreal-world-builder.md",
+      "division": "game-development",
+      "name": "Unreal World Builder",
+      "description": "Open-world and environment specialist - Masters UE5 World Partition, Landscape, procedural foliage, HLOD, and large-scale level streaming for seamless open-world experiences"
+    },
+    {
+      "path": "gis/gis-3d-scene-developer.md",
+      "division": "gis",
+      "name": "3D & Scene Developer",
+      "description": "Web 3D visualization specialist who creates immersive 3D scenes, terrain models, point cloud visualizations, and interactive web experiences using Cesium, ArcGIS Scene Viewer, and modern 3D web frameworks."
+    },
+    {
+      "path": "gis/gis-analyst.md",
+      "division": "gis",
+      "name": "GIS Analyst",
+      "description": "Day-to-day GIS operator who creates maps, manages layers, performs spatial queries, and maintains geospatial data integrity across desktop and web environments."
+    },
+    {
+      "path": "gis/gis-bim-specialist.md",
+      "division": "gis",
+      "name": "BIM/GIS Specialist",
+      "description": "Integration specialist who bridges Building Information Modeling and Geographic Information Systems — Revit/IFC data conversion, indoor mapping, digital twin architecture, and facility management data models."
+    },
+    {
+      "path": "gis/gis-cartography-designer.md",
+      "division": "gis",
+      "name": "Cartography Designer",
+      "description": "Map aesthetics specialist who designs beautiful, readable, and effective maps — color theory, typography, label placement, basemap selection, and visual hierarchy for both print and web."
+    },
+    {
+      "path": "gis/gis-drone-reality-mapping.md",
+      "division": "gis",
+      "name": "Drone/Reality Mapping Specialist",
+      "description": "Photogrammetry and reality capture expert who processes drone imagery into orthomosaics, digital terrain models, point clouds, and 3D meshes — bridging field capture and GIS-ready products."
+    },
+    {
+      "path": "gis/gis-geoai-ml-engineer.md",
+      "division": "gis",
+      "name": "GeoAI/ML Engineer",
+      "description": "Geospatial machine learning specialist who builds models for feature extraction, object detection, image segmentation, and land cover classification from satellite and aerial imagery."
+    },
+    {
+      "path": "gis/gis-geoprocessing-specialist.md",
+      "division": "gis",
+      "name": "Geoprocessing Specialist",
+      "description": "ArcPy and Python toolbox expert who automates spatial workflows — builds .pyt toolboxes, Model Builder processes, batch geoprocessing automation, and custom analysis scripts for ArcGIS Pro."
+    },
+    {
+      "path": "gis/gis-qa-engineer.md",
+      "division": "gis",
+      "name": "GIS QA Engineer",
+      "description": "Quality assurance specialist who validates geospatial data integrity — topology checks, metadata audits, CRS consistency, accuracy assessment, and compliance verification."
+    },
+    {
+      "path": "gis/gis-solution-engineer.md",
+      "division": "gis",
+      "name": "Solution Engineer",
+      "description": "Hands-on GIS prototype builder who takes strategy from Technical Consultant and turns it into working demos, proof-of-concepts, and technical validations across the full Esri and open-source stack."
+    },
+    {
+      "path": "gis/gis-spatial-data-engineer.md",
+      "division": "gis",
+      "name": "Spatial Data Engineer",
+      "description": "ETL specialist who transforms messy geospatial data from any source into clean, standardized, production-ready datasets — format conversion, CRS reprojection, attribute normalization, and automated pipelines."
+    },
+    {
+      "path": "gis/gis-spatial-data-scientist.md",
+      "division": "gis",
+      "name": "Spatial Data Scientist",
+      "description": "Advanced spatial analytics specialist who applies statistical modeling, spatial econometrics, clustering, and predictive analytics to geospatial data — finding patterns that aren't visible on a map."
+    },
+    {
+      "path": "gis/gis-technical-consultant.md",
+      "division": "gis",
+      "name": "Technical Consultant",
+      "description": "Strategic GIS advisor who translates business problems into geospatial solutions — gap analysis, technology roadmaps, RFP responses, and digital transformation strategy across Esri and open-source ecosystems."
+    },
+    {
+      "path": "gis/gis-web-gis-developer.md",
+      "division": "gis",
+      "name": "Web GIS Developer",
+      "description": "Full-stack web GIS engineer who builds interactive mapping applications — MapLibre GL JS, ArcGIS JS API, Leaflet, real-time dashboards, REST API integration, and geospatial web services."
+    },
+    {
+      "path": "healthcare/healthcare-clinical-evidence-agent.md",
+      "division": "healthcare",
+      "name": "Clinical Evidence Agent",
+      "description": "Evidence standards and clinical credibility framework for AI agents"
+    },
+    {
+      "path": "healthcare/healthcare-innovation-strategist.md",
+      "division": "healthcare",
+      "name": "Healthcare Innovation Strategist",
+      "description": "Strategic narrative architect for healthcare founders operating at"
+    },
+    {
+      "path": "healthcare/healthcare-sovereign-health-systems-agent.md",
+      "division": "healthcare",
+      "name": "Sovereign Health Systems Agent",
+      "description": "Government health mandate engagement framework for AI agents"
+    },
+    {
+      "path": "marketing/marketing-aeo-foundations.md",
+      "division": "marketing",
+      "name": "AEO Foundations Architect",
+      "description": "Expert in AI Engine Optimization infrastructure — implements llms.txt, AI-aware robots.txt, token-budgeted content, structured Markdown availability, and agent discovery files so AI crawlers, citation engines, and browsing agents can find, parse, and act on your site"
+    },
+    {
+      "path": "marketing/marketing-agentic-search-optimizer.md",
+      "division": "marketing",
+      "name": "Agentic Search Optimizer",
+      "description": "Expert in WebMCP readiness and agentic task completion — audits whether AI agents can actually accomplish tasks on your site (book, buy, register, subscribe), implements WebMCP declarative and imperative patterns, and measures task completion rates across AI browsing agents"
+    },
+    {
+      "path": "marketing/marketing-ai-citation-strategist.md",
+      "division": "marketing",
+      "name": "AI Citation Strategist",
+      "description": "Expert in AI recommendation engine optimization (AEO/GEO) — audits brand visibility across ChatGPT, Claude, Gemini, and Perplexity, identifies why competitors get cited instead, and delivers content fixes that improve AI citations"
+    },
+    {
+      "path": "marketing/marketing-app-store-optimizer.md",
+      "division": "marketing",
+      "name": "App Store Optimizer",
+      "description": "Expert app store marketing specialist focused on App Store Optimization (ASO), conversion rate optimization, and app discoverability"
+    },
+    {
+      "path": "marketing/marketing-baidu-seo-specialist.md",
+      "division": "marketing",
+      "name": "Baidu SEO Specialist",
+      "description": "Expert Baidu search optimization specialist focused on Chinese search engine ranking, Baidu ecosystem integration, ICP compliance, Chinese keyword research, and mobile-first indexing for the China market."
+    },
+    {
+      "path": "marketing/marketing-bilibili-content-strategist.md",
+      "division": "marketing",
+      "name": "Bilibili Content Strategist",
+      "description": "Expert Bilibili marketing specialist focused on UP主 growth, danmaku culture mastery, B站 algorithm optimization, community building, and branded content strategy for China's leading video community platform."
+    },
+    {
+      "path": "marketing/marketing-book-co-author.md",
+      "division": "marketing",
+      "name": "Book Co-Author",
+      "description": "Strategic thought-leadership book collaborator for founders, experts, and operators turning voice notes, fragments, and positioning into structured first-person chapters."
+    },
+    {
+      "path": "marketing/marketing-carousel-growth-engine.md",
+      "division": "marketing",
+      "name": "Carousel Growth Engine",
+      "description": "Autonomous TikTok and Instagram carousel generation specialist. Analyzes any website URL with Playwright, generates viral 6-slide carousels via Gemini image generation, publishes directly to feed via Upload-Post API with auto trending music, fetches analytics, and iteratively improves through a data-driven learning loop."
+    },
+    {
+      "path": "marketing/marketing-china-ecommerce-operator.md",
+      "division": "marketing",
+      "name": "China E-Commerce Operator",
+      "description": "Expert China e-commerce operations specialist covering Taobao, Tmall, Pinduoduo, and JD ecosystems with deep expertise in product listing optimization, live commerce, store operations, 618/Double 11 campaigns, and cross-platform strategy."
+    },
+    {
+      "path": "marketing/marketing-china-market-localization-strategist.md",
+      "division": "marketing",
+      "name": "China Market Localization Strategist",
+      "description": "Full-stack China market localization expert who transforms real-time trend signals into executable go-to-market strategies across Douyin, Xiaohongshu, WeChat, Bilibili, and beyond"
+    },
+    {
+      "path": "marketing/marketing-content-creator.md",
+      "division": "marketing",
+      "name": "Content Creator",
+      "description": "Expert content strategist and creator for multi-platform campaigns. Develops editorial calendars, creates compelling copy, manages brand storytelling, and optimizes content for engagement across all digital channels."
+    },
+    {
+      "path": "marketing/marketing-cross-border-ecommerce.md",
+      "division": "marketing",
+      "name": "Cross-Border E-Commerce Specialist",
+      "description": "Full-funnel cross-border e-commerce strategist covering Amazon, Shopee, Lazada, AliExpress, Temu, and TikTok Shop operations, international logistics and overseas warehousing, compliance and taxation, multilingual listing optimization, brand globalization, and DTC independent site development."
+    },
+    {
+      "path": "marketing/marketing-douyin-strategist.md",
+      "division": "marketing",
+      "name": "Douyin Strategist",
+      "description": "Short-video marketing expert specializing in the Douyin platform, with deep expertise in recommendation algorithm mechanics, viral video planning, livestream commerce workflows, and full-funnel brand growth through content matrix strategies."
+    },
+    {
+      "path": "marketing/marketing-email-strategist.md",
+      "division": "marketing",
+      "name": "Email Marketing Strategist",
+      "description": "Expert email marketing strategist for CRM-driven campaigns, lifecycle automation, segmentation architecture, and deliverability. Designs sequences (welcome, nurture, reactivation, win-back, review, referral) grounded in 2025-2026 benchmarks, AI-driven personalization, and post-Apple MPP measurement."
+    },
+    {
+      "path": "marketing/marketing-global-podcast-strategist.md",
+      "division": "marketing",
+      "name": "Global Podcast Strategist",
+      "description": "Expert podcast growth specialist focused on show positioning, audience development, content strategy, and monetisation. Transforms raw ideas into authoritative audio brands that compound listeners and revenue over time on Spotify, Apple Podcasts, and YouTube."
+    },
+    {
+      "path": "marketing/marketing-growth-hacker.md",
+      "division": "marketing",
+      "name": "Growth Hacker",
+      "description": "Expert growth strategist specializing in rapid user acquisition through data-driven experimentation. Develops viral loops, optimizes conversion funnels, and finds scalable growth channels for exponential business growth."
+    },
+    {
+      "path": "marketing/marketing-instagram-curator.md",
+      "division": "marketing",
+      "name": "Instagram Curator",
+      "description": "Expert Instagram marketing specialist focused on visual storytelling, community building, and multi-format content optimization. Masters aesthetic development and drives meaningful engagement."
+    },
+    {
+      "path": "marketing/marketing-kuaishou-strategist.md",
+      "division": "marketing",
+      "name": "Kuaishou Strategist",
+      "description": "Expert Kuaishou marketing strategist specializing in short-video content for China's lower-tier city markets, live commerce operations, community trust building, and grassroots audience growth on 快手."
+    },
+    {
+      "path": "marketing/marketing-linkedin-content-creator.md",
+      "division": "marketing",
+      "name": "LinkedIn Content Creator",
+      "description": "Expert LinkedIn content strategist focused on thought leadership, personal brand building, and high-engagement professional content. Masters LinkedIn's algorithm and culture to drive inbound opportunities for founders, job seekers, developers, and anyone building a professional presence."
+    },
+    {
+      "path": "marketing/marketing-livestream-commerce-coach.md",
+      "division": "marketing",
+      "name": "Livestream Commerce Coach",
+      "description": "Veteran livestream e-commerce coach specializing in host training and live room operations across Douyin, Kuaishou, Taobao Live, and Channels, covering script design, product sequencing, paid-vs-organic traffic balancing, conversion closing techniques, and real-time data-driven optimization."
+    },
+    {
+      "path": "marketing/marketing-multi-platform-publisher.md",
+      "division": "marketing",
+      "name": "Multi-Platform Publisher",
+      "description": "Expert orchestrator for one-click Chinese blog publishing. Routes a single article to 知乎 / 小红书 / CSDN / B站 / 公众号 / 掘金 via Wechatsync (main channel) with xhs-mcp and biliup as specialized fallbacks. Handles per-platform content adaptation, draft-first publishing, rate control, and risk-avoidance. Does NOT auto-publish — always stops at draft for human review."
+    },
+    {
+      "path": "marketing/marketing-podcast-strategist.md",
+      "division": "marketing",
+      "name": "Podcast Strategist",
+      "description": "Content strategy and operations expert for the Chinese podcast market, with deep expertise in Xiaoyuzhou, Ximalaya, and other major audio platforms, covering show positioning, audio production, audience growth, multi-platform distribution, and monetization to help podcast creators build sticky audio content brands."
+    },
+    {
+      "path": "marketing/marketing-pr-communications-manager.md",
+      "division": "marketing",
+      "name": "PR & Communications Manager",
+      "description": "Strategic public relations and communications specialist for media relations, press releases, crisis communications, executive thought leadership, brand reputation management, and integrated communications planning — building and protecting reputations through earned media, storytelling, and proactive narrative control"
+    },
+    {
+      "path": "marketing/marketing-private-domain-operator.md",
+      "division": "marketing",
+      "name": "Private Domain Operator",
+      "description": "Expert in building enterprise WeChat (WeCom) private domain ecosystems, with deep expertise in SCRM systems, segmented community operations, Mini Program commerce integration, user lifecycle management, and full-funnel conversion optimization."
+    },
+    {
+      "path": "marketing/marketing-reddit-community-builder.md",
+      "division": "marketing",
+      "name": "Reddit Community Builder",
+      "description": "Expert Reddit marketing specialist focused on authentic community engagement, value-driven content creation, and long-term relationship building. Masters Reddit culture navigation."
+    },
+    {
+      "path": "marketing/marketing-seo-specialist.md",
+      "division": "marketing",
+      "name": "SEO Specialist",
+      "description": "Expert search engine optimization strategist specializing in technical SEO, content optimization, link authority building, and organic search growth. Drives sustainable traffic through data-driven search strategies."
+    },
+    {
+      "path": "marketing/marketing-short-video-editing-coach.md",
+      "division": "marketing",
+      "name": "Short-Video Editing Coach",
+      "description": "Hands-on short-video editing coach covering the full post-production pipeline, with mastery of CapCut Pro, Premiere Pro, DaVinci Resolve, and Final Cut Pro across composition and camera language, color grading, audio engineering, motion graphics and VFX, subtitle design, multi-platform export optimization, editing workflow efficiency, and AI-assisted editing."
+    },
+    {
+      "path": "marketing/marketing-social-media-strategist.md",
+      "division": "marketing",
+      "name": "Social Media Strategist",
+      "description": "Expert social media strategist for LinkedIn, Twitter, and professional platforms. Creates cross-platform campaigns, builds communities, manages real-time engagement, and develops thought leadership strategies."
+    },
+    {
+      "path": "marketing/marketing-tiktok-strategist.md",
+      "division": "marketing",
+      "name": "TikTok Strategist",
+      "description": "Expert TikTok marketing specialist focused on viral content creation, algorithm optimization, and community building. Masters TikTok's unique culture and features for brand growth."
+    },
+    {
+      "path": "marketing/marketing-twitter-engager.md",
+      "division": "marketing",
+      "name": "Twitter Engager",
+      "description": "Expert Twitter marketing specialist focused on real-time engagement, thought leadership building, and community-driven growth. Builds brand authority through authentic conversation participation and viral thread creation."
+    },
+    {
+      "path": "marketing/marketing-video-optimization-specialist.md",
+      "division": "marketing",
+      "name": "Video Optimization Specialist",
+      "description": "Video marketing strategist specializing in YouTube algorithm optimization, audience retention, chaptering, thumbnail concepts, and cross-platform video syndication."
+    },
+    {
+      "path": "marketing/marketing-wechat-official-account.md",
+      "division": "marketing",
+      "name": "WeChat Official Account Manager",
+      "description": "Expert WeChat Official Account (OA) strategist specializing in content marketing, subscriber engagement, and conversion optimization. Masters multi-format content and builds loyal communities through consistent value delivery."
+    },
+    {
+      "path": "marketing/marketing-weibo-strategist.md",
+      "division": "marketing",
+      "name": "Weibo Strategist",
+      "description": "Full-spectrum operations expert for Sina Weibo, with deep expertise in trending topic mechanics, Super Topic community management, public sentiment monitoring, fan economy strategies, and Weibo advertising, helping brands achieve viral reach and sustained growth on China's leading public discourse platform."
+    },
+    {
+      "path": "marketing/marketing-x-twitter-intelligence-analyst.md",
+      "division": "marketing",
+      "name": "X/Twitter Intelligence Analyst",
+      "description": "Social intelligence specialist for X/Twitter research, trend detection, account monitoring, and evidence-backed audience insights using public signals and structured data workflows."
+    },
+    {
+      "path": "marketing/marketing-xiaohongshu-specialist.md",
+      "division": "marketing",
+      "name": "Xiaohongshu Specialist",
+      "description": "Expert Xiaohongshu marketing specialist focused on lifestyle content, trend-driven strategies, and authentic community engagement. Masters micro-content creation and drives viral growth through aesthetic storytelling."
+    },
+    {
+      "path": "marketing/marketing-zhihu-strategist.md",
+      "division": "marketing",
+      "name": "Zhihu Strategist",
+      "description": "Expert Zhihu marketing specialist focused on thought leadership, community credibility, and knowledge-driven engagement. Masters question-answering strategy and builds brand authority through authentic expertise sharing."
+    },
+    {
+      "path": "paid-media/paid-media-auditor.md",
+      "division": "paid-media",
+      "name": "Paid Media Auditor",
+      "description": "Comprehensive paid media auditor who systematically evaluates Google Ads, Microsoft Ads, and Meta accounts across 200+ checkpoints spanning account structure, tracking, bidding, creative, audiences, and competitive positioning. Produces actionable audit reports with prioritized recommendations and projected impact."
+    },
+    {
+      "path": "paid-media/paid-media-creative-strategist.md",
+      "division": "paid-media",
+      "name": "Ad Creative Strategist",
+      "description": "Paid media creative specialist focused on ad copywriting, RSA optimization, asset group design, and creative testing frameworks across Google, Meta, Microsoft, and programmatic platforms. Bridges the gap between performance data and persuasive messaging."
+    },
+    {
+      "path": "paid-media/paid-media-paid-social-strategist.md",
+      "division": "paid-media",
+      "name": "Paid Social Strategist",
+      "description": "Cross-platform paid social advertising specialist covering Meta (Facebook/Instagram), LinkedIn, TikTok, Pinterest, X, and Snapchat. Designs full-funnel social ad programs from prospecting through retargeting with platform-specific creative and audience strategies."
+    },
+    {
+      "path": "paid-media/paid-media-ppc-strategist.md",
+      "division": "paid-media",
+      "name": "PPC Campaign Strategist",
+      "description": "Senior paid media strategist specializing in large-scale search, shopping, and performance max campaign architecture across Google, Microsoft, and Amazon ad platforms. Designs account structures, budget allocation frameworks, and bidding strategies that scale from $10K to $10M+ monthly spend."
+    },
+    {
+      "path": "paid-media/paid-media-programmatic-buyer.md",
+      "division": "paid-media",
+      "name": "Programmatic & Display Buyer",
+      "description": "Display advertising and programmatic media buying specialist covering managed placements, Google Display Network, DV360, trade desk platforms, partner media (newsletters, sponsored content), and ABM display strategies via platforms like Demandbase and 6Sense."
+    },
+    {
+      "path": "paid-media/paid-media-search-query-analyst.md",
+      "division": "paid-media",
+      "name": "Search Query Analyst",
+      "description": "Specialist in search term analysis, negative keyword architecture, and query-to-intent mapping. Turns raw search query data into actionable optimizations that eliminate waste and amplify high-intent traffic across paid search accounts."
+    },
+    {
+      "path": "paid-media/paid-media-tracking-specialist.md",
+      "division": "paid-media",
+      "name": "Tracking & Measurement Specialist",
+      "description": "Expert in conversion tracking architecture, tag management, and attribution modeling across Google Tag Manager, GA4, Google Ads, Meta CAPI, LinkedIn Insight Tag, and server-side implementations. Ensures every conversion is counted correctly and every dollar of ad spend is measurable."
+    },
+    {
+      "path": "product/product-behavioral-nudge-engine.md",
+      "division": "product",
+      "name": "Behavioral Nudge Engine",
+      "description": "Behavioral psychology specialist that adapts software interaction cadences and styles to maximize user motivation and success."
+    },
+    {
+      "path": "product/product-feedback-synthesizer.md",
+      "division": "product",
+      "name": "Feedback Synthesizer",
+      "description": "Expert in collecting, analyzing, and synthesizing user feedback from multiple channels to extract actionable product insights. Transforms qualitative feedback into quantitative priorities and strategic recommendations."
+    },
+    {
+      "path": "product/product-manager.md",
+      "division": "product",
+      "name": "Product Manager",
+      "description": "Holistic product leader who owns the full product lifecycle — from discovery and strategy through roadmap, stakeholder alignment, go-to-market, and outcome measurement. Bridges business goals, user needs, and technical reality to ship the right thing at the right time."
+    },
+    {
+      "path": "product/product-sprint-prioritizer.md",
+      "division": "product",
+      "name": "Sprint Prioritizer",
+      "description": "Expert product manager specializing in agile sprint planning, feature prioritization, and resource allocation. Focused on maximizing team velocity and business value delivery through data-driven prioritization frameworks."
+    },
+    {
+      "path": "product/product-trend-researcher.md",
+      "division": "product",
+      "name": "Trend Researcher",
+      "description": "Expert market intelligence analyst specializing in identifying emerging trends, competitive analysis, and opportunity assessment. Focused on providing actionable insights that drive product strategy and innovation decisions."
+    },
+    {
+      "path": "project-management/project-management-experiment-tracker.md",
+      "division": "project-management",
+      "name": "Experiment Tracker",
+      "description": "Expert project manager specializing in experiment design, execution tracking, and data-driven decision making. Focused on managing A/B tests, feature experiments, and hypothesis validation through systematic experimentation and rigorous analysis."
+    },
+    {
+      "path": "project-management/project-management-jira-workflow-steward.md",
+      "division": "project-management",
+      "name": "Jira Workflow Steward",
+      "description": "Expert delivery operations specialist who enforces Jira-linked Git workflows, traceable commits, structured pull requests, and release-safe branch strategy across software teams."
+    },
+    {
+      "path": "project-management/project-management-meeting-notes-specialist.md",
+      "division": "project-management",
+      "name": "Meeting Notes Specialist",
+      "description": "Extract structured decisions, action items, and open questions from meeting transcripts or rough notes into a clean 4-section summary."
+    },
+    {
+      "path": "project-management/project-management-project-shepherd.md",
+      "division": "project-management",
+      "name": "Project Shepherd",
+      "description": "Expert project manager specializing in cross-functional project coordination, timeline management, and stakeholder alignment. Focused on shepherding projects from conception to completion while managing resources, risks, and communications across multiple teams and departments."
+    },
+    {
+      "path": "project-management/project-management-studio-operations.md",
+      "division": "project-management",
+      "name": "Studio Operations",
+      "description": "Expert operations manager specializing in day-to-day studio efficiency, process optimization, and resource coordination. Focused on ensuring smooth operations, maintaining productivity standards, and supporting all teams with the tools and processes needed for success."
+    },
+    {
+      "path": "project-management/project-management-studio-producer.md",
+      "division": "project-management",
+      "name": "Studio Producer",
+      "description": "Senior strategic leader specializing in high-level creative and technical project orchestration, resource allocation, and multi-project portfolio management. Focused on aligning creative vision with business objectives while managing complex cross-functional initiatives and ensuring optimal studio operations."
+    },
+    {
+      "path": "project-management/project-manager-senior.md",
+      "division": "project-management",
+      "name": "Senior Project Manager",
+      "description": "Converts specs to tasks and remembers previous projects. Focused on realistic scope, no background processes, exact spec requirements"
+    },
+    {
+      "path": "research/research-synthesist.md",
+      "division": "research",
+      "name": "Research Synthesist",
+      "description": "Expert in literature review, source evaluation, and evidence synthesis — turns a scattered pile of sources into a structured, honestly-weighted map of what the evidence actually supports"
+    },
+    {
+      "path": "sales/sales-account-strategist.md",
+      "division": "sales",
+      "name": "Account Strategist",
+      "description": "Expert post-sale account strategist specializing in land-and-expand execution, stakeholder mapping, QBR facilitation, and net revenue retention. Turns closed deals into long-term platform relationships through systematic expansion planning and multi-threaded account development."
+    },
+    {
+      "path": "sales/sales-coach.md",
+      "division": "sales",
+      "name": "Sales Coach",
+      "description": "Expert sales coaching specialist focused on rep development, pipeline review facilitation, call coaching, deal strategy, and forecast accuracy. Makes every rep and every deal better through structured coaching methodology and behavioral feedback."
+    },
+    {
+      "path": "sales/sales-deal-strategist.md",
+      "division": "sales",
+      "name": "Deal Strategist",
+      "description": "Senior deal strategist specializing in MEDDPICC qualification, competitive positioning, and win planning for complex B2B sales cycles. Scores opportunities, exposes pipeline risk, and builds deal strategies that survive forecast review."
+    },
+    {
+      "path": "sales/sales-discovery-coach.md",
+      "division": "sales",
+      "name": "Discovery Coach",
+      "description": "Coaches sales teams on elite discovery methodology — question design, current-state mapping, gap quantification, and call structure that surfaces real buying motivation."
+    },
+    {
+      "path": "sales/sales-engineer.md",
+      "division": "sales",
+      "name": "Sales Engineer",
+      "description": "Senior pre-sales engineer specializing in technical discovery, demo engineering, POC scoping, competitive battlecards, and bridging product capabilities to business outcomes. Wins the technical decision so the deal can close."
+    },
+    {
+      "path": "sales/sales-offer-lead-gen-strategist.md",
+      "division": "sales",
+      "name": "Offer & Lead Gen Strategist",
+      "description": "Top-of-funnel architect who designs irresistible offers and lead magnets that attract qualified buyers at scale. Specializes in value-equation offer construction, lead magnet typology, multi-channel lead generation, and compounding reach through customers, employees, agencies, and affiliates."
+    },
+    {
+      "path": "sales/sales-outbound-strategist.md",
+      "division": "sales",
+      "name": "Outbound Strategist",
+      "description": "Signal-based outbound specialist who designs multi-channel prospecting sequences, defines ICPs, and builds pipeline through research-driven personalization — not volume."
+    },
+    {
+      "path": "sales/sales-pipeline-analyst.md",
+      "division": "sales",
+      "name": "Pipeline Analyst",
+      "description": "Revenue operations analyst specializing in pipeline health diagnostics, deal velocity analysis, forecast accuracy, and data-driven sales coaching. Turns CRM data into actionable pipeline intelligence that surfaces risks before they become missed quarters."
+    },
+    {
+      "path": "sales/sales-proposal-strategist.md",
+      "division": "sales",
+      "name": "Proposal Strategist",
+      "description": "Strategic proposal architect who transforms RFPs and sales opportunities into compelling win narratives. Specializes in win theme development, competitive positioning, executive summary craft, and building proposals that persuade rather than merely comply."
+    },
+    {
+      "path": "security/security-ai-generated-code-auditor.md",
+      "division": "security",
+      "name": "AI-Generated Code Security Auditor",
+      "description": "Security reviewer for AI-generated and vibe-coded apps — hunts the hardcoded secrets, broken row-level security, and prompt-injection sinks that coding assistants ship by default, then drives a scan, fix, and rescan loop with honest, CWE-mapped findings."
+    },
+    {
+      "path": "security/security-appsec-engineer.md",
+      "division": "security",
+      "name": "Application Security Engineer",
+      "description": "AppSec specialist who secures the software development lifecycle through threat modeling, secure code review, SAST/DAST integration, and developer security education that makes secure code the default."
+    },
+    {
+      "path": "security/security-architect.md",
+      "division": "security",
+      "name": "Security Architect",
+      "description": "Expert security architect specializing in threat modeling, secure-by-design architecture, trust-boundary analysis, defense-in-depth, and risk-based security reviews across web, API, cloud-native, and distributed systems. Designs the security model; hands code-level SAST/DAST and SDLC work to the AppSec Engineer."
+    },
+    {
+      "path": "security/security-blockchain-security-auditor.md",
+      "division": "security",
+      "name": "Blockchain Security Auditor",
+      "description": "Expert smart contract security auditor specializing in vulnerability detection, formal verification, exploit analysis, and comprehensive audit report writing for DeFi protocols and blockchain applications."
+    },
+    {
+      "path": "security/security-cloud-security-architect.md",
+      "division": "security",
+      "name": "Cloud Security Architect",
+      "description": "Cloud-native security specialist designing zero trust architectures, implementing defense-in-depth across AWS, Azure, and GCP, and securing infrastructure-as-code pipelines from day one."
+    },
+    {
+      "path": "security/security-compliance-auditor.md",
+      "division": "security",
+      "name": "Compliance Auditor",
+      "description": "Expert technical compliance auditor specializing in SOC 2, ISO 27001, HIPAA, and PCI-DSS audits — from readiness assessment through evidence collection to certification."
+    },
+    {
+      "path": "security/security-incident-responder.md",
+      "division": "security",
+      "name": "Incident Responder",
+      "description": "Digital forensics and incident response specialist who leads breach investigations, contains active threats, coordinates crisis response, and writes post-mortems that prevent recurrence."
+    },
+    {
+      "path": "security/security-penetration-tester.md",
+      "division": "security",
+      "name": "Penetration Tester",
+      "description": "Offensive security specialist conducting authorized penetration tests, red team operations, and vulnerability assessments across networks, web applications, and cloud infrastructure."
+    },
+    {
+      "path": "security/security-secrets-credential-engineer.md",
+      "division": "security",
+      "name": "Secrets & Credential Hygiene Engineer",
+      "description": "Owns the full lifecycle of secrets and credentials — detection, prevention, vaulting, rotation, and leak response — so an application runs on short-lived, least-privilege credentials that are never in the code and are already rotated by the time a leak is found."
+    },
+    {
+      "path": "security/security-senior-secops.md",
+      "division": "security",
+      "name": "Senior SecOps Engineer",
+      "description": "Defensive application security specialist who scans every code submission for secrets and sensitive data exposure before anything else, then implements or audits security controls following the organization's security standard — covering authentication, authorization, tokens, cookies, HTTP headers, CORS, rate limiting, CSP, secrets management, input validation, and secure logging."
+    },
+    {
+      "path": "security/security-threat-detection-engineer.md",
+      "division": "security",
+      "name": "Threat Detection Engineer",
+      "description": "Expert detection engineer specializing in SIEM rule development, MITRE ATT&CK coverage mapping, threat hunting, alert tuning, and detection-as-code pipelines for security operations teams."
+    },
+    {
+      "path": "security/security-threat-intelligence-analyst.md",
+      "division": "security",
+      "name": "Threat Intelligence Analyst",
+      "description": "Cyber threat intelligence specialist who tracks adversary groups, maps attack campaigns to MITRE ATT&CK, produces actionable intelligence reports, and builds detection rules that catch real threats."
+    },
+    {
+      "path": "spatial-computing/macos-spatial-metal-engineer.md",
+      "division": "spatial-computing",
+      "name": "macOS Spatial/Metal Engineer",
+      "description": "Native Swift and Metal specialist building high-performance 3D rendering systems and spatial computing experiences for macOS and Vision Pro"
+    },
+    {
+      "path": "spatial-computing/terminal-integration-specialist.md",
+      "division": "spatial-computing",
+      "name": "Terminal Integration Specialist",
+      "description": "Terminal emulation, text rendering optimization, and SwiftTerm integration for modern Swift applications"
+    },
+    {
+      "path": "spatial-computing/visionos-spatial-engineer.md",
+      "division": "spatial-computing",
+      "name": "visionOS Spatial Engineer",
+      "description": "Native visionOS spatial computing, SwiftUI volumetric interfaces, and Liquid Glass design implementation"
+    },
+    {
+      "path": "spatial-computing/xr-cockpit-interaction-specialist.md",
+      "division": "spatial-computing",
+      "name": "XR Cockpit Interaction Specialist",
+      "description": "Specialist in designing and developing immersive cockpit-based control systems for XR environments"
+    },
+    {
+      "path": "spatial-computing/xr-immersive-developer.md",
+      "division": "spatial-computing",
+      "name": "XR Immersive Developer",
+      "description": "Expert WebXR and immersive technology developer with specialization in browser-based AR/VR/XR applications"
+    },
+    {
+      "path": "spatial-computing/xr-interface-architect.md",
+      "division": "spatial-computing",
+      "name": "XR Interface Architect",
+      "description": "Spatial interaction designer and interface strategist for immersive AR/VR/XR environments"
+    },
+    {
+      "path": "specialized/accounts-payable-agent.md",
+      "division": "specialized",
+      "name": "Accounts Payable Agent",
+      "description": "Autonomous payment processing specialist that executes vendor payments, contractor invoices, and recurring bills across any payment rail — crypto, fiat, stablecoins. Integrates with AI agent workflows via tool calls."
+    },
+    {
+      "path": "specialized/agentic-identity-trust.md",
+      "division": "specialized",
+      "name": "Agentic Identity & Trust Architect",
+      "description": "Designs identity, authentication, and trust verification systems for autonomous AI agents operating in multi-agent environments. Ensures agents can prove who they are, what they're authorized to do, and what they actually did."
+    },
+    {
+      "path": "specialized/agents-orchestrator.md",
+      "division": "specialized",
+      "name": "Agents Orchestrator",
+      "description": "Autonomous pipeline manager that orchestrates the entire development workflow. You are the leader of this process."
+    },
+    {
+      "path": "specialized/automation-governance-architect.md",
+      "division": "specialized",
+      "name": "Automation Governance Architect",
+      "description": "Governance-first architect for business automations (n8n-first) who audits value, risk, and maintainability before implementation."
+    },
+    {
+      "path": "specialized/business-strategist.md",
+      "division": "specialized",
+      "name": "Business Strategist",
+      "description": "Senior management consulting specialist for competitive analysis, market entry strategy, business model design, growth planning, organizational strategy, and strategic decision-making — translating complex market dynamics into clear, actionable strategies that create sustainable competitive advantage"
+    },
+    {
+      "path": "specialized/change-management-consultant.md",
+      "division": "specialized",
+      "name": "Change Management Consultant",
+      "description": "Expert change management specialist using ADKAR, Kotter, and Prosci frameworks to guide organizations through technology implementations, restructuring, culture transformation, and M&A integration — managing resistance, building adoption, and ensuring changes stick long after go-live"
+    },
+    {
+      "path": "specialized/chief-financial-officer.md",
+      "division": "specialized",
+      "name": "Chief Financial Officer",
+      "description": "Strategic finance executive who governs capital allocation, treasury operations, financial planning, M&A finance, investor relations, and board reporting — translating financial complexity into clear decisions that drive business performance and stakeholder confidence."
+    },
+    {
+      "path": "specialized/corporate-training-designer.md",
+      "division": "specialized",
+      "name": "Corporate Training Designer",
+      "description": "Expert in enterprise training system design and curriculum development — proficient in training needs analysis, instructional design methodology, blended learning program design, internal trainer development, leadership programs, and training effectiveness evaluation and continuous optimization."
+    },
+    {
+      "path": "specialized/customer-service.md",
+      "division": "specialized",
+      "name": "Customer Service",
+      "description": "Friendly, professional customer service specialist for any industry — handling inquiries, complaints, account support, FAQs, and seamless escalation with warmth, efficiency, and a genuine commitment to customer satisfaction"
+    },
+    {
+      "path": "specialized/customer-success-manager.md",
+      "division": "specialized",
+      "name": "Customer Success Manager",
+      "description": "Strategic customer success specialist for onboarding, health scoring, QBR facilitation, churn prevention, expansion identification, and renewal management — driving net revenue retention by turning customers into long-term partners who achieve measurable outcomes"
+    },
+    {
+      "path": "specialized/data-consolidation-agent.md",
+      "division": "specialized",
+      "name": "Data Consolidation Agent",
+      "description": "AI agent that consolidates extracted sales data into live reporting dashboards with territory, rep, and pipeline summaries"
+    },
+    {
+      "path": "specialized/data-privacy-officer.md",
+      "division": "specialized",
+      "name": "Data Privacy Officer",
+      "description": "Corporate data privacy specialist and DPO who builds GDPR, CCPA, and global privacy compliance programs — covering data mapping, privacy impact assessments, consent management, breach response, vendor due diligence, and regulatory engagement."
+    },
+    {
+      "path": "specialized/esg-sustainability-officer.md",
+      "division": "specialized",
+      "name": "ESG & Sustainability Officer",
+      "description": "Corporate sustainability strategist and ESG reporting specialist who builds environmental, social, and governance programs, manages disclosures, drives decarbonization initiatives, and aligns business strategy with stakeholder and regulatory expectations."
+    },
+    {
+      "path": "specialized/government-digital-presales-consultant.md",
+      "division": "specialized",
+      "name": "Government Digital Presales Consultant",
+      "description": "Presales expert for China's government digital transformation market (ToG), proficient in policy interpretation, solution design, bid document preparation, POC validation, compliance requirements (classified protection/cryptographic assessment/Xinchuang domestic IT), and stakeholder management — helping technical teams efficiently win government IT projects."
+    },
+    {
+      "path": "specialized/grant-writer.md",
+      "division": "specialized",
+      "name": "Grant Writer",
+      "description": "Expert grant writing specialist for nonprofits, research institutions, and social enterprises — covering prospect research, letter of inquiry writing, full proposal development, budget narratives, federal and foundation grants, and post-award reporting to maximize funding success"
+    },
+    {
+      "path": "specialized/healthcare-aging-parent-care-companion.md",
+      "division": "specialized",
+      "name": "Aging Parent Care Companion",
+      "description": "Compassionate, HIPAA-aligned care coordination and decision-support agent for family caregivers managing an aging parent's appointments, medications, care team communication, and their own caregiver wellbeing"
+    },
+    {
+      "path": "specialized/healthcare-customer-service.md",
+      "division": "specialized",
+      "name": "Healthcare Customer Service",
+      "description": "Empathetic healthcare customer service specialist for patient support, billing inquiries, appointment management, insurance questions, complaint resolution, and seamless escalation to clinical or administrative staff"
+    },
+    {
+      "path": "specialized/healthcare-marketing-compliance.md",
+      "division": "specialized",
+      "name": "Healthcare Marketing Compliance Specialist",
+      "description": "Expert in healthcare marketing compliance in China, proficient in the Advertising Law, Medical Advertisement Management Measures, Drug Administration Law, and related regulations — covering pharmaceuticals, medical devices, medical aesthetics, health supplements, and internet healthcare across content review, risk control, platform rule interpretation, and patient privacy protection, helping enterprises conduct effective health marketing within legal boundaries."
+    },
+    {
+      "path": "specialized/hospitality-guest-services.md",
+      "division": "specialized",
+      "name": "Hospitality Guest Services",
+      "description": "Comprehensive hospitality guest services specialist for hotels, resorts, restaurants, and event venues — covering reservations, check-in/check-out, concierge services, guest complaint resolution, loyalty program management, and post-stay follow-up to deliver exceptional guest experiences that drive loyalty and revenue"
+    },
+    {
+      "path": "specialized/hr-onboarding.md",
+      "division": "specialized",
+      "name": "HR Onboarding",
+      "description": "Comprehensive HR onboarding specialist for employee orientation, documentation management, compliance tracking, benefits enrollment, culture integration, and new hire support — delivering a seamless first-day-to-first-year experience that drives retention and productivity"
+    },
+    {
+      "path": "specialized/identity-graph-operator.md",
+      "division": "specialized",
+      "name": "Identity Graph Operator",
+      "description": "Operates a shared identity graph that multiple AI agents resolve against. Ensures every agent in a multi-agent system gets the same canonical answer for \"who is this entity?\" - deterministically, even under concurrent writes."
+    },
+    {
+      "path": "specialized/language-translator.md",
+      "division": "specialized",
+      "name": "Language Translator",
+      "description": "Real-time Spanish ↔ English translation specialist with cultural context, regional dialect awareness, travel phrase guidance, and tone-appropriate communication for everyday, business, and emergency situations"
+    },
+    {
+      "path": "specialized/legal-billing-time-tracking.md",
+      "division": "specialized",
+      "name": "Legal Billing & Time Tracking",
+      "description": "Comprehensive legal billing and time tracking specialist for accurate time capture, invoice generation, billing narrative writing, collections management, trust account compliance, and billing analysis — maximizing revenue recovery while maintaining client relationships and ethical compliance across any firm size or billing model"
+    },
+    {
+      "path": "specialized/legal-client-intake.md",
+      "division": "specialized",
+      "name": "Legal Client Intake",
+      "description": "Comprehensive legal client intake specialist for qualifying prospects, collecting case information, scheduling consultations, managing conflict checks, and delivering attorney-ready intake summaries across any practice area and firm size"
+    },
+    {
+      "path": "specialized/legal-document-review.md",
+      "division": "specialized",
+      "name": "Legal Document Review",
+      "description": "Comprehensive legal document review specialist for contracts, litigation documents, and real estate agreements — summarizing documents, flagging risk clauses, comparing contract versions, and checking compliance across any law firm size or practice area"
+    },
+    {
+      "path": "specialized/loan-officer-assistant.md",
+      "division": "specialized",
+      "name": "Loan Officer Assistant",
+      "description": "Comprehensive loan officer assistant for mortgage and lending professionals — covering borrower intake, pre-qualification, document collection, pipeline management, compliance tracking, rate quoting, and closing coordination across residential, commercial, and consumer lending"
+    },
+    {
+      "path": "specialized/lsp-index-engineer.md",
+      "division": "specialized",
+      "name": "LSP/Index Engineer",
+      "description": "Language Server Protocol specialist building unified code intelligence systems through LSP client orchestration and semantic indexing"
+    },
+    {
+      "path": "specialized/ma-integration-manager.md",
+      "division": "specialized",
+      "name": "M&A Integration Manager",
+      "description": "Mergers and acquisitions integration specialist who designs and executes post-merger integration programs — covering Day 1 readiness, 100-day planning, synergy tracking, cultural integration, functional workstream coordination, and transition service agreement management."
+    },
+    {
+      "path": "specialized/medical-billing-coding-specialist.md",
+      "division": "specialized",
+      "name": "Medical Billing & Coding Specialist",
+      "description": "Expert medical billing and coding specialist for ICD-10-CM/PCS, CPT, and HCPCS coding, claim submission, denial management, revenue cycle optimization, compliance auditing, and payer contract analysis — maximizing clean claim rates and revenue recovery for healthcare providers of all sizes"
+    },
+    {
+      "path": "specialized/operations-manager.md",
+      "division": "specialized",
+      "name": "Operations Manager",
+      "description": "Business operations specialist who applies Lean, Six Sigma, and systems thinking to process mapping, capacity planning, KPI governance, vendor management, and organizational efficiency — turning operational complexity into repeatable, measurable performance."
+    },
+    {
+      "path": "specialized/organizational-psychologist.md",
+      "division": "specialized",
+      "name": "Organizational Psychologist",
+      "description": "Applied organizational psychologist who diagnoses team dynamics, psychological safety, burnout risk, and culture health — using evidence-based frameworks to help leaders build high-performing, resilient, and psychologically safe organizations."
+    },
+    {
+      "path": "specialized/personal-growth-mentor.md",
+      "division": "specialized",
+      "name": "Personal Growth Mentor",
+      "description": "Cross-domain personal development mentor for goal clarity, habit design, strategic decisions, and accountability without motivational fluff."
+    },
+    {
+      "path": "specialized/real-estate-buyer-seller.md",
+      "division": "specialized",
+      "name": "Real Estate Buyer & Seller",
+      "description": "Comprehensive real estate agent assistant for buyer representation, seller representation, listing management, offer negotiation, transaction coordination, and closing support — delivering a world-class client experience from first showing to final closing across residential and investment real estate"
+    },
+    {
+      "path": "specialized/recruitment-specialist.md",
+      "division": "specialized",
+      "name": "Recruitment Specialist",
+      "description": "Expert recruitment operations and talent acquisition specialist — skilled in China's major hiring platforms, talent assessment frameworks, and labor law compliance. Helps companies efficiently attract, screen, and retain top talent while building a competitive employer brand."
+    },
+    {
+      "path": "specialized/report-distribution-agent.md",
+      "division": "specialized",
+      "name": "Report Distribution Agent",
+      "description": "AI agent that automates distribution of consolidated sales reports to representatives based on territorial parameters"
+    },
+    {
+      "path": "specialized/resume-tailor.md",
+      "division": "specialized",
+      "name": "Resume Tailor",
+      "description": "Candidate-side resume optimization specialist who analyzes job descriptions, maps real experience to role requirements, improves ATS keyword alignment, and rewrites bullets without fabricating qualifications."
+    },
+    {
+      "path": "specialized/retail-customer-returns.md",
+      "division": "specialized",
+      "name": "Retail Customer Returns",
+      "description": "Comprehensive retail customer returns specialist for processing returns, exchanges, and refunds across in-store, online, and omnichannel retail — handling policy enforcement, fraud prevention, customer retention, vendor returns, and returns analytics to maximize recovery while preserving customer loyalty"
+    },
+    {
+      "path": "specialized/sales-data-extraction-agent.md",
+      "division": "specialized",
+      "name": "Sales Data Extraction Agent",
+      "description": "AI agent specialized in monitoring Excel files and extracting key sales metrics (MTD, YTD, Year End) for internal live reporting"
+    },
+    {
+      "path": "specialized/sales-outreach.md",
+      "division": "specialized",
+      "name": "Sales Outreach",
+      "description": "Consultative B2B sales outreach specialist for cold prospecting, lead follow-up, objection handling, proposal writing, and pipeline management — combining data-driven targeting with genuine relationship-building to open doors and close deals"
+    },
+    {
+      "path": "specialized/specialized-chief-of-staff.md",
+      "division": "specialized",
+      "name": "Chief of Staff",
+      "description": "Master coordinator for founders and executives — filters noise, owns processes, enforces consistency, routes decisions, and positions outputs for impact so the boss can think clearly."
+    },
+    {
+      "path": "specialized/specialized-civil-engineer.md",
+      "division": "specialized",
+      "name": "Civil Engineer",
+      "description": "Expert civil and structural engineer with global standards coverage — Eurocode, DIN, ACI, AISC, ASCE, AS/NZS, CSA, GB, IS, AIJ, and more. Specializes in structural analysis, geotechnical design, construction documentation, building code compliance, and multi-standard international projects."
+    },
+    {
+      "path": "specialized/specialized-codebase-archaeologist.md",
+      "division": "specialized",
+      "name": "Codebase Archaeologist",
+      "description": "Multi-session, multi-tool drift detection specialist who audits codebases touched by several AI coding tools (Claude, Cursor, Copilot, Windsurf, etc.) over time, finding silent logic mismatches, dead code, and doc-vs-code divergence that no single session would ever notice on its own."
+    },
+    {
+      "path": "specialized/specialized-cultural-intelligence-strategist.md",
+      "division": "specialized",
+      "name": "Cultural Intelligence Strategist",
+      "description": "CQ specialist that detects invisible exclusion, researches global context, and ensures software resonates authentically across intersectional identities."
+    },
+    {
+      "path": "specialized/specialized-developer-advocate.md",
+      "division": "specialized",
+      "name": "Developer Advocate",
+      "description": "Expert developer advocate specializing in building developer communities, creating compelling technical content, optimizing developer experience (DX), and driving platform adoption through authentic engineering engagement. Bridges product and engineering teams with external developers."
+    },
+    {
+      "path": "specialized/specialized-document-generator.md",
+      "division": "specialized",
+      "name": "Document Generator",
+      "description": "Expert document creation specialist who generates professional PDF, PPTX, DOCX, and XLSX files using code-based approaches with proper formatting, charts, and data visualization."
+    },
+    {
+      "path": "specialized/specialized-fedramp-rmf-compliance.md",
+      "division": "specialized",
+      "name": "FedRAMP & RMF Compliance Engineer",
+      "description": "Expert FedRAMP and NIST Risk Management Framework compliance engineer specializing in both FedRAMP authorization pathways — the traditional Rev5 path (NIST 800-53 Rev 5 control implementation, System Security Plans, 3PAO assessment, agency authorization) and the modernized FedRAMP 20x path (Key Security Indicators, automated machine-readable validation, compliance-as-code) — plus the ATO process, continuous monitoring (ConMon), POA&M management, FIPS 199 categorization, authorization boundary diagrams, OSCAL machine-readable packages, and cloud security compliance for government and regulated industries"
+    },
+    {
+      "path": "specialized/specialized-focus-music-architect.md",
+      "division": "specialized",
+      "name": "Focus Music Architect",
+      "description": "Instrumental focus music specialist and neuroacoustic prompt engineer — crafts high-yield prompts, soundscape architectures, BPM curves, and binaural layers for deep cognitive flow and generative audio models."
+    },
+    {
+      "path": "specialized/specialized-french-consulting-market.md",
+      "division": "specialized",
+      "name": "French Consulting Market Navigator",
+      "description": "Navigate the French ESN/SI freelance ecosystem — margin models, platform mechanics (Malt, collective.work), portage salarial, rate positioning, and payment cycle realities"
+    },
+    {
+      "path": "specialized/specialized-korean-business-navigator.md",
+      "division": "specialized",
+      "name": "Korean Business Navigator",
+      "description": "Korean business culture for foreign professionals — 품의 decision process, nunchi reading, KakaoTalk business etiquette, hierarchy navigation, and relationship-first deal mechanics"
+    },
+    {
+      "path": "specialized/specialized-master-plan-architect.md",
+      "division": "specialized",
+      "name": "Master Plan Architect",
+      "description": "Master planning architect, technical educator, and ruthless plan critic who specializes in deep architectural teaching, Red Teaming / risk critique, and crafting comprehensive Implementation Plans in Markdown with ZERO code execution."
+    },
+    {
+      "path": "specialized/specialized-mcp-builder.md",
+      "division": "specialized",
+      "name": "MCP Builder",
+      "description": "Expert Model Context Protocol developer who designs, builds, and tests MCP servers that extend AI agent capabilities with custom tools, resources, and prompts."
+    },
+    {
+      "path": "specialized/specialized-model-qa.md",
+      "division": "specialized",
+      "name": "Model QA Specialist",
+      "description": "Independent model QA expert who audits ML and statistical models end-to-end - from documentation review and data reconstruction to replication, calibration testing, interpretability analysis, performance monitoring, and audit-grade reporting."
+    },
+    {
+      "path": "specialized/specialized-pricing-analyst.md",
+      "division": "specialized",
+      "name": "Pricing Analyst",
+      "description": "Specialized pricing analyst who develops optimal pricing models through market research, competitor analysis, cost structure evaluation, and margin optimization — turning pricing from guesswork into a data-driven competitive advantage."
+    },
+    {
+      "path": "specialized/specialized-salesforce-architect.md",
+      "division": "specialized",
+      "name": "Salesforce Architect",
+      "description": "Solution architecture for Salesforce platform — multi-cloud design, integration patterns, governor limits, deployment strategy, and data model governance for enterprise-scale orgs"
+    },
+    {
+      "path": "specialized/specialized-strategy-duel-agent.md",
+      "division": "specialized",
+      "name": "Strategy Duel Agent",
+      "description": "Conducts live strategy duels using game theory and the 36 Chinese stratagems"
+    },
+    {
+      "path": "specialized/specialized-workflow-architect.md",
+      "division": "specialized",
+      "name": "Workflow Architect",
+      "description": "Workflow design specialist who maps complete workflow trees for every system, user journey, and agent interaction — covering happy paths, all branch conditions, failure modes, recovery paths, handoff contracts, and observable states to produce build-ready specs that agents can implement against and QA can test against."
+    },
+    {
+      "path": "specialized/study-abroad-advisor.md",
+      "division": "specialized",
+      "name": "Study Abroad Advisor",
+      "description": "Full-spectrum study abroad planning expert covering the US, UK, Canada, Australia, Europe, Hong Kong, and Singapore — proficient in undergraduate, master's, and PhD application strategy, school selection, essay coaching, profile enhancement, standardized test planning, visa preparation, and overseas life adaptation, helping Chinese students craft personalized end-to-end study abroad plans."
+    },
+    {
+      "path": "specialized/supply-chain-strategist.md",
+      "division": "specialized",
+      "name": "Supply Chain Strategist",
+      "description": "Expert supply chain management and procurement strategy specialist — skilled in supplier development, strategic sourcing, quality control, and supply chain digitalization. Grounded in China's manufacturing ecosystem, helps companies build efficient, resilient, and sustainable supply chains."
+    },
+    {
+      "path": "specialized/zk-steward.md",
+      "division": "specialized",
+      "name": "ZK Steward",
+      "description": "Knowledge-base steward in the spirit of Niklas Luhmann's Zettelkasten. Default perspective: Luhmann; switches to domain experts (Feynman, Munger, Ogilvy, etc.) by task. Enforces atomic notes, connectivity, and validation loops. Use for knowledge-base building, note linking, complex task breakdown, and cross-domain decision support."
+    },
+    {
+      "path": "support/support-analytics-reporter.md",
+      "division": "support",
+      "name": "Analytics Reporter",
+      "description": "Expert data analyst transforming raw data into actionable business insights. Creates dashboards, performs statistical analysis, tracks KPIs, and provides strategic decision support through data visualization and reporting."
+    },
+    {
+      "path": "support/support-executive-summary-generator.md",
+      "division": "support",
+      "name": "Executive Summary Generator",
+      "description": "Consultant-grade AI specialist trained to think and communicate like a senior strategy consultant. Transforms complex business inputs into concise, actionable executive summaries using McKinsey SCQA, BCG Pyramid Principle, and Bain frameworks for C-suite decision-makers."
+    },
+    {
+      "path": "support/support-finance-tracker.md",
+      "division": "support",
+      "name": "Finance Tracker",
+      "description": "Expert financial analyst and controller specializing in financial planning, budget management, and business performance analysis. Maintains financial health, optimizes cash flow, and provides strategic financial insights for business growth."
+    },
+    {
+      "path": "support/support-infrastructure-maintainer.md",
+      "division": "support",
+      "name": "Infrastructure Maintainer",
+      "description": "Expert infrastructure specialist focused on system reliability, performance optimization, and technical operations management. Maintains robust, scalable infrastructure supporting business operations with security, performance, and cost efficiency."
+    },
+    {
+      "path": "support/support-legal-compliance-checker.md",
+      "division": "support",
+      "name": "Legal Compliance Checker",
+      "description": "Expert legal and compliance specialist ensuring business operations, data handling, and content creation comply with relevant laws, regulations, and industry standards across multiple jurisdictions."
+    },
+    {
+      "path": "support/support-support-responder.md",
+      "division": "support",
+      "name": "Support Responder",
+      "description": "Expert customer support specialist delivering exceptional customer service, issue resolution, and user experience optimization. Specializes in multi-channel support, proactive customer care, and turning support interactions into positive brand experiences."
+    },
+    {
+      "path": "testing/testing-accessibility-auditor.md",
+      "division": "testing",
+      "name": "Accessibility Auditor",
+      "description": "Expert accessibility specialist who audits interfaces against WCAG standards, tests with assistive technologies, and ensures inclusive design. Defaults to finding barriers — if it's not tested with a screen reader, it's not accessible."
+    },
+    {
+      "path": "testing/testing-api-tester.md",
+      "division": "testing",
+      "name": "API Tester",
+      "description": "Expert API testing specialist focused on comprehensive API validation, performance testing, and quality assurance across all systems and third-party integrations"
+    },
+    {
+      "path": "testing/testing-evidence-collector.md",
+      "division": "testing",
+      "name": "Evidence Collector",
+      "description": "Screenshot-obsessed, fantasy-allergic QA specialist - Default to finding 3-5 issues, requires visual proof for everything"
+    },
+    {
+      "path": "testing/testing-performance-benchmarker.md",
+      "division": "testing",
+      "name": "Performance Benchmarker",
+      "description": "Expert performance testing and optimization specialist focused on measuring, analyzing, and improving system performance across all applications and infrastructure"
+    },
+    {
+      "path": "testing/testing-reality-checker.md",
+      "division": "testing",
+      "name": "Reality Checker",
+      "description": "Stops fantasy approvals, evidence-based certification - Default to \"NEEDS WORK\", requires overwhelming proof for production readiness"
+    },
+    {
+      "path": "testing/testing-test-automation-engineer.md",
+      "division": "testing",
+      "name": "Test Automation Engineer",
+      "description": "Expert end-to-end test automation engineer for Playwright and Cypress — resilient selectors, flake elimination, isolated test data, CI parallelization, and trace-driven failure debugging."
+    },
+    {
+      "path": "testing/testing-test-results-analyzer.md",
+      "division": "testing",
+      "name": "Test Results Analyzer",
+      "description": "Expert test analysis specialist focused on comprehensive test result evaluation, quality metrics analysis, and actionable insight generation from testing activities"
+    },
+    {
+      "path": "testing/testing-tool-evaluator.md",
+      "division": "testing",
+      "name": "Tool Evaluator",
+      "description": "Expert technology assessment specialist focused on evaluating, testing, and recommending tools, software, and platforms for business use and productivity optimization"
+    },
+    {
+      "path": "testing/testing-workflow-optimizer.md",
+      "division": "testing",
+      "name": "Workflow Optimizer",
+      "description": "Expert process improvement specialist focused on analyzing, optimizing, and automating workflows across all business functions for maximum productivity and efficiency"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+#!/usr/bin/env bash
+# Install/refresh Cole Medin's skills (github.com/coleam00/skills) for Hermes.
+#
+# `npx skills add coleam00/skills -g` keeps the canonical copies in ~/.agents/skills
+# and drops *directory symlinks* into ~/.hermes/skills. Hermes discovers skills with
+# Path.rglob("SKILL.md"), which does not descend into symlinked directories, so those
+# symlinks are invisible to it. This mirrors the gstack-hermes-sync approach:
+#   ~/.hermes/skills/<name>/   real dir, each top-level entry symlinked to the canonical copy
+#
+# Re-run after `npx skills update` (or any re-add) if new skills appear.
+set -euo pipefail
+
+SRC="${COLE_SKILLS_SRC:-$HOME/.agents/skills}"
+LOCK="${COLE_SKILLS_LOCK:-$HOME/.agents/.skill-lock.json}"
+DEST="${HERMES_HOME:-$HOME/.hermes}/skills"
+
+[ -d "$SRC" ] || { echo "no canonical skills dir at $SRC" >&2; exit 1; }
+[ -f "$LOCK" ] || { echo "no skill lock at $LOCK" >&2; exit 1; }
+
+# Names installed from coleam00/skills, per the skills-CLI lock file.
+mapfile -t NAMES < <(jq -r '.skills | to_entries[] | select(.value.source == "coleam00/skills") | .key' "$LOCK" | sort)
+[ "${#NAMES[@]}" -gt 0 ] || { echo "no coleam00/skills entries in $LOCK" >&2; exit 1; }
+
+n=0
+for name in "${NAMES[@]}"; do
+  s="$SRC/$name"
+  [ -f "$s/SKILL.md" ] || { echo "skip $name (no SKILL.md in $s)" >&2; continue; }
+  rm -rf "${DEST:?}/$name"
+  mkdir -p "$DEST/$name"
+  for f in "$s"/* "$s"/.[!.]*; do
+    [ -e "$f" ] || continue
+    ln -sfn "$f" "$DEST/$name/$(basename "$f")"
+  done
+  n=$((n + 1))
+done
+
+found=$(python3 -c "
+from pathlib import Path
+import sys
+names=set(sys.argv[1:])
+r=Path('$DEST')
+print(len({p.parent.name for p in r.rglob('SKILL.md')} & names))
+" "${NAMES[@]}")
+
+echo "coleam00/skills synced to Hermes: $n skills in $DEST ($found discoverable by rglob)"

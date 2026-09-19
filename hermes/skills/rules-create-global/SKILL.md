@@ -1,0 +1,1 @@
+/root/.agents/skills/rules-create-global/SKILL.md

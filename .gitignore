@@ -1,0 +1,18 @@
+# Restore-time artifacts install.sh leaves behind
+*.bak-*
+
+# Runtime state that must never be captured
+.usage.json
+.curator_ledger.jsonl
+.curator_state
+.locks/
+__pycache__/
+*.pyc
+
+# Secrets -- belt and braces; nothing here should ever hold them
+.env
+.env.*
+auth.json
+.credentials.json
+*.pem
+id_rsa*

@@ -1,0 +1,1 @@
+/root/.agents/skills/hooks-create/SKILL.md

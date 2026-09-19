@@ -1,0 +1,132 @@
+name: galatea-implementation-audit
+description: |
+  Audit Galatea Portal against MISSION.md and answer one question with evidence:
+  is everything the mission declares in scope actually implemented, and does it
+  still hold the hard invariants? A large-tier auditor walks each in-scope
+  capability area against the real code and tests, records every gap with file
+  evidence, and writes a contract-shaped ticket for each one; a deterministic
+  check validates the findings before anything is published; publication uses
+  gh with a dedup marker so re-running never creates a duplicate issue.
+
+  Use when: "is Galatea fully implemented", "audit the portal against the
+  mission", "what is still missing", "check nothing in MISSION.md was skipped",
+  or before declaring a milestone done.
+  NOT for: implementing a gap (archon-ship owns that), reviewing a PR, or
+  merging. This workflow never edits the product.
+
+requires: [github]
+model: large
+interactive: true
+mutates_checkout: false
+
+inputs:
+  area:
+    default: ""
+    description: >-
+      Optional MISSION.md capability area to audit alone -- "Forum",
+      "Quantum XIII progression", "Broadcasts", "Terminal and content",
+      "Membership and identity", "Engineering quality". Empty audits every
+      in-scope area.
+  publication:
+    default: preview
+    description: >-
+      preview renders the findings locally and publishes nothing; approve waits
+      for a human decision before creating issues; auto publishes this run.
+  max_gaps:
+    default: "15"
+    description: >-
+      Upper bound on findings in one audit, 1-50. A portal with more gaps than
+      the bound reports the most blocking ones and says what it left.
+
+returns: check
+
+nodes:
+  # Admit the mission and the guidance before a large-tier auditor spends on
+  # them. A missing MISSION.md is a bad invocation, not something to infer.
+  - id: scope
+    script: collect-scope
+    runtime: uv
+    with:
+      area: "$INPUTS.area"
+      publication: "$INPUTS.publication"
+      max_gaps: "$INPUTS.max_gaps"
+    output_format:
+      type: object
+      properties:
+        commit: { type: string }
+        area: { type: string }
+        areas: { type: array, items: { type: string } }
+        publication: { type: string }
+        max_gaps: { type: integer }
+        guidance: { type: array, items: { type: string } }
+      required: [commit, area, areas, publication, max_gaps, guidance]
+
+  # The one judgment node. Deciding whether a capability is really implemented
+  # -- as opposed to present, stubbed, or untested -- is reading, not matching.
+  - id: audit
+    command: audit-implementation
+    depends_on: [scope]
+    mutates_checkout: false
+    output_type: implementation-audit
+    with:
+      area: "$scope.output.area"
+      max_gaps: "$scope.output.max_gaps"
+      commit: "$scope.output.commit"
+    output_format:
+      type: object
+      properties:
+        count: { type: integer }
+        blocking: { type: integer }
+        verdict: { type: string }
+        summary: { type: string }
+      required: [count, blocking, verdict, summary]
+
+  # Shape, unique keys, evidence, severity and the bound are checked before a
+  # single issue is opened; findings that fail here fail the run.
+  - id: check
+    script: check-gaps
+    runtime: uv
+    depends_on: [audit]
+    with:
+      max_gaps: "$scope.output.max_gaps"
+      commit: "$scope.output.commit"
+    output_format:
+      type: object
+      properties:
+        count: { type: integer }
+        blocking: { type: integer }
+        keys: { type: array, items: { type: string } }
+      required: [count, blocking, keys]
+
+  # A clean audit asks nobody and publishes nothing: the run completes with the
+  # auditor's verdict. That is the good outcome, not a skipped gate.
+  - id: authorize
+    depends_on: [check]
+    when: "$INPUTS.publication == 'approve' && $check.output.count > 0"
+    approval:
+      message: "Open GitHub issues for the $check.output.count findings in $ARTIFACTS_DIR/gaps.md ($check.output.blocking blocking)?"
+      decisions:
+        - id: approve
+          label: Publish the findings as issues
+        - id: hold
+          label: Keep the audit local
+
+  - id: publish
+    command: publish-gaps
+    context: fresh
+    mutates_checkout: false
+    model: medium
+    depends_on: [check, authorize]
+    trigger_rule: none_failed_min_one_success
+    when: "$check.output.count > 0"
+    with:
+      mode: "$INPUTS.publication"
+      approval: { from: "$authorize.output", if_skipped: null }
+    output_format:
+      type: object
+      properties:
+        published: { type: boolean }
+        created: { type: array, items: { type: string } }
+        existing: { type: array, items: { type: string } }
+        summary: { type: string }
+      required: [published, created, existing, summary]

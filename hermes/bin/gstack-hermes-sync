@@ -1,0 +1,56 @@
+#!/usr/bin/env bash
+# Install/refresh gstack skills for Hermes from the Claude gstack checkout.
+# gstack's ./setup has no Hermes install arm, so this mirrors its codex arm:
+#   ~/.hermes/skills/gstack/        runtime root (bin, lib, browse, ...) + router skill
+#   ~/.hermes/skills/gstack-<name>/ one real dir per skill, SKILL.md symlinked
+# Real dirs (not dir symlinks) because Hermes discovers skills via rglob, which
+# does not descend into symlinked directories.
+# Re-run after /gstack-upgrade.
+set -euo pipefail
+
+SRC="${GSTACK_SRC:-$HOME/.claude/skills/gstack}"
+DEST="${HERMES_HOME:-$HOME/.hermes}/skills"
+export PATH="$HOME/.bun/bin:$PATH"
+
+cd "$SRC"
+bun run gen:skill-docs --host hermes >/dev/null
+GEN="$SRC/.hermes/skills"
+
+link() { # link <src> <dst>
+  [ -e "$1" ] || return 0
+  mkdir -p "$(dirname "$2")"
+  ln -sfn "$1" "$2"
+}
+
+# Runtime root
+RT="$DEST/gstack"
+rm -rf "$RT"
+mkdir -p "$RT"
+link "$GEN/gstack/SKILL.md" "$RT/SKILL.md"
+for p in bin lib docs scripts design/dist browse/dist browse/bin \
+         ETHOS.md VERSION supabase/config.sh \
+         review/checklist.md review/design-checklist.md review/greptile-triage.md review/TODOS-format.md \
+         plan-devex-review/dx-hall-of-fame.md \
+         design-html/vendor design-html/sections ship/sections; do
+  link "$SRC/$p" "$RT/$p"
+done
+# Hermes-rendered skills other skills read inline by path
+for s in office-hours plan-design-review; do
+  link "$GEN/gstack-$s/SKILL.md" "$RT/$s/SKILL.md"
+done
+
+# Individual skills (drop ones removed upstream)
+for d in "$DEST"/gstack-*/; do
+  [ -d "$d" ] || continue
+  [ -e "$GEN/$(basename "$d")" ] || rm -rf "$d"
+done
+n=0
+for d in "$GEN"/gstack-*/; do
+  name="$(basename "$d")"
+  rm -rf "${DEST:?}/$name"
+  mkdir -p "$DEST/$name"
+  for f in "$d"*; do link "$f" "$DEST/$name/$(basename "$f")"; done
+  n=$((n + 1))
+done
+
+echo "gstack $(cat "$SRC/VERSION") synced to Hermes: $n skills + router in $DEST"

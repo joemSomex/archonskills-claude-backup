@@ -1,0 +1,1 @@
+/root/.claude/skills/gstack/.hermes/skills/gstack-setup-deploy/SKILL.md
