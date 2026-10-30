@@ -1,0 +1,1 @@
+/root/.agents/skills/prime-frontend/SKILL.md

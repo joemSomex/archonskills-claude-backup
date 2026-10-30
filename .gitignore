@@ -3,8 +3,12 @@
 
 # Runtime state that must never be captured
 .usage.json
+.usage.json.lock
 .curator_ledger.jsonl
 .curator_state
+.archive/
+.curator_backups/
+.hub/
 .locks/
 __pycache__/
 *.pyc

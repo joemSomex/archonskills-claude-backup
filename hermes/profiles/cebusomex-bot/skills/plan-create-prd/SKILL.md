@@ -1,0 +1,1 @@
+/root/.agents/skills/plan-create-prd/SKILL.md

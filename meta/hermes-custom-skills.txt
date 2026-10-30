@@ -4,7 +4,6 @@ creative/douyin-vertical-cover
 creative/hat-front-closeup
 creative/pixel-preserving-image-compositing
 creative/reference-driven-image-generation
-creative/story-synopsis-localization
 creative/vertical-social-cover-generation
 devops/vps-storage-review
 galatea-archon

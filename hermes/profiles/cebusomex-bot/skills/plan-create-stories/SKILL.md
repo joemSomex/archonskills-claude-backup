@@ -1,0 +1,1 @@
+/root/.agents/skills/plan-create-stories/SKILL.md

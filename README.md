@@ -19,9 +19,10 @@ the exact versions this snapshot was taken against.
 | `claude/agents-skills/` | The Cole Medin skill set from `~/.agents/skills`, which `~/.claude/skills` symlinks into. |
 | `claude/agents-skill-lock.json` | Source + commit hash for every Cole Medin skill. |
 | `claude/settings.json` | Claude Code settings. |
-| `hermes/skills/` | The full Hermes skill tree, vendor and custom alike. |
+| `hermes/skills/` | The global Hermes skill tree, vendor and custom alike, excluding runtime/archive state. |
+| `hermes/profiles/cebusomex-bot/` | The active profile's `SOUL.md` and isolated skill tree. Secrets, memories, sessions and cron state are excluded. |
 | `hermes/bin/` | The three sync/patch scripts that must be re-run after upgrades. |
-| `meta/hermes-custom-skills.txt` | The 19 Hermes skills that are hand-authored — everything else in `hermes/skills/` is a vendor bundle or a mirror. |
+| `meta/hermes-custom-skills.txt` | Curated hand-authored global Hermes skills — everything else in `hermes/skills/` is a vendor bundle or a mirror. |
 
 ## What is deliberately *not* in here
 
@@ -31,11 +32,13 @@ GitHub's 100 MB limit, so it cannot live in a git repo. `install.sh` reinstalls
 it from the official installer instead, which is also how you get security
 updates. The same applies to the `gstack-*` skill directories under
 `~/.claude/skills` and `~/.hermes/skills`: they are generated mirrors, rebuilt
-by `gstack-hermes-sync`.
+by `gstack-hermes-sync`. The lightweight `gstack-*` skill mirrors under the
+Hermes snapshots are included; they contain skill instructions rather than the
+vendor checkout and can also be regenerated after restore.
 
-**Secrets.** No `~/.hermes/.env`, `auth.json`, `config.yaml`, `.credentials.json`
-or SSH keys. You must supply those yourself on the new host — see *After
-restoring* below.
+**Secrets and runtime state.** No `~/.hermes/.env`, `auth.json`, `config.yaml`,
+`.credentials.json`, memories, sessions, cron records, databases or SSH keys.
+You must supply those yourself on the new host — see *After restoring* below.
 
 ## Restoring on a new VPS
 
@@ -53,6 +56,8 @@ Useful flags:
   newer than this snapshot.
 - `./install.sh --skip-vendor` — do not reinstall gstack or the Cole Medin
   skills, just lay down the files from this repo.
+- `./install.sh --profile cebusomex-bot` — also restore the captured profile's
+  `SOUL.md` and isolated skills under `~/.hermes/profiles/cebusomex-bot/`.
 - `GALATEA_REPO=/path/to/repo ./install.sh` — restore the Archon workflows into
   a Galatea checkout somewhere other than `/root/galatea-system-stagin`.
 

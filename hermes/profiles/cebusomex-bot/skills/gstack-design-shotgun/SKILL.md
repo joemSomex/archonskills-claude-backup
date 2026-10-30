@@ -1,0 +1,1 @@
+/root/.claude/skills/gstack/.hermes/skills/gstack-design-shotgun/SKILL.md

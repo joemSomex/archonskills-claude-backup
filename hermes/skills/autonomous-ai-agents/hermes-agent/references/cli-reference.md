@@ -110,8 +110,9 @@ hermes profile migrate-identity A B   Retry a completed rename's session/routing
 hermes auth                 Interactive credential manager
 hermes auth add [PROVIDER]  Add OAuth or API-key credential (nous, openai-codex, qwen-oauth, …)
 hermes auth list|remove P IDX|reset PROVIDER|status
+hermes usage [--provider ID] [--json]  Fetch live account limits and remaining allowance
 ```
-Multiple credentials per provider form a pool that rotates automatically and skips exhausted keys.
+Multiple credentials per provider form a pool that rotates automatically and skips exhausted keys. When asked for ChatGPT/Codex usage left, run `hermes usage --provider openai-codex` rather than inferring from auth status or saying usage is inaccessible. The command reports the connected provider's current allowance and reset window, not every ChatGPT product's separate limits; `/usage` shows the same block in chat. Do not activate a banked reset unless explicitly requested.
 
 ### Other
 

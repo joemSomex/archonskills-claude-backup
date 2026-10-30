@@ -85,6 +85,12 @@ After fetching the transcript, format it based on what the user asks for:
 - Save each collection batch to JSON in `os.environ['BH_AGENT_WORKSPACE']` (the Python variable `workspace` may be undefined). Verify unique IDs against the displayed comment count and check for remaining continuations. Disclose any mismatch or coverage limit.
 - Separate channel-owner posts/replies from audience feedback, distinguish messages from unique accounts, and avoid demographic or whole-audience sentiment claims based on self-selected commenters. Preserve quotes and comment links for evidence.
 
+## YouTube Community-post strategy
+
+- Treat Community posts as a core, consistent channel-growth tactic rather than an optional extra. They can reactivate existing viewers and provide YouTube with additional audience-interest signals between video uploads.
+- Prioritize native-engagement formats: polls, character choices, lore questions, viewer theories, images, quizzes, and behind-the-scenes material.
+- Avoid announcement-only posts whose sole message is “watch my latest video.” Build the post around an interaction that stands on its own, then connect it naturally to the relevant video or series.
+
 ## Error Handling
 
 - **Transcript disabled**: tell the user; suggest they check if subtitles are available on the video page.

@@ -8,15 +8,20 @@ REPO="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 GALATEA_REPO="${GALATEA_REPO:-/root/galatea-system-stagin}"
 STAMP="$(date -u +%Y%m%dT%H%M%SZ)"
 
-DRY=0 ALL_HERMES=0 SKIP_VENDOR=0
+DRY=0 ALL_HERMES=0 SKIP_VENDOR=0 PROFILE=""
 while [ $# -gt 0 ]; do
   case "$1" in
     --dry-run)            DRY=1 ;;
     --all-hermes-skills)  ALL_HERMES=1 ;;
     --skip-vendor)        SKIP_VENDOR=1 ;;
+    --profile)
+      shift
+      [ $# -gt 0 ] || { echo "install.sh: --profile requires a name" >&2; exit 1; }
+      PROFILE="$1"
+      ;;
     -h|--help)
       sed -n '2,5p' "${BASH_SOURCE[0]}"
-      echo "Flags: --dry-run  --all-hermes-skills  --skip-vendor"
+      echo "Flags: --dry-run  --all-hermes-skills  --skip-vendor  --profile NAME"
       exit 0 ;;
     *) echo "install.sh: unknown flag $1" >&2; exit 1 ;;
   esac
@@ -92,6 +97,19 @@ for s in coleskills-hermes-sync gstack-hermes-sync hermes-wrap-response-patch; d
   restore_tree "$REPO/hermes/bin/$s" "$HOME/.hermes/bin/$s"
   run chmod +x "$HOME/.hermes/bin/$s" 2>/dev/null || true
 done
+
+if [ -n "$PROFILE" ]; then
+  head_ "Hermes profile: $PROFILE"
+  PROFILE_SRC="$REPO/hermes/profiles/$PROFILE"
+  PROFILE_DEST="$HOME/.hermes/profiles/$PROFILE"
+  if [ -d "$PROFILE_SRC" ]; then
+    restore_tree "$PROFILE_SRC/skills" "$PROFILE_DEST/skills"
+    restore_tree "$PROFILE_SRC/SOUL.md" "$PROFILE_DEST/SOUL.md"
+  else
+    echo "install.sh: profile snapshot not found: $PROFILE" >&2
+    exit 1
+  fi
+fi
 
 if [ "$SKIP_VENDOR" = 1 ]; then
   head_ "Vendor installs skipped (--skip-vendor)"

@@ -87,6 +87,7 @@ Image context dominates cost. Use 1024px only for text-heavy frames and avoid re
 - No transcript means captions were unavailable and Whisper was disabled or failed; continue with frames and say so.
 - `yt-dlp` may be too old for a source site's current changes; update it before concluding the URL is unsupported.
 - Scene extraction can miss subtle UI changes; rerun the relevant interval with `--fps 2`.
+- Some recent ffmpeg builds reject the bundled frame extractor's `-vsync` option. If `watch.py` fails with `Unrecognized option 'vsync'`, fall back to local `ffmpeg -i SOURCE -vf 'fps=1/10,scale=360:-1'` timestamped JPEG sampling, followed by 2-5-second targeted sampling around the relevant scenes. Inspect the actual images and state the sampling limits; do not claim the watch pipeline completed.
 - The hook pass may make a second Whisper call when enabled.
 - A completed shell command is not proof of analysis; every cited visual claim must come from inspected frames.
 

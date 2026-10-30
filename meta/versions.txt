@@ -2,7 +2,10 @@ gstack                 1.87.4.0
 archon (factory pin)   24796870605b0fd576734b79a8d5c781f2b1c1e1
 cole skills lock       35 skills, lock v3
 hermes bundled skills  58
-captured               2026-09-19T02:21:14Z on srv1975204
+hermes global snapshot 220 SKILL.md files
+cebusomex-bot snapshot 181 SKILL.md files
+hermes agent           2026.9.24
+captured               2026-10-30T11:48:45Z on srv1975204
 
 gstack install source  https://github.com/garrytan/gstack.git
 gstack commit          a6b3a57512ca6d5c6aa5b68f74f736195021f96e (2026-09-15)

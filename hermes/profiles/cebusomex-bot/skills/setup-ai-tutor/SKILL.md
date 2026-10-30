@@ -1,0 +1,1 @@
+/root/.agents/skills/setup-ai-tutor/SKILL.md

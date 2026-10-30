@@ -1,0 +1,1 @@
+/root/.agents/skills/piv-validate/SKILL.md

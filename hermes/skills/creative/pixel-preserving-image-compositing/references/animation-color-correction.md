@@ -1,0 +1,30 @@
+# Selective material color correction across animation frames
+
+## Procedure
+
+1. Treat hair-only or material-only changes as masked color adjustments, not repainting or regeneration. Preserve geometry, strand placement, pixel clusters, sharp outlines, and animation. Use the latest supplied visual reference when it supersedes an earlier HEX palette.
+2. Inspect material boundaries in every frame before deriving masks. Separate hair from warm skin, eyebrows, irises, lips, and costume accents. Do not treat a color threshold or the largest connected component as a complete semantic mask: skin can share hair hues, and a moving hand can divide the hair into disconnected regions. Include those detached sections and inspect mask overlays at native resolution.
+3. Sample only unambiguous material pixels in the reference; exclude skin, costume, transparency, and background contamination. Treat palette anchors as points on a continuous tonal curve, not flat replacement fills.
+4. Build one shared monotonic color mapping from pooled source-material samples and reference tones, and apply that same mapping to every frame. Do not normalize each frame independently: separate exposure or percentile corrections create color flicker. Preserve highlight/shadow ordering and fine brightness differences instead of flattening strands.
+5. Verify exact pixel equality outside each mask and exact equality of the entire alpha channel against the existing frame. Also verify unchanged dimensions and silhouette bounds. Inspect the sequence on light and dark backgrounds. Outside-mask equality proves preservation only after semantic mask validation; a mask leaking into skin invalidates that claim.
+6. Deliver individual corrected PNGs at the user's review gate. Decode the exact supplied animation, retain original frame count, playback order, canvas dimensions, and delays, and number the PNGs accordingly. Do not silently rebuild an approved GIF or modify alignment and anatomy during a color-only correction.
+
+## Iris-only corrections
+
+Bound masks to verified iris interiors and protect pupils, catchlights, outlines, sclera, eyelids, and gaze. Inspect high-contrast mask overlays at native size; warm skin and copper hair can pass orange/gold thresholds outside the irises. Leave closed-eye frames completely unchanged. Use a single pooled brightness-to-reference RGB curve for darker upper shading, amber midtones, and gold highlights; do not normalize each frame independently or use a flat fill.
+
+When a source iris is already a known brightness-scaled RGB ramp, refine its tight per-eye mask by measured channel-ratio tolerances to reject adjacent warm skin and tinted catchlights. Derive that ramp from the actual source; do not assume an earlier character's HEX applies. Inspect every visible-eye pose, including side glances where the iris moves beyond the opening frame's bounds.
+
+## Lossless animated WebP delivery
+
+1. Decode the supplied animation to full RGBA frames and record every frame delay and loop value before editing. Use the reference animation only for the permitted color samples, never its timing or motion.
+2. Apply one shared lookup curve per output to the verified masks. For several color-only alternatives, vary only the permitted palette within the reference's tonal range; use the same curve across all frames of each variant. Label these as palette alternatives, not different performances. Leave closed-eye frames pixel-identical.
+3. Save with Pillow using `frames[0].save(path, format='WEBP', save_all=True, append_images=frames[1:], duration=delays, loop=loop, lossless=True, quality=100, method=6, exact=True, minimize_size=False, kmin=1, kmax=1)`. This avoids GIF palette re-quantization of unaffected pixels. Test animation support by encoding and reopening a sample rather than assuming a feature-flag name exists across Pillow versions.
+4. Reopen the delivered WebP, call `seek(i)` then `load()` before reading duration, and assert the original frame count, canvas, delays, loop, and alpha. Require full decoded RGBA equality to the edited frames and equality to the original outside each mask; separately require complete equality for closed-eye frames. Fail rather than silently accepting coalesced frames or altered delays.
+5. Persist palette anchors, mask counts, output paths, and verification results. Count and deduplicate outputs programmatically before delivery.
+
+## Exact-color GIF constraints
+
+Before GIF assembly under an exact outside-iris preservation requirement, count the unique opaque RGB colors outside each verified iris mask, then count their union with the proposed corrected iris colors. A transparent GIF frame normally has 255 opaque entries; local palettes make this a per-frame limit, not an animation-wide limit. If the union fits, encode exact lookup palettes and verify decoded outside-mask RGB and alpha equality. If it does not fit, ask whether non-iris approximation is permitted or lossless animated WebP/APNG is preferred; do not silently quantize unaffected pixels, flatten the iris, change format, or alter frame count. For supplied-frame conversion alone, do not recolor the eyes: palette reservation is not permission for an iris edit, and including a hex entry does not prove iris pixels use it.
+
+After approval for GIF assembly with non-iris approximation explicitly permitted, pool the corrected iris RGB values and reserve all distinct iris colors exactly when practical. Reserve one transparent index, then quantize non-iris colors into the remaining `255 - iris_color_count` opaque slots. Map opaque pixels directly to palette indices 1-255 using signed RGB distances, never through the transparent entry. Reopen every frame and assert exact decoded iris RGB equality when exact colors were reserved, alongside unchanged alpha, dimensions, order, and delays. Do not claim every non-iris pixel remains exact after GIF encoding when the color union exceeds the available opaque slots; exact preservation applies to the verified PNG edit and reserved iris colors, not automatically to the quantized GIF.

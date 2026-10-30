@@ -1,0 +1,34 @@
+# Community craft reference
+
+Curated from the user's `Quantum_XIII_YouTube_Community_Posts_Skill.txt`. Source examples illustrate style; they are not verified released-episode facts. Canon consistency does not authorize publishing unreleased lore.
+
+## Purpose and participation
+
+Choose a primary purpose: conversation, theory, released lore discovery, character connection, episode reflection, emotional response, fan creativity, recognition, feedback, anticipation, tradition, or genuine news. Quality of discussion matters more than raw comments. Lightweight reaction posts can maintain rhythm, but interpretation, theories, creation, and community contributions can sustain deeper fandom. Avoid fake uncertainty and manufactured controversy.
+
+Use flexible pillars rather than quotas: released episode moments, characters, lore, competing interpretations, fan culture and jokes, fan recognition (permission required), approved behind-the-scenes material, interactive choices and quizzes, approved anticipation, and community building. Not every post needs to advertise the series.
+
+## Review and format
+
+Assess a proposed idea for its audience behavior, specificity, intrinsic interest, participation effort, fandom payoff, spoiler risk, factual basis, voice, and fit for another format. Critique weak ideas briefly before improving them. Consider text discussions, native polls, scene stills, character images, fan spotlights, verified updates, and announcements; not every post needs a question. For a requested poll, supply voting options as well as the prompt, with choices that are distinct and neutral rather than a disguised trivia test. Require an approved visual for image formats. Poll options must not accidentally confirm a theory, falsely assert a fact, or make a factual quiz ambiguous.
+
+The user's selected workflow has two distinct phases. For a multi-day request, first give ten *short content concepts per named day* with varied formats and no full copy; wait for the user's choice. Then give five substantively distinct full-copy variations for each selected concept, preserving that concept's format and evidence boundary. A single supplied concept or a direct copy request skips the shortlist. Do not confuse five ideas with five phrasings. Respect an explicit request for another count or sequence. Avoid routine 'What do you think?' and 'Comment below' endings in drafted discussions. Be curious without impersonating a fan or implying knowledge of unreleased answers. Write a natural setup only when it helps the audience feel the stakes; do not turn every Community item into a question. The user's test feedback: the Episode 06 own-versus-stranger memory dilemma was engaging but too short as a full post; the Episode 05 'beautiful cage' word-comparison felt forced; the Silas batch became overly question/quiz-like when all slots used the same mechanic. Prefer natural, relatable dilemmas and format diversity over mechanical close reading or trivia. Do not add unsupported scene feelings or plot claims just to make a post longer. Keep it scannable, with clear labels for episode-specific spoilers and no forced slang or unsupported audience claims.
+
+## Comments, credit, and follow-through
+
+From real comments, extract recurring questions, interpretations, misconceptions, emotional reactions, character attachment, disagreements, jokes, and continuity concerns. Separate studio replies from audience evidence. State one viewer's point as one viewer's point; preserve interesting minority views without claiming consensus. Obtain the user's approval and the creator's permission before officially featuring an identifiable fan comment, username, artwork, edit, or theory. Genuine discussions may lead to later follow-ups, but do not promise them before the replies exist.
+
+## Selective lessons from the Community strategy article
+
+Source: https://yt-seo-architect.vercel.app/blog/youtube-community-posts-strategy-2026 (YT SEO Architect, published June 16, 2026). Treat it as an idea source, not an authority on Somex's results or YouTube's algorithm.
+
+- Give formats different jobs: low-friction polls for narrow preferences, approved imagery plus a specific observation for deeper discussion, and text when an idea needs no asset. Neither format wins universally; choose by the intended participation.
+- Use poll responses as signals from respondents, not as a representative survey or a promise that voters will watch a future episode. Follow-up choices depend on observed replies, not a formula.
+- Make a video link selective and useful: a released-episode scene discussion may benefit from an official episode path, while a theory or community prompt can stand alone. Verify the destination and spoiler implications before including it.
+- When drafting several Community ideas, plan the purpose, audience, public-release scope, and available format for each before suggesting dates. Keep the Friday commitment and Sunday off-day, but let the user's calendar own placement; a generic 3-5-post example is not a Somex requirement. Use text for a self-contained question or verified studio observation, not an invented milestone.
+- If metrics are provided, compare each post with its original objective. Record date, purpose, audience (newcomer/current viewer), format, topic, measured poll participation, reply substance, returning discussion, and relevant episode traffic where available. When there is enough history, look at a roughly month-long pattern rather than a single post; do not assume the article's 30-day interval is a required reporting cadence. Check for repetition and fatigue without inventing a fixed decline threshold. Distinguish traffic observed after a Community post from traffic caused by it. Feed findings into later draft concepts only after actual evidence.
+- Preserve Somex constraints: Friday 23:00 GMT+8 Community minimum, Sunday off, no assumed image/BTS assets, no forced cadence. Reject the article's unsubstantiated 3-5-per-week sweet spot, engagement/retention percentages, asserted algorithmic authority metric, mandatory link on every post, and instruction to reply rapidly to every comment or three times per thread. Reply drafting belongs to a separate workflow. The article's examples for creator-education channels are not Quantum 13 story prompts.
+
+## Final check
+
+Confirm public-release scope, episode evidence, terminology, quote fidelity, spoiler and visual risk, audience participation, native format, asset readiness, credit/permissions, and natural tone. Keep World-Bible-only material private absent explicit clearance. Return drafts for the user's own scheduling workflow.

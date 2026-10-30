@@ -12,6 +12,22 @@ metadata:
 
 Generate four independent pose-matched close-up portraits from exactly five ordered reference images.
 
+## Mandatory pre-use notice
+
+Before analyzing references, generating images, or asking follow-up questions, send the notice below as the first visible response. Do this for every user who invokes this skill.
+
+For a Chinese or non-English request, send exactly:
+
+> *注意：该指令有图片顺序要求和人物朝向要求，人物面部参考和姿势参考需统一朝向。  
+> 图片顺序：人物面部、帽子、背景、姿势参考*
+
+For an English request, send exactly:
+
+> *Note: This instruction has image-order and character-orientation requirements. The character face reference and pose reference must face the same direction.  
+> Image order: character face, hat, background, pose reference.*
+
+Send the applicable notice before continuing the skill workflow. Do not omit it when all references appear correct. For the five-image workflow, “pose reference” covers both images 4 and 5.
+
 ## Required reference order
 
 Treat the five images as follows and never exchange their roles:
